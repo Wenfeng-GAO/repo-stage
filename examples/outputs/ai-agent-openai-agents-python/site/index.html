@@ -33,7 +33,7 @@ uv add openai-agents</code></pre>
         <p class="eyebrow">What it offers</p>
         <h2>Source-grounded project highlights</h2>
       </div>
-      <div class="cards"><article><p>[`wrapper.context`][agents.run_context.RunContextWrapper.context] for your own mutable app state and dependencies.</p></article><article><p>[`wrapper.usage`][agents.run_context.RunContextWrapper.usage] for aggregated request and token usage across the current run.</p></article><article><p>[`wrapper.tool_input`][agents.run_context.RunContextWrapper.tool_input] for structured input when the current run is executing inside [`Agent.as_tool()`][agents.agent.Agent.as_tool].</p></article><article><p>[`wrapper.approve_tool(...)`][agents.run_context.RunContextWrapper.approve_tool] / [`wrapper.reject_tool(...)`][agents.run_context.RunContextWrapper.reject_tool] when you need to update approval state programmatically.</p></article></div>
+      <div class="cards"><article><p>pytest and Coverage.py</p></article><article><p>[`RunHooks`][agents.lifecycle.RunHooks] observe the entire `Runner.run(...)` invocation, including handoffs to other agents.</p></article><article><p>[`AgentHooks`][agents.lifecycle.AgentHooks] are attached to a specific agent instance via `agent.hooks`.</p></article><article><p>Agent start/end hooks receive [`AgentHookContext`][agents.run_context.AgentHookContext], which wraps your original context and carries the shared run usage state.</p></article><article><p>LLM, tool, and handoff hooks receive [`RunContextWrapper`][agents.run_context.RunContextWrapper].</p></article><article><p>`on_agent_start` / `on_agent_end`: when a specific agent begins or finishes producing a final output.</p></article></div>
     </section>
 
     <section class="grid-section muted">
@@ -41,7 +41,7 @@ uv add openai-agents</code></pre>
         <p class="eyebrow">Use cases</p>
         <h2>Where this project fits</h2>
       </div>
-      <div class="cards"><article><p>Use from the command line in local development workflows.</p></article><article><p>Integrate repository capabilities into developer applications.</p></article></div>
+      <div class="cards"><article><p>Not enough sourced detail was available for this section.</p></article></div>
     </section>
 
     <section class="facts">

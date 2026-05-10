@@ -332,6 +332,69 @@
       "path": "examples/basic/dynamic_system_prompt.py",
       "url": "https://github.com/openai/openai-agents-python/blob/main/examples/basic/dynamic_system_prompt.py",
       "notes": ""
+    },
+    {
+      "id": "src-asset-1",
+      "type": "file",
+      "path": "docs/assets/images/favicon-platform.svg",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/assets/images/favicon-platform.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-2",
+      "type": "file",
+      "path": "docs/assets/images/graph.png",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/assets/images/graph.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-3",
+      "type": "file",
+      "path": "docs/assets/images/harness_with_compute.png",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/assets/images/harness_with_compute.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-4",
+      "type": "file",
+      "path": "docs/assets/images/mcp-tracing.jpg",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/assets/images/mcp-tracing.jpg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-5",
+      "type": "file",
+      "path": "docs/assets/images/orchestration.png",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/assets/images/orchestration.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-6",
+      "type": "file",
+      "path": "docs/assets/logo.svg",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/assets/logo.svg",
+      "notes": "Repository asset detected as logo"
+    },
+    {
+      "id": "src-asset-7",
+      "type": "file",
+      "path": "examples/basic/media/image_bison.jpg",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/basic/media/image_bison.jpg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-8",
+      "type": "file",
+      "path": "examples/realtime/app/static/favicon.ico",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/realtime/app/static/favicon.ico",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-9",
+      "type": "file",
+      "path": "examples/sandbox/tutorials/vision_website_clone/reference-site.png",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/sandbox/tutorials/vision_website_clone/reference-site.png",
+      "notes": "Repository asset detected as image"
     }
   ],
   "facts": [
@@ -374,7 +437,7 @@
     {
       "id": "fact-5",
       "kind": "feature",
-      "value": "[`wrapper.context`][agents.run_context.RunContextWrapper.context] for your own mutable app state and dependencies.",
+      "value": "pytest and Coverage.py",
       "sourceIds": [
         "src-readme"
       ],
@@ -383,29 +446,74 @@
     {
       "id": "fact-6",
       "kind": "feature",
-      "value": "[`wrapper.usage`][agents.run_context.RunContextWrapper.usage] for aggregated request and token usage across the current run.",
+      "value": "[`RunHooks`][agents.lifecycle.RunHooks] observe the entire `Runner.run(...)` invocation, including handoffs to other agents.",
       "sourceIds": [
-        "src-readme"
+        "src-doc-1"
       ],
       "confidence": "medium"
     },
     {
       "id": "fact-7",
       "kind": "feature",
-      "value": "[`wrapper.tool_input`][agents.run_context.RunContextWrapper.tool_input] for structured input when the current run is executing inside [`Agent.as_tool()`][agents.agent.Agent.as_tool].",
+      "value": "[`AgentHooks`][agents.lifecycle.AgentHooks] are attached to a specific agent instance via `agent.hooks`.",
       "sourceIds": [
-        "src-readme"
+        "src-doc-1"
       ],
       "confidence": "medium"
     },
     {
       "id": "fact-8",
       "kind": "feature",
-      "value": "[`wrapper.approve_tool(...)`][agents.run_context.RunContextWrapper.approve_tool] / [`wrapper.reject_tool(...)`][agents.run_context.RunContextWrapper.reject_tool] when you need to update approval state programmatically.",
+      "value": "Agent start/end hooks receive [`AgentHookContext`][agents.run_context.AgentHookContext], which wraps your original context and carries the shared run usage state.",
+      "sourceIds": [
+        "src-doc-1"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-9",
+      "kind": "feature",
+      "value": "LLM, tool, and handoff hooks receive [`RunContextWrapper`][agents.run_context.RunContextWrapper].",
+      "sourceIds": [
+        "src-doc-1"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-10",
+      "kind": "feature",
+      "value": "`on_agent_start` / `on_agent_end`: when a specific agent begins or finishes producing a final output.",
+      "sourceIds": [
+        "src-doc-1"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-11",
+      "kind": "example",
+      "value": "python -m venv .venv\nsource .venv/bin/activate  # On Windows: .venv\\Scripts\\activate\npip install openai-agents",
       "sourceIds": [
         "src-readme"
       ],
-      "confidence": "medium"
+      "confidence": "high"
+    },
+    {
+      "id": "fact-12",
+      "kind": "example",
+      "value": "uv init\nuv add openai-agents",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-13",
+      "kind": "example",
+      "value": "from agents import Agent, ModelSettings, function_tool\n\n@function_tool\ndef get_weather(city: str) -> str:\n    \"\"\"returns weather info for the specified city.\"\"\"\n    return f\"The weather in {city} is sunny\"\n\nagent = Agent(\n    name=\"Haiku agent\",\n    instructions=\"Always respond in haiku form\",\n    model=\"gpt-5-nano\",\n    tools=[get_weather],\n)",
+      "sourceIds": [
+        "src-doc-1"
+      ],
+      "confidence": "high"
     }
   ],
   "product": {
@@ -418,15 +526,14 @@
     ],
     "problems": [],
     "features": [
-      "[`wrapper.context`][agents.run_context.RunContextWrapper.context] for your own mutable app state and dependencies.",
-      "[`wrapper.usage`][agents.run_context.RunContextWrapper.usage] for aggregated request and token usage across the current run.",
-      "[`wrapper.tool_input`][agents.run_context.RunContextWrapper.tool_input] for structured input when the current run is executing inside [`Agent.as_tool()`][agents.agent.Agent.as_tool].",
-      "[`wrapper.approve_tool(...)`][agents.run_context.RunContextWrapper.approve_tool] / [`wrapper.reject_tool(...)`][agents.run_context.RunContextWrapper.reject_tool] when you need to update approval state programmatically."
+      "pytest and Coverage.py",
+      "[`RunHooks`][agents.lifecycle.RunHooks] observe the entire `Runner.run(...)` invocation, including handoffs to other agents.",
+      "[`AgentHooks`][agents.lifecycle.AgentHooks] are attached to a specific agent instance via `agent.hooks`.",
+      "Agent start/end hooks receive [`AgentHookContext`][agents.run_context.AgentHookContext], which wraps your original context and carries the shared run usage state.",
+      "LLM, tool, and handoff hooks receive [`RunContextWrapper`][agents.run_context.RunContextWrapper].",
+      "`on_agent_start` / `on_agent_end`: when a specific agent begins or finishes producing a final output."
     ],
-    "useCases": [
-      "Use from the command line in local development workflows.",
-      "Integrate repository capabilities into developer applications."
-    ],
+    "useCases": [],
     "quickstart": [
       "pip install openai-agents",
       "uv init",
@@ -446,47 +553,65 @@
     {
       "path": "docs/assets/images/favicon-platform.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-1"
+      ]
     },
     {
       "path": "docs/assets/images/graph.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-2"
+      ]
     },
     {
       "path": "docs/assets/images/harness_with_compute.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-3"
+      ]
     },
     {
       "path": "docs/assets/images/mcp-tracing.jpg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-4"
+      ]
     },
     {
       "path": "docs/assets/images/orchestration.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-5"
+      ]
     },
     {
       "path": "docs/assets/logo.svg",
       "kind": "logo",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-6"
+      ]
     },
     {
       "path": "examples/basic/media/image_bison.jpg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-7"
+      ]
     },
     {
       "path": "examples/realtime/app/static/favicon.ico",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-8"
+      ]
     },
     {
       "path": "examples/sandbox/tutorials/vision_website_clone/reference-site.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-9"
+      ]
     }
   ],
   "gaps": [
@@ -499,6 +624,11 @@
       "kind": "ingestion-error",
       "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
       "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
     }
   ]
 }

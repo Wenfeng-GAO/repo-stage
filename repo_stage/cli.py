@@ -88,27 +88,58 @@ def build_profile_from_ingestion(ingestion: dict[str, Any]) -> dict[str, Any]:
     )
     package_items = ingestion.get("packageMetadata") or []
     package = package_items[0] if package_items else None
+    source_items = [
+        item
+        for item in [readme, *(ingestion.get("docs") or []), *(ingestion.get("examples") or [])]
+        if source_content(item)
+    ]
 
     description = clean_sentence(repo.get("description") or package_description(package) or first_paragraph(readme_text))
     one_liner = description or f"{repo.get('name', 'This repository')} is a public GitHub project."
     add_fact(facts, "description", one_liner, source_id_for_item(source_id_by_path, readme) or "src-github", "medium" if readme else "high")
 
-    commands = extract_commands(text_pool)
-    commands.extend(package_commands(package_items))
-    commands = unique(commands)[:6]
-    for command in commands:
-        add_fact(facts, "quickstart", command, source_id_for_item(source_id_by_path, readme or package), "high")
+    sourced_commands: list[tuple[str, str]] = []
+    for item in source_items:
+        source_id = source_id_for_item(source_id_by_path, item)
+        if source_id:
+            sourced_commands.extend((command, source_id) for command in extract_commands(source_content(item)))
+    sourced_commands.extend(package_commands_with_sources(package_items, source_id_by_path))
+    sourced_commands = unique_pairs(sourced_commands)[:6]
+    commands = [command for command, _source_id in sourced_commands]
+    for command, source_id in sourced_commands:
+        add_fact(facts, "quickstart", command, source_id, "high")
 
-    features = extract_features(text_pool)
+    sourced_features: list[tuple[str, str]] = []
+    for item in source_items:
+        source_id = source_id_for_item(source_id_by_path, item)
+        if source_id:
+            sourced_features.extend((feature, source_id) for feature in extract_features(source_content(item)))
+    sourced_features = unique_pairs(sourced_features)
+    features = [feature for feature, _source_id in sourced_features]
     if features:
-        for feature in features[:6]:
-            add_fact(facts, "feature", feature, source_id_for_item(source_id_by_path, readme) or "src-github", "medium")
+        for feature, source_id in sourced_features[:6]:
+            add_fact(facts, "feature", feature, source_id, "medium")
     else:
         features = [one_liner]
         gaps.append({"kind": "unclear-positioning", "message": "Repository sources did not expose clear feature bullets.", "severity": "medium"})
 
-    examples = extract_examples(text_pool)
+    sourced_examples: list[tuple[str, str]] = []
+    for item in source_items:
+        source_id = source_id_for_item(source_id_by_path, item)
+        if source_id:
+            sourced_examples.extend((example, source_id) for example in extract_examples(source_content(item)))
+    sourced_examples = unique_pairs(sourced_examples)
+    examples = [example for example, _source_id in sourced_examples]
+    for example, source_id in sourced_examples[:3]:
+        add_fact(facts, "example", example, source_id, "high")
+
     contribution = any("contributing" in str(source.get("path", "")).lower() for source in sources)
+    use_cases: list[str] = []
+    gaps.append({
+        "kind": "unclear-use-cases",
+        "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+        "severity": "low",
+    })
 
     return {
         "schemaVersion": "repo-profile.v0",
@@ -130,7 +161,7 @@ def build_profile_from_ingestion(ingestion: dict[str, Any]) -> dict[str, Any]:
             "audiences": infer_audiences(text_pool),
             "problems": [],
             "features": features[:6],
-            "useCases": extract_use_cases(text_pool, repo.get("name", "")),
+            "useCases": use_cases,
             "quickstart": commands,
             "examples": examples[:3],
             "contribution": {
@@ -138,10 +169,7 @@ def build_profile_from_ingestion(ingestion: dict[str, Any]) -> dict[str, Any]:
                 "notes": ["Contribution guide found in repository."] if contribution else [],
             },
         },
-        "assets": [
-            {"path": item.get("path", ""), "kind": item.get("kind", "image"), "sourceIds": []}
-            for item in ingestion.get("assets") or []
-        ],
+        "assets": normalize_profile_assets(ingestion.get("assets") or [], source_id_by_path),
         "gaps": gaps,
     }
 
@@ -162,6 +190,18 @@ def normalize_sources(ingestion: dict[str, Any]) -> list[dict[str, Any]]:
             "path": item.get("path", ""),
             "url": item.get("url", ""),
             "notes": item.get("notes", ""),
+        })
+    existing_paths = {source["path"] for source in sources if source.get("path")}
+    for idx, item in enumerate(ingestion.get("assets") or [], 1):
+        asset_path = item.get("path", "")
+        if not asset_path or asset_path in existing_paths:
+            continue
+        sources.append({
+            "id": f"src-asset-{idx}",
+            "type": "file",
+            "path": asset_path,
+            "url": item.get("url", ""),
+            "notes": f"Repository asset detected as {item.get('kind', 'image')}",
         })
     return sources
 
@@ -234,24 +274,27 @@ def package_description(package: dict[str, Any] | None) -> str:
     return str(parsed.get("description") or "")
 
 
-def package_commands(package_items: list[dict[str, Any]]) -> list[str]:
-    commands: list[str] = []
+def package_commands_with_sources(package_items: list[dict[str, Any]], source_id_by_path: dict[str, str]) -> list[tuple[str, str]]:
+    commands: list[tuple[str, str]] = []
     for package in package_items:
         path = str(package.get("path") or "")
+        source_id = source_id_by_path.get(path)
+        if not source_id:
+            continue
         parsed = package.get("parsed") or {}
         name = parsed.get("name") or parsed.get("module")
         if path.endswith("package.json") and name:
-            commands.append(f"npm install {name}")
+            commands.append((f"npm install {name}", source_id))
             scripts = parsed.get("scripts") or {}
             for script in ("dev", "build", "test", "start"):
                 if script in scripts:
-                    commands.append(f"npm run {script}")
+                    commands.append((f"npm run {script}", source_id))
         elif path.endswith("pyproject.toml") and name:
-            commands.append(f"pip install {name}")
+            commands.append((f"pip install {name}", source_id))
         elif path.endswith("Cargo.toml") and name:
-            commands.append(f"cargo install {name}")
+            commands.append((f"cargo install {name}", source_id))
         elif path.endswith("go.mod") and name:
-            commands.append(f"go install {name}@latest")
+            commands.append((f"go install {name}@latest", source_id))
     return commands
 
 
@@ -336,6 +379,32 @@ def unique(items: list[str]) -> list[str]:
             seen.add(key)
             result.append(item)
     return result
+
+
+def unique_pairs(items: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    seen = set()
+    result = []
+    for value, source_id in items:
+        key = value.lower()
+        if key not in seen:
+            seen.add(key)
+            result.append((value, source_id))
+    return result
+
+
+def normalize_profile_assets(assets: list[dict[str, Any]], source_id_by_path: dict[str, str]) -> list[dict[str, Any]]:
+    normalized = []
+    for item in assets:
+        asset_path = item.get("path", "")
+        source_id = source_id_by_path.get(asset_path)
+        if not asset_path or not source_id:
+            continue
+        normalized.append({
+            "path": asset_path,
+            "kind": item.get("kind", "image"),
+            "sourceIds": [source_id],
+        })
+    return normalized
 
 
 def warning_gap(message: str) -> dict[str, str]:
@@ -553,11 +622,37 @@ def validate_profile(profile: dict[str, Any], errors: list[str], warnings: list[
             errors.append(f"Profile repo.{key} is required")
     source_ids = {item.get("id") for item in profile.get("sources", [])}
     for fact in profile.get("facts", []):
+        if not fact.get("sourceIds"):
+            errors.append(f"Fact {fact.get('id')} must include at least one source")
         for source_id in fact.get("sourceIds", []):
             if source_id not in source_ids:
                 errors.append(f"Fact {fact.get('id')} references unknown source {source_id}")
+    for index, asset in enumerate(profile.get("assets", [])):
+        if not asset.get("path"):
+            errors.append(f"Asset {index} path is required")
+        asset_source_ids = asset.get("sourceIds") or []
+        if not asset_source_ids:
+            errors.append(f"Asset {asset.get('path') or index} must include at least one source")
+        for source_id in asset_source_ids:
+            if source_id not in source_ids:
+                errors.append(f"Asset {asset.get('path') or index} references unknown source {source_id}")
+    sourced_values = {
+        str(fact.get("value"))
+        for fact in profile.get("facts", [])
+        if fact.get("confidence") in {"high", "medium"} and fact.get("sourceIds")
+    }
+    product = profile.get("product", {})
+    validate_sourced_product_value(product.get("oneLiner"), "product.oneLiner", sourced_values, errors)
+    for field in ("features", "useCases", "quickstart", "examples"):
+        for index, value in enumerate(product.get(field) or []):
+            validate_sourced_product_value(value, f"product.{field}[{index}]", sourced_values, errors)
     if not profile.get("product", {}).get("oneLiner"):
         warnings.append("Product oneLiner is empty.")
+
+
+def validate_sourced_product_value(value: str | None, path_name: str, sourced_values: set[str], errors: list[str]) -> None:
+    if value and value not in sourced_values:
+        errors.append(f"{path_name} must match a high/medium sourced fact")
 
 
 def write_validation_report(path: Path, validation: dict[str, Any]) -> None:

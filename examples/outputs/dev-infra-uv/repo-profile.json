@@ -969,6 +969,111 @@
       "path": "docs/concepts/projects/run.md",
       "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/run.md",
       "notes": ""
+    },
+    {
+      "id": "src-asset-1",
+      "type": "file",
+      "path": "assets/png/Astral.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/Astral.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-2",
+      "type": "file",
+      "path": "assets/png/install-cold.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/install-cold.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-3",
+      "type": "file",
+      "path": "assets/png/install-warm.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/install-warm.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-4",
+      "type": "file",
+      "path": "assets/png/resolve-cold.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/resolve-cold.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-5",
+      "type": "file",
+      "path": "assets/png/resolve-warm.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/resolve-warm.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-6",
+      "type": "file",
+      "path": "assets/svg/Astral.svg",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/svg/Astral.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-7",
+      "type": "file",
+      "path": "assets/svg/Benchmark-Dark.svg",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/svg/Benchmark-Dark.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-8",
+      "type": "file",
+      "path": "assets/svg/Benchmark-Light.svg",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/svg/Benchmark-Light.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-9",
+      "type": "file",
+      "path": "docs/assets/favicon.ico",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/favicon.ico",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-10",
+      "type": "file",
+      "path": "docs/assets/github-add-environment.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/github-add-environment.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-11",
+      "type": "file",
+      "path": "docs/assets/logo-letter.svg",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/logo-letter.svg",
+      "notes": "Repository asset detected as logo"
+    },
+    {
+      "id": "src-asset-12",
+      "type": "file",
+      "path": "docs/assets/pypi-add-trusted-publisher.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/pypi-add-trusted-publisher.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-13",
+      "type": "file",
+      "path": "docs/assets/pypi-with-trusted-publisher.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/pypi-with-trusted-publisher.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-14",
+      "type": "file",
+      "path": "docs/assets/uv_gui_script_hello_world.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/uv_gui_script_hello_world.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-15",
+      "type": "file",
+      "path": "docs/assets/uv_gui_script_hello_world_pyqt.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/uv_gui_script_hello_world_pyqt.png",
+      "notes": "Repository asset detected as image"
     }
   ],
   "facts": [
@@ -1088,6 +1193,33 @@
         "src-readme"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "fact-14",
+      "kind": "example",
+      "value": "# On macOS and Linux.\ncurl -LsSf https://astral.sh/uv/install.sh | sh",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-15",
+      "kind": "example",
+      "value": "# On Windows.\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-16",
+      "kind": "example",
+      "value": "# With pip.\npip install uv",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
     }
   ],
   "product": {
@@ -1107,11 +1239,7 @@
       "Installs and manages Python versions.",
       "Runs and installs tools published as Python packages."
     ],
-    "useCases": [
-      "Use from the command line in local development workflows.",
-      "Build application interfaces with reusable components.",
-      "Integrate repository capabilities into developer applications."
-    ],
+    "useCases": [],
     "quickstart": [
       "curl -LsSf https://astral.sh/uv/install.sh | sh",
       "pip install uv",
@@ -1134,77 +1262,107 @@
     {
       "path": "assets/png/Astral.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-1"
+      ]
     },
     {
       "path": "assets/png/install-cold.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-2"
+      ]
     },
     {
       "path": "assets/png/install-warm.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-3"
+      ]
     },
     {
       "path": "assets/png/resolve-cold.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-4"
+      ]
     },
     {
       "path": "assets/png/resolve-warm.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-5"
+      ]
     },
     {
       "path": "assets/svg/Astral.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-6"
+      ]
     },
     {
       "path": "assets/svg/Benchmark-Dark.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-7"
+      ]
     },
     {
       "path": "assets/svg/Benchmark-Light.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-8"
+      ]
     },
     {
       "path": "docs/assets/favicon.ico",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-9"
+      ]
     },
     {
       "path": "docs/assets/github-add-environment.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-10"
+      ]
     },
     {
       "path": "docs/assets/logo-letter.svg",
       "kind": "logo",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-11"
+      ]
     },
     {
       "path": "docs/assets/pypi-add-trusted-publisher.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-12"
+      ]
     },
     {
       "path": "docs/assets/pypi-with-trusted-publisher.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-13"
+      ]
     },
     {
       "path": "docs/assets/uv_gui_script_hello_world.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-14"
+      ]
     },
     {
       "path": "docs/assets/uv_gui_script_hello_world_pyqt.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-15"
+      ]
     }
   ],
   "gaps": [
@@ -1217,6 +1375,11 @@
       "kind": "ingestion-error",
       "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
       "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
     }
   ]
 }

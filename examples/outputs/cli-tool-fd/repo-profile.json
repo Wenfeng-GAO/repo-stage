@@ -38,6 +38,27 @@
       "path": "Cargo.toml",
       "url": "https://github.com/sharkdp/fd/blob/master/Cargo.toml",
       "notes": ""
+    },
+    {
+      "id": "src-asset-1",
+      "type": "file",
+      "path": "doc/logo.png",
+      "url": "https://github.com/sharkdp/fd/blob/master/doc/logo.png",
+      "notes": "Repository asset detected as logo"
+    },
+    {
+      "id": "src-asset-2",
+      "type": "file",
+      "path": "doc/logo.svg",
+      "url": "https://github.com/sharkdp/fd/blob/master/doc/logo.svg",
+      "notes": "Repository asset detected as logo"
+    },
+    {
+      "id": "src-asset-3",
+      "type": "file",
+      "path": "doc/screencast.svg",
+      "url": "https://github.com/sharkdp/fd/blob/master/doc/screencast.svg",
+      "notes": "Repository asset detected as image"
     }
   ],
   "facts": [
@@ -157,6 +178,33 @@
         "src-readme"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "fact-14",
+      "kind": "example",
+      "value": "If called with just a single argument like this, *fd* searches the current directory recursively\nfor any entries that *contain* the pattern `netfl`.\n\n### Regular expression search\n\nThe search pattern is treated as a regular expression. Here, we search for entries that start\nwith `x` and end with `rc`:",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-15",
+      "kind": "example",
+      "value": "The regular expression syntax used by `fd` is [documented here](https://docs.rs/regex/latest/regex/#syntax).\n\n### Specifying the root directory\n\nIf we want to search a specific directory, it can be given as a second argument to *fd*:",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-16",
+      "kind": "example",
+      "value": "### List all files, recursively\n\n*fd* can be called with no arguments. This is very useful to get a quick overview of all entries\nin the current directory, recursively (similar to `ls -R`):",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
     }
   ],
   "product": {
@@ -176,10 +224,7 @@
       "Supports parallel command execution",
       "Smart case: the search is case-insensitive by default. It switches to"
     ],
-    "useCases": [
-      "Use from the command line in local development workflows.",
-      "Integrate repository capabilities into developer applications."
-    ],
+    "useCases": [],
     "quickstart": [
       "brew install fd",
       "npm install -g fd-find",
@@ -202,17 +247,23 @@
     {
       "path": "doc/logo.png",
       "kind": "logo",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-1"
+      ]
     },
     {
       "path": "doc/logo.svg",
       "kind": "logo",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-2"
+      ]
     },
     {
       "path": "doc/screencast.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-3"
+      ]
     }
   ],
   "gaps": [
@@ -225,6 +276,11 @@
       "kind": "ingestion-error",
       "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
       "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
     }
   ]
 }

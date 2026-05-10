@@ -129,6 +129,286 @@
       "path": "examples/with-script-in-browser/utils.ts",
       "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-script-in-browser/utils.ts",
       "notes": ""
+    },
+    {
+      "id": "src-asset-1",
+      "type": "file",
+      "path": ".github/assets/crowdin.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/.github/assets/crowdin.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-2",
+      "type": "file",
+      "path": ".github/assets/sentry.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/.github/assets/sentry.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-3",
+      "type": "file",
+      "path": ".github/assets/vercel.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/.github/assets/vercel.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-4",
+      "type": "file",
+      "path": "dev-docs/docs/assets/aggressive-block-fingerprint.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/docs/assets/aggressive-block-fingerprint.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-5",
+      "type": "file",
+      "path": "dev-docs/docs/assets/block-fingerprint.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/docs/assets/block-fingerprint.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-6",
+      "type": "file",
+      "path": "dev-docs/docs/assets/brave-shield.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/docs/assets/brave-shield.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-7",
+      "type": "file",
+      "path": "dev-docs/docs/assets/nerd-stats.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/docs/assets/nerd-stats.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-8",
+      "type": "file",
+      "path": "dev-docs/static/img/docusaurus.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/docusaurus.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-9",
+      "type": "file",
+      "path": "dev-docs/static/img/doremon.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/doremon.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-10",
+      "type": "file",
+      "path": "dev-docs/static/img/favicon.ico",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/favicon.ico",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-11",
+      "type": "file",
+      "path": "dev-docs/static/img/favicon.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/favicon.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-12",
+      "type": "file",
+      "path": "dev-docs/static/img/logo.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/logo.svg",
+      "notes": "Repository asset detected as logo"
+    },
+    {
+      "id": "src-asset-13",
+      "type": "file",
+      "path": "dev-docs/static/img/og-image-2.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image-2.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-14",
+      "type": "file",
+      "path": "dev-docs/static/img/og-image.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-15",
+      "type": "file",
+      "path": "dev-docs/static/img/pika.jpeg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/pika.jpeg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-16",
+      "type": "file",
+      "path": "dev-docs/static/img/undraw_add_files.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/undraw_add_files.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-17",
+      "type": "file",
+      "path": "dev-docs/static/img/undraw_blank_canvas.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/undraw_blank_canvas.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-18",
+      "type": "file",
+      "path": "dev-docs/static/img/undraw_innovative.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/undraw_innovative.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-19",
+      "type": "file",
+      "path": "dev-docs/static/img/welcome-screen-overview.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/welcome-screen-overview.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-20",
+      "type": "file",
+      "path": "examples/with-nextjs/public/images/doremon.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-nextjs/public/images/doremon.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-21",
+      "type": "file",
+      "path": "examples/with-nextjs/public/images/excalibot.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-nextjs/public/images/excalibot.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-22",
+      "type": "file",
+      "path": "examples/with-nextjs/public/images/pika.jpeg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-nextjs/public/images/pika.jpeg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-23",
+      "type": "file",
+      "path": "examples/with-nextjs/public/images/rocket.jpeg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-nextjs/public/images/rocket.jpeg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-24",
+      "type": "file",
+      "path": "examples/with-nextjs/src/app/favicon.ico",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-nextjs/src/app/favicon.ico",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-25",
+      "type": "file",
+      "path": "examples/with-script-in-browser/public/images/doremon.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-script-in-browser/public/images/doremon.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-26",
+      "type": "file",
+      "path": "examples/with-script-in-browser/public/images/excalibot.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-script-in-browser/public/images/excalibot.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-27",
+      "type": "file",
+      "path": "examples/with-script-in-browser/public/images/pika.jpeg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-script-in-browser/public/images/pika.jpeg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-28",
+      "type": "file",
+      "path": "examples/with-script-in-browser/public/images/rocket.jpeg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-script-in-browser/public/images/rocket.jpeg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-29",
+      "type": "file",
+      "path": "packages/excalidraw/tests/fixtures/deer.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/tests/fixtures/deer.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-30",
+      "type": "file",
+      "path": "packages/excalidraw/tests/fixtures/smiley.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/tests/fixtures/smiley.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-31",
+      "type": "file",
+      "path": "packages/excalidraw/tests/fixtures/smiley_embedded_v2.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/tests/fixtures/smiley_embedded_v2.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-32",
+      "type": "file",
+      "path": "packages/excalidraw/tests/fixtures/smiley_embedded_v2.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/tests/fixtures/smiley_embedded_v2.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-33",
+      "type": "file",
+      "path": "packages/excalidraw/tests/fixtures/svg-image-exporting-reference.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/tests/fixtures/svg-image-exporting-reference.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-34",
+      "type": "file",
+      "path": "packages/excalidraw/tests/fixtures/test_embedded_v1.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/tests/fixtures/test_embedded_v1.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-35",
+      "type": "file",
+      "path": "packages/excalidraw/tests/fixtures/test_embedded_v1.svg",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/tests/fixtures/test_embedded_v1.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-36",
+      "type": "file",
+      "path": "public/android-chrome-192x192.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/public/android-chrome-192x192.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-37",
+      "type": "file",
+      "path": "public/android-chrome-512x512.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/public/android-chrome-512x512.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-38",
+      "type": "file",
+      "path": "public/apple-touch-icon.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/public/apple-touch-icon.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-39",
+      "type": "file",
+      "path": "public/favicon-16x16.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/public/favicon-16x16.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-40",
+      "type": "file",
+      "path": "public/favicon-32x32.png",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/public/favicon-32x32.png",
+      "notes": "Repository asset detected as image"
     }
   ],
   "facts": [
@@ -164,7 +444,7 @@
       "kind": "quickstart",
       "value": "npm run dev",
       "sourceIds": [
-        "src-readme"
+        "src-example-1"
       ],
       "confidence": "high"
     },
@@ -173,7 +453,7 @@
       "kind": "quickstart",
       "value": "yarn dev",
       "sourceIds": [
-        "src-readme"
+        "src-example-1"
       ],
       "confidence": "high"
     },
@@ -182,7 +462,7 @@
       "kind": "quickstart",
       "value": "pnpm dev",
       "sourceIds": [
-        "src-readme"
+        "src-example-1"
       ],
       "confidence": "high"
     },
@@ -191,7 +471,7 @@
       "kind": "quickstart",
       "value": "bun dev",
       "sourceIds": [
-        "src-readme"
+        "src-example-1"
       ],
       "confidence": "high"
     },
@@ -248,6 +528,24 @@
         "src-readme"
       ],
       "confidence": "medium"
+    },
+    {
+      "id": "fact-14",
+      "kind": "example",
+      "value": "npm install react react-dom @excalidraw/excalidraw\n# or\nyarn add react react-dom @excalidraw/excalidraw",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-15",
+      "kind": "example",
+      "value": "npm run dev\n# or\nyarn dev\n# or\npnpm dev\n# or\nbun dev",
+      "sourceIds": [
+        "src-example-1"
+      ],
+      "confidence": "high"
     }
   ],
   "product": {
@@ -267,11 +565,7 @@
       "🏗️&nbsp;Customizable.",
       "📷&nbsp;Image support."
     ],
-    "useCases": [
-      "Use from the command line in local development workflows.",
-      "Build application interfaces with reusable components.",
-      "Integrate repository capabilities into developer applications."
-    ],
+    "useCases": [],
     "quickstart": [
       "npm install react react-dom @excalidraw/excalidraw",
       "yarn add react react-dom @excalidraw/excalidraw",
@@ -293,202 +587,282 @@
     {
       "path": ".github/assets/crowdin.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-1"
+      ]
     },
     {
       "path": ".github/assets/sentry.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-2"
+      ]
     },
     {
       "path": ".github/assets/vercel.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-3"
+      ]
     },
     {
       "path": "dev-docs/docs/assets/aggressive-block-fingerprint.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-4"
+      ]
     },
     {
       "path": "dev-docs/docs/assets/block-fingerprint.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-5"
+      ]
     },
     {
       "path": "dev-docs/docs/assets/brave-shield.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-6"
+      ]
     },
     {
       "path": "dev-docs/docs/assets/nerd-stats.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-7"
+      ]
     },
     {
       "path": "dev-docs/static/img/docusaurus.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-8"
+      ]
     },
     {
       "path": "dev-docs/static/img/doremon.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-9"
+      ]
     },
     {
       "path": "dev-docs/static/img/favicon.ico",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-10"
+      ]
     },
     {
       "path": "dev-docs/static/img/favicon.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-11"
+      ]
     },
     {
       "path": "dev-docs/static/img/logo.svg",
       "kind": "logo",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-12"
+      ]
     },
     {
       "path": "dev-docs/static/img/og-image-2.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-13"
+      ]
     },
     {
       "path": "dev-docs/static/img/og-image.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-14"
+      ]
     },
     {
       "path": "dev-docs/static/img/pika.jpeg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-15"
+      ]
     },
     {
       "path": "dev-docs/static/img/undraw_add_files.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-16"
+      ]
     },
     {
       "path": "dev-docs/static/img/undraw_blank_canvas.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-17"
+      ]
     },
     {
       "path": "dev-docs/static/img/undraw_innovative.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-18"
+      ]
     },
     {
       "path": "dev-docs/static/img/welcome-screen-overview.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-19"
+      ]
     },
     {
       "path": "examples/with-nextjs/public/images/doremon.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-20"
+      ]
     },
     {
       "path": "examples/with-nextjs/public/images/excalibot.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-21"
+      ]
     },
     {
       "path": "examples/with-nextjs/public/images/pika.jpeg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-22"
+      ]
     },
     {
       "path": "examples/with-nextjs/public/images/rocket.jpeg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-23"
+      ]
     },
     {
       "path": "examples/with-nextjs/src/app/favicon.ico",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-24"
+      ]
     },
     {
       "path": "examples/with-script-in-browser/public/images/doremon.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-25"
+      ]
     },
     {
       "path": "examples/with-script-in-browser/public/images/excalibot.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-26"
+      ]
     },
     {
       "path": "examples/with-script-in-browser/public/images/pika.jpeg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-27"
+      ]
     },
     {
       "path": "examples/with-script-in-browser/public/images/rocket.jpeg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-28"
+      ]
     },
     {
       "path": "packages/excalidraw/tests/fixtures/deer.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-29"
+      ]
     },
     {
       "path": "packages/excalidraw/tests/fixtures/smiley.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-30"
+      ]
     },
     {
       "path": "packages/excalidraw/tests/fixtures/smiley_embedded_v2.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-31"
+      ]
     },
     {
       "path": "packages/excalidraw/tests/fixtures/smiley_embedded_v2.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-32"
+      ]
     },
     {
       "path": "packages/excalidraw/tests/fixtures/svg-image-exporting-reference.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-33"
+      ]
     },
     {
       "path": "packages/excalidraw/tests/fixtures/test_embedded_v1.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-34"
+      ]
     },
     {
       "path": "packages/excalidraw/tests/fixtures/test_embedded_v1.svg",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-35"
+      ]
     },
     {
       "path": "public/android-chrome-192x192.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-36"
+      ]
     },
     {
       "path": "public/android-chrome-512x512.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-37"
+      ]
     },
     {
       "path": "public/apple-touch-icon.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-38"
+      ]
     },
     {
       "path": "public/favicon-16x16.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-39"
+      ]
     },
     {
       "path": "public/favicon-32x32.png",
       "kind": "image",
-      "sourceIds": []
+      "sourceIds": [
+        "src-asset-40"
+      ]
     }
   ],
   "gaps": [
@@ -501,6 +875,11 @@
       "kind": "ingestion-error",
       "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
       "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
     }
   ]
 }

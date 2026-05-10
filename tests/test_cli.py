@@ -52,7 +52,7 @@ pip install repo
         "packageMetadata": [],
         "docs": [],
         "examples": [],
-        "assets": [],
+        "assets": [{"path": "docs/logo.svg", "kind": "logo", "url": "https://github.com/owner/repo/blob/main/docs/logo.svg"}],
         "gaps": [],
         "warnings": [],
         "errors": [],
@@ -119,6 +119,38 @@ class RepoStageCliTests(unittest.TestCase):
             write_gap_report(out_dir / "README-gap-report.md", profile)
             result = validate_output(out_dir, profile)
         self.assertEqual(result["status"], "passed")
+
+    def test_profile_builder_attaches_asset_source_ids(self) -> None:
+        profile = build_profile_from_ingestion(sample_ingestion())
+
+        self.assertEqual(profile["assets"], [{"path": "docs/logo.svg", "kind": "logo", "sourceIds": ["src-asset-1"]}])
+        self.assertTrue(any(source["id"] == "src-asset-1" and source["path"] == "docs/logo.svg" for source in profile["sources"]))
+
+    def test_validate_rejects_assets_without_source_ids(self) -> None:
+        profile = build_profile_from_ingestion(sample_ingestion())
+        profile["assets"][0]["sourceIds"] = []
+        with tempfile.TemporaryDirectory() as tmp:
+            out_dir = Path(tmp)
+            write_json(out_dir / "repo-profile.json", profile)
+            write_site(out_dir / "site", profile)
+            write_gap_report(out_dir / "README-gap-report.md", profile)
+            result = validate_output(out_dir, profile)
+
+        self.assertEqual(result["status"], "failed")
+        self.assertTrue(any("must include at least one source" in error for error in result["errors"]))
+
+    def test_validate_rejects_unsourced_rendered_use_cases(self) -> None:
+        profile = build_profile_from_ingestion(sample_ingestion())
+        profile["product"]["useCases"] = ["Use this project for an inferred workflow."]
+        with tempfile.TemporaryDirectory() as tmp:
+            out_dir = Path(tmp)
+            write_json(out_dir / "repo-profile.json", profile)
+            write_site(out_dir / "site", profile)
+            write_gap_report(out_dir / "README-gap-report.md", profile)
+            result = validate_output(out_dir, profile)
+
+        self.assertEqual(result["status"], "failed")
+        self.assertTrue(any("product.useCases[0]" in error for error in result["errors"]))
 
 
 if __name__ == "__main__":
