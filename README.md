@@ -34,10 +34,11 @@ Read the product documents:
 - [docs/skill-spec.md](docs/skill-spec.md)
 - [docs/repo-profile-schema.md](docs/repo-profile-schema.md)
 - [docs/quality-checklist.md](docs/quality-checklist.md)
+- [docs/agent-compatibility.md](docs/agent-compatibility.md)
 
 ## Status
 
-RepoStage is currently in product planning. The product name is confirmed, the public repository is created, and the first reviewable product, development, Skill, schema, and quality documents are checked in.
+RepoStage is currently in product planning. The product name is confirmed, the public repository is created, and the first reviewable product, development, agent-portable Skill, schema, compatibility, and quality documents are checked in.
 
 ## License
 

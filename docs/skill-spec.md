@@ -1,12 +1,14 @@
 # RepoStage Skill Spec
 
-This document defines the expected behavior of the RepoStage Skill.
+This document defines the expected behavior of the RepoStage Skill across Codex, Claude, and other file-system-capable coding agents.
 
 ## Purpose
 
 RepoStage helps an agent turn a public open-source GitHub repository into a polished one-page static website grounded in repository facts.
 
 The Skill is successful when it produces files a maintainer can preview locally and consider publishing after minor edits.
+
+The Skill should be portable. Its core behavior must not depend on Codex-only, Claude-only, or Multica-only runtime features.
 
 ## Trigger
 
@@ -96,6 +98,23 @@ The Skill should stop or degrade gracefully when:
 - The generated site fails required validation.
 
 In these cases, the Skill should produce a short failure report with the blocked step and the minimum user action needed to continue.
+
+## Agent Runtime Requirements
+
+Required:
+
+- File read/write access.
+- Ability to run local commands or equivalent scripts.
+- Network access to fetch public GitHub repository contents.
+- Ability to produce Markdown, JSON, HTML, and CSS files.
+
+Optional:
+
+- Browser automation for screenshots.
+- GitHub API token for richer metadata.
+- Git commands for clone-based ingestion.
+
+If an optional capability is missing, the Skill should continue where possible and record skipped validation in `validation-report.md`.
 
 ## Acceptance Criteria
 

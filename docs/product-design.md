@@ -8,7 +8,7 @@ The first version is intentionally narrow:
 
 RepoStage is not a commercial website builder, hosted SaaS, pitch-deck generator, or full visual editor in the MVP. It is a local, repo-aware generation workflow for open-source maintainers.
 
-The first implementation shape should be a Codex/Multica Skill with supporting templates, scripts, examples, and validation checks.
+The first implementation shape should be an agent-portable Skill with supporting templates, scripts, examples, and validation checks. Codex/Multica can be the first validation environment, but the Skill should also be usable by Claude and other file-system-capable coding agents.
 
 ## Name
 
@@ -197,7 +197,8 @@ The milestone is complete when at least one maintainer says they would use or pu
 
 ## Resolved Direction
 
-- First product shape: Codex/Multica Skill first, not a standalone SaaS.
+- First product shape: agent-portable Skill first, not a standalone SaaS.
+- Target users of the Skill itself: Codex, Claude, and similar coding agents that can read files, run commands, and write local outputs.
 - First output path: default to `site/`.
 - GitHub credentials: optional for public repos; degrade gracefully under rate limits.
 - Page generator: static HTML/CSS first; add a framework only after the static version is validated.

@@ -4,7 +4,7 @@ This document defines the product documentation, implementation path, technical 
 
 ## CTO Decision
 
-RepoStage should be developed as a Codex/Multica Skill first, with a small supporting open-source repository around it.
+RepoStage should be developed as an agent-portable Skill first, with a small supporting open-source repository around it.
 
 The first product boundary is:
 
@@ -12,7 +12,9 @@ The first product boundary is:
 Public GitHub repo URL in -> one-page static project website out
 ```
 
-RepoStage is not an independent SaaS, visual website builder, hosted deployment platform, or commercial launch suite in the MVP. The deliverable should be a reusable Skill workflow plus local templates, scripts, fixtures, and validation checks that allow an agent to repeatedly perform the same job with high quality.
+RepoStage is not an independent SaaS, visual website builder, hosted deployment platform, or commercial launch suite in the MVP. The deliverable should be a reusable Skill workflow plus local templates, scripts, fixtures, and validation checks that allow Codex, Claude, and other file-system-capable coding agents to repeatedly perform the same job with high quality.
+
+The Skill must avoid platform lock-in. Codex/Multica can be the first implementation and test environment, but the instructions, assets, and scripts should be understandable by any agent that can read files, run local commands, fetch a public GitHub repo, and write output files.
 
 ## Required Development Documents
 
@@ -26,9 +28,10 @@ The repo should keep the following documents as source of truth:
 | `docs/skill-spec.md` | Exact Skill behavior: triggers, inputs, workflow, outputs, failure modes, and acceptance criteria. | Engineering |
 | `docs/repo-profile-schema.md` | Versioned schema for extracted repository facts and source grounding. | Engineering |
 | `docs/quality-checklist.md` | Manual and automated QA checklist for generated websites. | Engineering/design |
+| `docs/agent-compatibility.md` | Portability requirements for Codex, Claude, and other agent runtimes. | Engineering |
 | `examples/` | Golden input repos, generated output snapshots, and review notes. | Engineering |
 
-Only the first three documents need to exist immediately. The next implementation step should add `skill-spec.md`, `repo-profile-schema.md`, and `quality-checklist.md` before writing significant generator code.
+Only the first three documents need to exist immediately. The next implementation step should add `skill-spec.md`, `repo-profile-schema.md`, `quality-checklist.md`, and `agent-compatibility.md` before writing significant generator code.
 
 ## Implementation Strategy
 
@@ -68,6 +71,7 @@ Build from the workflow contract inward:
    - Add `SKILL.md` with trigger rules and the full workflow.
    - Include templates and scripts as skill assets.
    - Document local usage and expected outputs.
+   - Keep the Skill runtime-neutral: no hidden Multica-only assumptions in the core instructions.
 
 ## Proposed Repository Structure
 
@@ -81,6 +85,7 @@ repo-stage/
     skill-spec.md
     repo-profile-schema.md
     quality-checklist.md
+    agent-compatibility.md
   skills/
     repo-stage/
       SKILL.md
@@ -112,7 +117,7 @@ Deliverables:
 Review question:
 
 ```text
-Do we agree this is a Skill-first product whose MVP is repo URL to one-page static website?
+Do we agree this is an agent-portable Skill-first product whose MVP is repo URL to one-page static website?
 ```
 
 ### M1: Manual Golden Path
@@ -159,7 +164,7 @@ Exit criteria:
 
 ### M3: Skill Packaging
 
-Goal: make the workflow reusable by Codex/Multica agents.
+Goal: make the workflow reusable by Codex, Claude, and other file-system-capable coding agents.
 
 Deliverables:
 
@@ -167,12 +172,14 @@ Deliverables:
 - Skill assets: templates, scripts, references, checklist.
 - Example invocation and expected output.
 - Failure-handling guidance.
+- Runtime compatibility notes for Codex, Claude, and generic shell/file agents.
 
 Exit criteria:
 
 - An agent can decide when to use the Skill from a user request.
 - An agent can run the workflow without needing hidden context.
 - The generated files match the documented output contract.
+- The workflow can be followed outside Multica when the agent has equivalent file, shell, and network access.
 
 ### M4: External Validation
 
@@ -272,6 +279,7 @@ Manual review checks:
 Before moving from planning to implementation, review these decisions:
 
 - Skill-first product boundary is accepted.
+- Skill portability across Codex, Claude, and similar agents is accepted.
 - MVP stays limited to one-page static website generation.
 - Output directory contract is accepted.
 - Source-grounding rule is accepted: unsourced claims cannot appear as facts.
@@ -284,8 +292,9 @@ Before moving from planning to implementation, review these decisions:
 1. Add `docs/skill-spec.md`.
 2. Add `docs/repo-profile-schema.md`.
 3. Add `docs/quality-checklist.md`.
-4. Create 3 example fixture folders.
-5. Build the first manual generated site from a real repo.
-6. Review the manual output before implementing automation.
+4. Add `docs/agent-compatibility.md`.
+5. Create 3 example fixture folders.
+6. Build the first manual generated site from a real repo.
+7. Review the manual output before implementing automation.
 
 This sequence keeps the project grounded in a narrow, reviewable Skill contract before code volume increases.
