@@ -3,48 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>bat | RepoStage Preview</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>bat | RepoStage</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <nav><span>bat</span><a href="https://github.com/sharkdp/bat">GitHub</a></nav>
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">sharkdp / bat</p>
-        <h1>A cat(1) clone with wings.</h1>
-        <p class="lead">A static RepoStage preview generated from repository README and metadata. Claims are intentionally conservative and source-grounded.</p>
-        <div class="actions">
-          <a class="primary" href="#quickstart">Try the quickstart</a>
-          <a class="secondary" href="https://github.com/sharkdp/bat">View repository</a>
-        </div>
-      </div>
-      <aside>
-        <strong>Repository facts</strong>
-        <dl>
-          <dt>License</dt><dd>Apache-2.0 OR MIT</dd>
-          <dt>Ecosystem</dt><dd>Rust</dd>
-          <dt>Sources</dt><dd>2 repository sources</dd>
-        </dl>
-      </aside>
-    </div>
-  </header>
   <main>
-    <section>
-      <h2>Why developers look at it</h2>
-      <div class="cards"><article>Developers need a simpler tool with less operational overhead.</article></div>
+    <section class="hero">
+      <p class="eyebrow">Generated from repository sources</p>
+      <h1>bat</h1>
+      <p class="lead">bat is a cat(1) clone with syntax highlighting and Git integration.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/sharkdp/bat">View on GitHub</a>
+        <a class="button" href="#quickstart">Copy quickstart</a>
+      </div>
     </section>
-    <section>
-      <h2>Repository-grounded features</h2>
-      <div class="cards"><article>be for widely used systems</article><article>be from somewhat official sources</article><article>ansi looks decent on any terminal. It uses 3-bit colors: black, red, green,</article><article>base16 is designed for base16 terminal themes. It uses</article><article>base16-256 is designed for tinted-shell.</article><article>Enjoy maximum compatibility. Some terminal utilities do not support more than 3-bit colors.</article></div>
+
+    <section id="quickstart" class="band">
+      <div>
+        <p class="eyebrow">Quickstart</p>
+        <h2>Start from commands found in the repo</h2>
+      </div>
+      <pre><code>cargo install bat
+bat README.md</code></pre>
     </section>
-    <section id="quickstart">
-      <h2>Quickstart</h2>
-      <pre><code>cargo install bat</code></pre>
+
+    <section class="grid-section">
+      <div>
+        <p class="eyebrow">What it offers</p>
+        <h2>Source-grounded project highlights</h2>
+      </div>
+      <div class="cards"><article><p>Syntax highlighting for a large number of programming and markup languages.</p></article><article><p>Git integration shows modifications with respect to the index.</p></article><article><p>Can show and highlight non-printable characters.</p></article><article><p>Uses automatic paging for output that is too large for one screen.</p></article><article><p>Works as a drop-in replacement for cat in non-interactive terminal workflows.</p></article></div>
     </section>
-    <section>
-      <h2>Examples and use cases</h2>
-      <ul><li>Be aware that in some cases, -h may not be a shorthand of --help (for example with ls). In cases where you need to use -h</li><li>You can use --style=numbers,changes, for example, to show only Git changes</li><li>&gt; For example, if your config contains --style=full,-snip, you can run bat with</li></ul>
+
+    <section class="grid-section muted">
+      <div>
+        <p class="eyebrow">Use cases</p>
+        <h2>Where this project fits</h2>
+      </div>
+      <div class="cards"><article><p>Display a single file on the terminal.</p></article><article><p>Display multiple files at once.</p></article><article><p>Read from stdin and determine syntax automatically.</p></article></div>
+    </section>
+
+    <section class="facts">
+      <div><span>Language</span><strong>Not detected</strong></div><div><span>License</span><strong>LICENSE-APACHE</strong></div><div><span>Repository</span><strong>sharkdp/bat</strong></div>
     </section>
   </main>
 </body>

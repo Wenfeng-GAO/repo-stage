@@ -1,0 +1,4 @@
+# Public repositories used for local ingestion smoke tests.
+https://github.com/Wenfeng-GAO/repo-stage
+https://github.com/pallets/flask
+https://github.com/psf/requests

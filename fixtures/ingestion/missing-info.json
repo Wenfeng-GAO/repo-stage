@@ -1,0 +1,22 @@
+{
+  "repo": {
+    "url": "https://github.com/example/sparse",
+    "description": "Sparse is a small command-line note utility.",
+    "defaultBranch": "main",
+    "primaryLanguage": "Go",
+    "topics": ["cli", "notes"]
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "notes": "Brief README with overview only."
+    }
+  ],
+  "product": {
+    "features": ["Stores notes from a terminal"],
+    "audiences": ["Developers who use command-line tools"]
+  },
+  "assets": []
+}

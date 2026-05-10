@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/chalk/chalk",
+    "owner": "chalk",
+    "name": "chalk",
+    "description": "Terminal string styling done right",
+    "defaultBranch": "main",
+    "primaryLanguage": "JavaScript",
+    "license": "MIT",
+    "topics": ["ansi", "cli", "color", "console", "terminal", "text"]
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "readme.md",
+      "url": "https://github.com/chalk/chalk/blob/main/readme.md",
+      "notes": "README headline, highlights, install command, usage examples, API behavior, and color support details."
+    },
+    {
+      "id": "src-package",
+      "type": "file",
+      "path": "package.json",
+      "url": "https://github.com/chalk/chalk/blob/main/package.json",
+      "notes": "Package metadata, license, module type, exported entrypoint, TypeScript types, Node engine, and keywords."
+    },
+    {
+      "id": "src-logo",
+      "type": "file",
+      "path": "media/logo.svg",
+      "url": "https://github.com/chalk/chalk/blob/main/media/logo.svg",
+      "notes": "Project logo used by the generated site."
+    },
+    {
+      "id": "src-screenshot",
+      "type": "file",
+      "path": "media/screenshot.png",
+      "url": "https://github.com/chalk/chalk/blob/main/media/screenshot.png",
+      "notes": "Project screenshot used by the generated site."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-oneliner",
+      "kind": "positioning",
+      "value": "Terminal string styling done right",
+      "sourceIds": ["src-readme", "src-package"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-install",
+      "kind": "quickstart",
+      "value": "npm install chalk",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-usage",
+      "kind": "example",
+      "value": "import chalk from 'chalk'; console.log(chalk.blue('Hello world!'));",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-features",
+      "kind": "feature-list",
+      "value": "Expressive API, high performance, no dependencies, nested styles, 256/Truecolor support, automatic color detection, no String.prototype extension, focused API, and active maintenance.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-esm",
+      "kind": "runtime",
+      "value": "Chalk 5 is ESM.",
+      "sourceIds": ["src-readme", "src-package"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-node",
+      "kind": "runtime",
+      "value": "package.json declares Node engine support: ^12.17.0 || ^14.13 || >=16.0.0.",
+      "sourceIds": ["src-package"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-colors",
+      "kind": "capability",
+      "value": "Chalk supports basic colors, 256 colors, and Truecolor, and exposes support levels 0 through 3.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-dependents",
+      "kind": "ecosystem",
+      "value": "The README states Chalk was used by approximately 115,000 packages as of July 4, 2024.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "MIT",
+      "sourceIds": ["src-package"],
+      "confidence": "high"
+    }
+  ],
+  "product": {
+    "name": "Chalk",
+    "oneLiner": "Terminal string styling done right.",
+    "audiences": ["Node.js CLI authors", "Tooling maintainers", "Developers formatting terminal output"],
+    "problems": [
+      "Terminal output often needs emphasis, status, and hierarchy without mutating String.prototype.",
+      "Reusable packages need color behavior that adapts to the user's terminal capabilities."
+    ],
+    "features": [
+      "Chainable and composable styling API",
+      "Nested styles that return to the outer style cleanly",
+      "Automatic color support detection with manual override",
+      "256-color and Truecolor support",
+      "No runtime dependencies"
+    ],
+    "useCases": [
+      "Style log output in Node.js CLIs.",
+      "Create reusable theme helpers such as error and warning styles.",
+      "Adapt output to terminals with different color support levels."
+    ],
+    "quickstart": [
+      "npm install chalk",
+      "import chalk from 'chalk';",
+      "console.log(chalk.blue('Hello world!'));"
+    ],
+    "examples": [
+      "chalk.blue.bgRed.bold('Hello world!')",
+      "chalk.hex('#FFA500')('Warning!')",
+      "new Chalk({level: 0})"
+    ],
+    "contribution": {
+      "hasContributionGuide": true,
+      "notes": ["The repository includes contributing.md and code-of-conduct.md."]
+    }
+  },
+  "assets": [
+    {
+      "path": "site/assets/logo.svg",
+      "kind": "logo",
+      "sourceIds": ["src-logo"]
+    },
+    {
+      "path": "site/assets/screenshot.png",
+      "kind": "screenshot",
+      "sourceIds": ["src-screenshot"]
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "missing-demo",
+      "message": "README includes a screenshot but no hosted interactive demo.",
+      "severity": "low"
+    },
+    {
+      "kind": "unclear-audience",
+      "message": "The likely audience is inferred from package purpose and keywords rather than stated as an explicit maintainer-authored audience section.",
+      "severity": "low"
+    }
+  ]
+}

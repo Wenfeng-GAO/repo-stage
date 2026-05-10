@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/example/tiny-cli-tool",
+    "owner": "example",
+    "name": "tiny-cli-tool",
+    "description": "Format plain text task lists for terminal workflows.",
+    "defaultBranch": "",
+    "primaryLanguage": "JavaScript",
+    "license": "MIT",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-repo-url",
+      "type": "metadata",
+      "path": "",
+      "url": "https://github.com/example/tiny-cli-tool",
+      "notes": "Repository URL provided as input."
+    },
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "",
+      "notes": "Primary README source."
+    },
+    {
+      "id": "src-package-json",
+      "type": "file",
+      "path": "package.json",
+      "url": "",
+      "notes": "Package metadata."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-project-name",
+      "kind": "identity",
+      "value": "Tiny CLI Tool",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-repo-url",
+      "kind": "identity",
+      "value": "https://github.com/example/tiny-cli-tool",
+      "sourceIds": [
+        "src-repo-url"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-repo-owner",
+      "kind": "identity",
+      "value": "example",
+      "sourceIds": [
+        "src-repo-url"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-repo-name",
+      "kind": "identity",
+      "value": "tiny-cli-tool",
+      "sourceIds": [
+        "src-repo-url"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-one-liner",
+      "kind": "positioning",
+      "value": "Tiny CLI Tool formats plain text task lists for terminal workflows.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-1",
+      "kind": "feature",
+      "value": "Formats Markdown task lists.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-feature-2",
+      "kind": "feature",
+      "value": "Removes repeated blank lines.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-feature-3",
+      "kind": "feature",
+      "value": "Keeps completed and pending task markers unchanged.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-quickstart-1",
+      "kind": "quickstart",
+      "value": "npm install -g tiny-cli-tool",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-quickstart-2",
+      "kind": "quickstart",
+      "value": "tiny-cli-tool format tasks.md",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "src-package-json"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "product": {
+    "name": "Tiny CLI Tool",
+    "oneLiner": "Tiny CLI Tool formats plain text task lists for terminal workflows.",
+    "audiences": [
+      "Developers"
+    ],
+    "problems": [],
+    "features": [
+      "Formats Markdown task lists.",
+      "Removes repeated blank lines.",
+      "Keeps completed and pending task markers unchanged."
+    ],
+    "useCases": [
+      "Tiny CLI Tool formats plain text task lists for terminal workflows.",
+      "Formats Markdown task lists.",
+      "Removes repeated blank lines."
+    ],
+    "quickstart": [
+      "npm install -g tiny-cli-tool",
+      "tiny-cli-tool format tasks.md"
+    ],
+    "examples": [],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [],
+  "gaps": [
+    {
+      "kind": "missing-screenshot",
+      "message": "No screenshot or demo asset was detected by the lightweight helper.",
+      "severity": "low"
+    }
+  ]
+}

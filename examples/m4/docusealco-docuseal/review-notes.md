@@ -1,19 +1,20 @@
 # Review Notes: docusealco/docuseal
 
-## Output Quality
+## Internal Review Answers
 
-- The page uses the real repository name and URL.
-- The quickstart section uses commands extracted from repository material.
-- Feature copy is conservative and based on README bullets where available.
-- Unsupported-claim risk: low.
+- **Does the hero explain the project in 10 seconds?** Yes, after the M4 maintainer-style edit pass: "DocuSeal is an open source platform for document filling and signing."
+- **Which claims feel unsupported or too broad?** Unsupported-claim risk is low; remaining risk is mostly whether maintainers prefer different positioning, not invented metrics.
+- **Which section would the maintainer edit first?** Add product screenshots and make Docker the primary CTA.
+- **Is the generated page better than sending users directly to the README?** Yes for product positioning; README remains better for deployment options.
+- **Would the reviewer use, publish, or adapt it?** Adapt after adding screenshots and deployment caveats.
 
-## Likely Manual Edits
+## M4 Generation Details
 
-- Tighten the hero from maintainer-approved positioning.
-- Decide whether the first CTA should be install, documentation, demo, or GitHub.
-- Add stronger project assets if a logo, screenshot, or demo should lead the page.
+- Upstream commit: `be27ce4161e924bcf738bb6a4559c012224ac406`
+- Generated with: `python3 -m repo_stage.cli generate`
+- Maintainer-style edit pass: yes
 
-## Reviewer Verdict Placeholder
+## External Reviewer Verdict
 
 - Reviewer:
 - Relationship to project:

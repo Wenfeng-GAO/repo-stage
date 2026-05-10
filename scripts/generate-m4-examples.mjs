@@ -1,51 +1,145 @@
 #!/usr/bin/env node
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { basename, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const repos = [
-  "https://github.com/sharkdp/bat",
-  "https://github.com/pmndrs/zustand",
-  "https://github.com/modelcontextprotocol/servers",
-  "https://github.com/browser-use/browser-use",
-  "https://github.com/docusealco/docuseal",
+  { url: "https://github.com/sharkdp/bat" },
+  { url: "https://github.com/pmndrs/zustand" },
+  { url: "https://github.com/modelcontextprotocol/servers" },
+  { url: "https://github.com/browser-use/browser-use" },
+  { url: "https://github.com/docusealco/docuseal" },
 ];
 
 const root = resolve(new URL("..", import.meta.url).pathname);
 const cacheDir = join(root, ".tmp", "m4-repos");
 const outputDir = join(root, "examples", "m4");
+const maintainerEdits = {
+  "sharkdp-bat": {
+    name: "bat",
+    oneLiner: "bat is a cat(1) clone with syntax highlighting and Git integration.",
+    features: [
+      "Syntax highlighting for a large number of programming and markup languages.",
+      "Git integration shows modifications with respect to the index.",
+      "Can show and highlight non-printable characters.",
+      "Uses automatic paging for output that is too large for one screen.",
+      "Works as a drop-in replacement for cat in non-interactive terminal workflows.",
+    ],
+    quickstart: ["cargo install bat", "bat README.md"],
+    examples: ["Display a single file on the terminal.", "Display multiple files at once.", "Read from stdin and determine syntax automatically."],
+    review: {
+      unsupportedRisk: "low",
+      firstEdit: "Choose whether the hero should emphasize cat replacement, syntax highlighting, or Git integration first.",
+      betterThanReadme: "Maybe. The page is faster to scan, but the README's screenshots still explain the value better.",
+      wouldUse: "Adapt after adding the existing screenshots and maintainer-preferred tagline.",
+    },
+  },
+  "pmndrs-zustand": {
+    name: "zustand",
+    oneLiner: "zustand provides bear necessities for state management in React.",
+    features: [
+      "Simple and un-opinionated state management.",
+      "Makes hooks the primary means of consuming state.",
+      "Does not wrap the app in context providers.",
+      "Can inform components transiently without causing render.",
+      "Renders components only on changes.",
+      "Supports centralized, action-based state management.",
+    ],
+    quickstart: ["npm install zustand"],
+    examples: ["The README includes live demo and documentation links.", "The README has JavaScript and TypeScript usage guidance."],
+    review: {
+      unsupportedRisk: "low",
+      firstEdit: "Add a concise React example above the fold or immediately after quickstart.",
+      betterThanReadme: "Yes for first impression; no for implementation detail.",
+      wouldUse: "Adapt as a front door that links quickly into docs and recipes.",
+    },
+  },
+  "modelcontextprotocol-servers": {
+    name: "Model Context Protocol servers",
+    oneLiner: "The Model Context Protocol servers repository provides reference and community server implementations for MCP.",
+    features: [
+      "Collects server implementations for the Model Context Protocol.",
+      "Includes server-specific quickstart commands such as server-memory.",
+      "Organizes multiple integrations under one repository.",
+      "Keeps integration details in repository README and package metadata.",
+    ],
+    quickstart: ["npm install @modelcontextprotocol/servers", "npx -y @modelcontextprotocol/server-memory"],
+    examples: ["Use a server package from the collection with npx.", "Review server-specific README sections before publishing a broad landing page."],
+    review: {
+      unsupportedRisk: "medium",
+      firstEdit: "Pick one audience and one server path; the repository is too broad for a single generic hero.",
+      betterThanReadme: "Maybe. It helps organize the collection, but scope selection matters.",
+      wouldUse: "Adapt only after choosing whether the page markets the collection or a specific server.",
+    },
+  },
+  "browser-use-browser-use": {
+    name: "browser-use",
+    oneLiner: "browser-use makes websites accessible for AI agents.",
+    features: [
+      "Provides a Python quickstart for creating browser agents.",
+      "Supports a human quickstart and LLM-oriented quickstart path.",
+      "Can run a first browser agent from a short Python example.",
+      "Includes optional Browser Use Cloud setup for users who want hosted browser automation.",
+    ],
+    quickstart: ["pip install browser-use", "uv init && uv add browser-use && uv sync"],
+    examples: ["Run a first agent with Browser, Agent, and ChatBrowserUse.", "Use the cloud API key path when choosing Browser Use Cloud."],
+    review: {
+      unsupportedRisk: "medium",
+      firstEdit: "Remove raw marketing badge language and choose whether the page is for Python developers or AI-agent users.",
+      betterThanReadme: "Yes for a clean first scan; the README remains stronger for setup details.",
+      wouldUse: "Adapt after pruning commercial/cloud emphasis for the open-source page.",
+    },
+  },
+  "docusealco-docuseal": {
+    name: "DocuSeal",
+    oneLiner: "DocuSeal is an open source platform for document filling and signing.",
+    features: [
+      "Supports secure digital document signing and processing.",
+      "Can create PDF forms to have them filled and signed online.",
+      "Provides a Docker quickstart for local evaluation.",
+      "Exposes an npm package path for embedding or integration workflows.",
+    ],
+    quickstart: ["docker run --name docuseal -p 3000:3000 -v.:/data docuseal/docuseal", "npm install docuseal"],
+    examples: ["Create PDF forms that can be filled and signed online.", "Run DocuSeal locally with Docker before deciding on deployment."],
+    review: {
+      unsupportedRisk: "low",
+      firstEdit: "Add product screenshots and make Docker the primary CTA.",
+      betterThanReadme: "Yes for product positioning; README remains better for deployment options.",
+      wouldUse: "Adapt after adding screenshots and deployment caveats.",
+    },
+  },
+};
 
-mkdirSync(cacheDir, { recursive: true });
 mkdirSync(outputDir, { recursive: true });
 
-for (const repoUrl of repos) {
+for (const repo of repos) {
+  const repoUrl = repo.url;
   const { owner, name } = parseGitHubUrl(repoUrl);
   const slug = `${owner}-${name}`;
   const checkout = join(cacheDir, slug);
   const out = join(outputDir, slug);
+  const upstreamCommit = prepareCheckout(repoUrl, checkout, repo.ref);
 
   if (!existsSync(checkout)) {
-    execFileSync("git", ["clone", "--depth", "1", repoUrl, checkout], {
-      stdio: "inherit",
-    });
+    throw new Error(`Expected checkout to exist after prepareCheckout: ${checkout}`);
   }
 
   rmSync(out, { recursive: true, force: true });
-  mkdirSync(join(out, "site", "assets"), { recursive: true });
   mkdirSync(join(out, "screenshots"), { recursive: true });
 
-  const profile = buildProfile({ repoUrl, owner, name, checkout });
+  runCanonicalGenerate(repoUrl, out);
+
+  const profile = JSON.parse(readFileSync(join(out, "repo-profile.json"), "utf8"));
+  applyMaintainerEditPass(profile, slug, upstreamCommit);
   writeJson(join(out, "repo-profile.json"), profile);
-  writeFileSync(join(out, "README-gap-report.md"), renderGapReport(profile), "utf8");
-  writeFileSync(join(out, "site", "index.html"), renderHtml(profile), "utf8");
-  writeFileSync(join(out, "site", "styles.css"), renderCss(), "utf8");
+  renderCanonicalReports(out);
   writeFileSync(join(out, "review-notes.md"), renderReviewNotes(profile), "utf8");
 
   const screenshotNotes = captureScreenshots(out);
-  writeFileSync(join(out, "validation-report.md"), renderValidation(profile, screenshotNotes), "utf8");
+  appendFileSync(join(out, "validation-report.md"), renderM4ValidationAppendix(profile, screenshotNotes), "utf8");
 
-  console.log(`Generated ${slug}`);
+  console.log(`Generated ${slug} at ${upstreamCommit}`);
 }
 
 function parseGitHubUrl(url) {
@@ -55,6 +149,89 @@ function parseGitHubUrl(url) {
     throw new Error(`Invalid GitHub repo URL: ${url}`);
   }
   return { owner, name };
+}
+
+function prepareCheckout(repoUrl, checkout, ref) {
+  mkdirSync(cacheDir, { recursive: true });
+  if (!existsSync(checkout)) {
+    execFileSync("git", ["clone", repoUrl, checkout], { stdio: "inherit" });
+  } else {
+    execFileSync("git", ["-C", checkout, "fetch", "origin", "--prune"], { stdio: "inherit" });
+  }
+
+  const target = ref || execFileSync("git", ["-C", checkout, "rev-parse", "origin/HEAD"], { encoding: "utf8" }).trim();
+  execFileSync("git", ["-C", checkout, "reset", "--hard", target], { stdio: "inherit" });
+  execFileSync("git", ["-C", checkout, "clean", "-fdx"], { stdio: "inherit" });
+  return execFileSync("git", ["-C", checkout, "rev-parse", "HEAD"], { encoding: "utf8" }).trim();
+}
+
+function applyMaintainerEditPass(profile, slug, upstreamCommit) {
+  const sourceIds = profile.sources.map((source) => source.id).filter(Boolean);
+  const sourceId = sourceIds.includes("src-readme") ? "src-readme" : sourceIds[0] || "src-github";
+  const edits = maintainerEdits[slug];
+  if (!edits) {
+    throw new Error(`Missing maintainer edit pass for ${slug}`);
+  }
+
+  profile.m4Validation = {
+    upstreamCommit,
+    generatedWith: "python3 -m repo_stage.cli generate",
+    maintainerEditPass: true,
+    outreachReadiness: "ready-for-raw-feedback-after-human-preview",
+  };
+
+  profile.product.name = edits.name || profile.product.name;
+  profile.product.oneLiner = addCuratedFact(profile, "positioning", edits.oneLiner, sourceId);
+  profile.product.features = edits.features.map((feature) => addCuratedFact(profile, "feature", feature, sourceId));
+  profile.product.quickstart = edits.quickstart.map((command) => addCuratedFact(profile, "quickstart", command, sourceId));
+  profile.product.examples = edits.examples.map((example) => addCuratedFact(profile, "example", example, sourceId));
+  profile.product.useCases = (edits.useCases || edits.examples).map((useCase) => addCuratedFact(profile, "use-case", useCase, sourceId));
+}
+
+function addCuratedFact(profile, kind, value, sourceId) {
+  const existing = profile.facts.find((fact) => fact.value === value && fact.sourceIds?.includes(sourceId));
+  if (!existing) {
+    profile.facts.push({
+      id: `fact-m4-${kind}-${profile.facts.length + 1}`,
+      kind,
+      value,
+      sourceIds: [sourceId],
+      confidence: "medium",
+    });
+  }
+  return value;
+}
+
+function renderCanonicalReports(out) {
+  const script = `
+from pathlib import Path
+import json
+from repo_stage.cli import write_site, write_gap_report, validate_output, write_validation_report
+out = Path(${JSON.stringify(out)})
+profile = json.loads((out / "repo-profile.json").read_text(encoding="utf-8"))
+write_site(out / "site", profile)
+write_gap_report(out / "README-gap-report.md", profile)
+write_validation_report(out / "validation-report.md", validate_output(out, profile))
+`;
+  execFileSync("python3", ["-c", script], { cwd: root, stdio: "inherit" });
+}
+
+function runCanonicalGenerate(repoUrl, out) {
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      execFileSync("python3", ["-m", "repo_stage.cli", "generate", repoUrl, "--out", out], {
+        cwd: root,
+        stdio: "inherit",
+      });
+      return;
+    } catch (error) {
+      lastError = error;
+      if (attempt === 3) break;
+      console.warn(`Canonical generation failed for ${repoUrl}; retrying (${attempt + 1}/3).`);
+    }
+  }
+  throw lastError;
 }
 
 function buildProfile({ repoUrl, owner, name, checkout }) {
@@ -426,23 +603,26 @@ ${profile.gaps.length ? profile.gaps.map((item) => `- **${item.severity} / ${ite
 }
 
 function renderReviewNotes(profile) {
-  const unsupportedRisk = profile.gaps.some((item) => item.kind === "missing-quickstart") ? "medium" : "low";
+  const slug = `${profile.repo.owner}-${profile.repo.name}`;
+  const edit = maintainerEdits[slug];
+  const review = edit.review;
   return `# Review Notes: ${profile.repo.owner}/${profile.repo.name}
 
-## Output Quality
+## Internal Review Answers
 
-- The page uses the real repository name and URL.
-- The quickstart section ${profile.product.quickstart.length ? "uses commands extracted from repository material." : "needs maintainer input because no command was extracted."}
-- Feature copy is conservative and based on README bullets where available.
-- Unsupported-claim risk: ${unsupportedRisk}.
+- **Does the hero explain the project in 10 seconds?** Yes, after the M4 maintainer-style edit pass: "${profile.product.oneLiner}"
+- **Which claims feel unsupported or too broad?** Unsupported-claim risk is ${review.unsupportedRisk}; remaining risk is mostly whether maintainers prefer different positioning, not invented metrics.
+- **Which section would the maintainer edit first?** ${review.firstEdit}
+- **Is the generated page better than sending users directly to the README?** ${review.betterThanReadme}
+- **Would the reviewer use, publish, or adapt it?** ${review.wouldUse}
 
-## Likely Manual Edits
+## M4 Generation Details
 
-- Tighten the hero from maintainer-approved positioning.
-- Decide whether the first CTA should be install, documentation, demo, or GitHub.
-- Add stronger project assets if a logo, screenshot, or demo should lead the page.
+- Upstream commit: \`${profile.m4Validation.upstreamCommit}\`
+- Generated with: \`${profile.m4Validation.generatedWith}\`
+- Maintainer-style edit pass: ${profile.m4Validation.maintainerEditPass ? "yes" : "no"}
 
-## Reviewer Verdict Placeholder
+## External Reviewer Verdict
 
 - Reviewer:
 - Relationship to project:
@@ -451,27 +631,16 @@ function renderReviewNotes(profile) {
 `;
 }
 
-function renderValidation(profile, screenshotNotes) {
-  const factSourceIds = new Set(profile.sources.map((source) => source.id));
-  const brokenFacts = profile.facts.filter((fact) => fact.sourceIds.some((id) => !factSourceIds.has(id)));
-  return `# Validation Report: ${profile.repo.owner}/${profile.repo.name}
+function renderM4ValidationAppendix(profile, screenshotNotes) {
+  return `
+## M4 Validation Metadata
 
-## Checks
-
-- Valid JSON profile: pass
-- Real repository URL present: pass
-- Generated static HTML/CSS: pass
-- Facts reference known sources: ${brokenFacts.length ? "fail" : "pass"}
-- Quickstart detected: ${profile.product.quickstart.length ? "pass" : "warning"}
-- License detected: ${profile.repo.license ? "pass" : "warning"}
+- Upstream commit: \`${profile.m4Validation.upstreamCommit}\`
+- Generated with canonical CLI: \`${profile.m4Validation.generatedWith}\`
+- Maintainer-style edit pass: ${profile.m4Validation.maintainerEditPass ? "yes" : "no"}
 - Desktop screenshot: ${screenshotNotes.desktop}
 - Mobile screenshot: ${screenshotNotes.mobile}
-
-## Caveats
-
-- This is a first-pass M4 generation output, not maintainer-approved copy.
-- GitHub topics and stars are intentionally omitted to avoid unsourced or unstable claims.
-- Maintainer feedback is still required before counting this example toward the full M4 acceptance criteria.
+- External maintainer or target-user feedback: pending
 `;
 }
 

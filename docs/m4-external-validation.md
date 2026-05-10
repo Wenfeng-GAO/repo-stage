@@ -6,14 +6,18 @@ maintainers would use, publish, or adapt it.
 Current readiness: partially complete.
 
 This branch now includes a local M4 example generator and five generated output
-sets under `examples/m4/`. External maintainer feedback is still pending, so M4
-is not fully complete yet.
+sets under `examples/m4/`. The examples are generated through the current
+canonical local RepoStage CLI, record the upstream repository commit used, and
+include a short maintainer-style edit pass. External maintainer feedback is
+still pending, so M4 is not fully complete yet.
 
 The generated output pipeline produces the M4 file set:
 
 - `repo-profile.json`
 - `site/index.html`
 - `README-gap-report.md`
+- `validation-report.md`
+- `review-notes.md`
 - desktop and mobile screenshots
 
 M4 should not be considered complete until at least two maintainers or
@@ -118,11 +122,13 @@ Choose the next scope from evidence:
 
 ## Current Recommendation
 
-Start external review after a short maintainer-style editing pass on the five
-generated examples:
+Start external review with the five generated examples:
 
-1. Confirm the hero, CTA, and quickstart command for each generated page.
-2. Replace generic visual treatment with available project assets where possible.
-3. Send previews to maintainers or target users for feedback.
-4. Use the repeated edit requests to decide whether the next milestone should
+1. Preview each page once to catch obvious rendering problems.
+2. Send previews to maintainers or target users for feedback.
+3. Use the repeated edit requests to decide whether the next milestone should
    improve page quality, add onboarding, or add social preview images.
+
+The current evidence points first toward page quality and maintainer workflow:
+project-specific assets, CTA priority, and multi-package scope selection remain
+the most repeated internal edit requests.

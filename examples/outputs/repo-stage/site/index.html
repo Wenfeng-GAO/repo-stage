@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RepoStage - Project Website</title>
+    <meta name="description" content="README in, project website out.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a class="brand" href="https://github.com/Wenfeng-GAO/repo-stage">RepoStage</a>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#quickstart">Quickstart</a>
+          <a href="https://github.com/Wenfeng-GAO/repo-stage">GitHub</a>
+        </div>
+      </nav>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Wenfeng-GAO / repo-stage</p>
+          <h1>RepoStage</h1>
+          <p class="hero-copy">README in, project website out.</p>
+          <div class="actions">
+            <a class="button" href="#quickstart">Start with the quickstart</a>
+            <a class="button secondary" href="https://github.com/Wenfeng-GAO/repo-stage">View on GitHub</a>
+          </div>
+        </div>
+        <aside class="repo-panel asset-panel"><img src="./assets/logo-repo-stage-mark.svg" alt="logo for repo-stage"></aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section problem-solution">
+        <div>
+          <p class="eyebrow">Problem</p>
+          <h2>Open-source maintainers may have useful repositories but weak external presentation.</h2>
+        </div>
+        <div>
+          <p class="eyebrow">Solution</p>
+          <p>RepoStage turns an existing open-source repo into a launch-ready project page.</p>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+    <div class="section-heading"><p class="eyebrow">Features</p></div>
+    <div class="card-grid">
+      <article class="info-card" data-sources="src-product-design"><h3>The workflow converts README, docs, package metadata, examples, license, and assets into repo-profile.json.</h3></article><article class="info-card" data-sources="src-readme,src-product-design"><h3>The required output includes site/index.html, site/styles.css, repo-profile.json, and README-gap-report.md.</h3></article><article class="info-card" data-sources="src-product-design"><h3>Generated pages include hero, problem and solution, features, quickstart, examples, trust, and contribution sections when sourced.</h3></article>
+    </div>
+  </section>
+      <section class="section" id="quickstart">
+    <div class="section-heading">
+      <p class="eyebrow">Quickstart</p>
+      <h2>Use the commands documented by the project</h2>
+    </div>
+    <div class="code-stack">
+      <div class="command" data-sources="src-product-design"><span>Step 1</span><pre><code>repo-stage generate https://github.com/owner/repo --out site</code></pre></div>
+    </div>
+  </section>
+      <section class="section" id="examples">
+    <div class="section-heading"><p class="eyebrow">Examples and use cases</p></div>
+    <div class="card-grid">
+      <article class="info-card" data-sources="src-product-design"><h3>Turn a public GitHub URL into local site files.</h3></article>
+    </div>
+  </section>
+      <section class="section trust">
+    <div class="section-heading"><p class="eyebrow">Project facts</p><h2>Grounded in repository metadata</h2></div>
+    <dl class="fact-grid">
+      <div><dt>Language</dt><dd>Markdown</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div><div><dt>Default branch</dt><dd>main</dd></div><div><dt>Topics</dt><dd>static-site, open-source, developer-tools</dd></div><div><dt>Repository</dt><dd><a href="https://github.com/Wenfeng-GAO/repo-stage">https://github.com/Wenfeng-GAO/repo-stage</a></dd></div>
+    </dl>
+  </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>Generated from sourced repository facts. Review the profile and gap report before publishing.</p>
+    </footer>
+  </body>
+</html>

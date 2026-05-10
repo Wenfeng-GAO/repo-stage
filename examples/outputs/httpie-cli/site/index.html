@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTTPie CLI - Human-friendly HTTP client</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="https://github.com/httpie/cli">
+        <img src="assets/httpie-logo.svg" alt="HTTPie">
+        <span>CLI</span>
+      </a>
+      <nav>
+        <a href="#examples">Examples</a>
+        <a href="https://httpie.io/docs">Docs</a>
+        <a href="https://github.com/httpie/cli">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Command-line HTTP client</p>
+          <h1>Human-friendly HTTP for the API era.</h1>
+          <p class="lede">HTTPie CLI helps developers test, debug, and interact with APIs and HTTP servers using simple syntax with formatted, colorized output.</p>
+          <div class="actions">
+            <a class="button primary" href="https://httpie.io/docs#installation">Install HTTPie</a>
+            <a class="button secondary" href="#examples">Try an example</a>
+          </div>
+        </div>
+        <div class="demo-frame" aria-label="HTTPie command examples">
+          <div class="window-dots"><span></span><span></span><span></span></div>
+          <pre><code>https httpie.io/hello
+
+http PUT pie.dev/put \
+  X-API-Token:123 \
+  name=John
+
+http --offline pie.dev/post hello=offline</code></pre>
+        </div>
+      </section>
+
+      <section class="split">
+        <div>
+          <p class="section-label">Why HTTPie</p>
+          <h2>Requests you can write, responses you can read.</h2>
+        </div>
+        <p>The README describes HTTPie as a command-line client for creating and sending arbitrary HTTP requests. Its syntax is designed to feel natural, while the output is formatted and colorized for terminal reading.</p>
+      </section>
+
+      <section class="feature-grid">
+        <article>
+          <h3>API-first syntax</h3>
+          <p>Send methods, headers, JSON data, forms, files, and arbitrary request data from concise terminal commands.</p>
+        </article>
+        <article>
+          <h3>Readable output</h3>
+          <p>Formatted and colorized output keeps response inspection approachable during testing and debugging.</p>
+        </article>
+        <article>
+          <h3>Real workflows</h3>
+          <p>HTTPS, proxies, authentication, custom headers, persistent sessions, and wget-like downloads are listed in the README features.</p>
+        </article>
+      </section>
+
+      <section id="examples" class="examples">
+        <div>
+          <p class="section-label">Examples from the README</p>
+          <h2>Start with hello world. Move into real API calls.</h2>
+        </div>
+        <pre><code>https httpie.io/hello</code></pre>
+        <pre><code>http PUT pie.dev/put X-API-Token:123 name=John</code></pre>
+        <pre><code>http --offline pie.dev/post hello=offline</code></pre>
+      </section>
+
+      <section class="community">
+        <div>
+          <h2>Docs, support, and contribution routes are already present.</h2>
+          <p>The README links to installation docs, full documentation, Discord, StackOverflow, GitHub Issues, newsletter updates, and a contribution guide.</p>
+        </div>
+        <div class="link-list">
+          <a href="https://httpie.io/docs">Documentation</a>
+          <a href="https://httpie.io/discord">Discord</a>
+          <a href="https://github.com/httpie/cli/blob/master/CONTRIBUTING.md">Contributing</a>
+        </div>
+      </section>
+
+      <section class="trust">
+        <div>
+          <strong>Python &gt;=3.7</strong>
+          <span>Declared in setup.cfg</span>
+        </div>
+        <div>
+          <strong>http / https / httpie</strong>
+          <span>Console scripts from package metadata</span>
+        </div>
+        <div>
+          <strong>BSD licensed</strong>
+          <span>Confirmed in setup.cfg and LICENSE</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

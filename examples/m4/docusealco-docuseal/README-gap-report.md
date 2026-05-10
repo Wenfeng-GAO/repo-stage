@@ -1,10 +1,13 @@
 # README Gap Report: docusealco/docuseal
 
-- **medium / missing-example:** No obvious example-oriented prose was extracted.
-- **low / missing-contributing:** No CONTRIBUTING.md file was detected.
+RepoStage only uses sourced repository facts. The items below explain what was missing or weak.
 
-## Manual Edit Notes
+- **low / unclear-use-cases**: Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.
 
-- Confirm the hero one-liner with a maintainer before publishing.
-- Replace conservative extracted feature copy with maintainer-preferred phrasing where needed.
-- Add screenshots or demo assets when the repository has a visual workflow but no detected image asset.
+## Output Contract
+
+- `site/index.html`
+- `site/styles.css`
+- `repo-profile.json`
+- `README-gap-report.md`
+- `validation-report.md`

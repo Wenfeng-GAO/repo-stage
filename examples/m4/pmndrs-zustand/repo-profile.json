@@ -4,94 +4,376 @@
     "url": "https://github.com/pmndrs/zustand",
     "owner": "pmndrs",
     "name": "zustand",
-    "description": "🐻 Bear necessities for state management in React",
-    "defaultBranch": "HEAD",
-    "primaryLanguage": "JavaScript/TypeScript",
-    "license": "MIT",
+    "description": "[](https://github.com/pmndrs/zustand/actions?query=workflow%3ATest) [](https://bundlejs.com/?q=zustand) [](https://www.npmjs.com/package/zustand) [](https://www.npmjs.com/package/zustand) [](https://discord.gg/poimandres",
+    "defaultBranch": "main",
+    "primaryLanguage": "",
+    "license": "LICENSE",
     "topics": []
   },
   "sources": [
     {
-      "id": "src-readme",
-      "type": "file",
-      "path": "README.md",
-      "url": "https://github.com/pmndrs/zustand/blob/HEAD/README.md",
-      "notes": "Primary repository README used for generated copy."
+      "id": "src-github",
+      "type": "github-metadata",
+      "path": "",
+      "url": "https://github.com/pmndrs/zustand",
+      "notes": "GitHub repository metadata from ingestion"
     },
     {
-      "id": "src-package-metadata",
-      "type": "file",
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE",
+      "url": "https://github.com/pmndrs/zustand/blob/main/LICENSE",
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
+      "path": "examples/demo/package.json",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-2",
+      "type": "package",
+      "path": "examples/starter/package.json",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/starter/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-3",
+      "type": "package",
       "path": "package.json",
-      "url": "https://github.com/pmndrs/zustand/blob/HEAD/package.json",
-      "notes": "Package metadata used for ecosystem and command hints."
+      "url": "https://github.com/pmndrs/zustand/blob/main/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-1",
+      "type": "docs",
+      "path": "docs/index.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/index.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-2",
+      "type": "docs",
+      "path": "docs/learn/getting-started/comparison.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/getting-started/comparison.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-3",
+      "type": "docs",
+      "path": "docs/learn/getting-started/introduction.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/getting-started/introduction.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-4",
+      "type": "docs",
+      "path": "docs/learn/guides/advanced-typescript.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/advanced-typescript.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-5",
+      "type": "docs",
+      "path": "docs/learn/guides/auto-generating-selectors.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/auto-generating-selectors.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-6",
+      "type": "docs",
+      "path": "docs/learn/guides/beginner-typescript.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/beginner-typescript.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-7",
+      "type": "docs",
+      "path": "docs/learn/guides/connect-to-state-with-url-hash.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/connect-to-state-with-url-hash.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-8",
+      "type": "docs",
+      "path": "docs/learn/guides/event-handler-in-pre-react-18.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/event-handler-in-pre-react-18.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-9",
+      "type": "docs",
+      "path": "docs/learn/guides/flux-inspired-practice.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/flux-inspired-practice.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-10",
+      "type": "docs",
+      "path": "docs/learn/guides/how-to-reset-state.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/how-to-reset-state.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-11",
+      "type": "docs",
+      "path": "docs/learn/guides/immutable-state-and-merging.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/immutable-state-and-merging.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-12",
+      "type": "docs",
+      "path": "docs/learn/guides/initialize-state-with-props.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/initialize-state-with-props.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-13",
+      "type": "docs",
+      "path": "docs/learn/guides/maps-and-sets-usage.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/maps-and-sets-usage.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-14",
+      "type": "docs",
+      "path": "docs/learn/guides/nextjs.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/nextjs.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-15",
+      "type": "docs",
+      "path": "docs/learn/guides/practice-with-no-store-actions.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/practice-with-no-store-actions.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-16",
+      "type": "docs",
+      "path": "docs/learn/guides/prevent-rerenders-with-use-shallow.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/prevent-rerenders-with-use-shallow.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-17",
+      "type": "docs",
+      "path": "docs/learn/guides/slices-pattern.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/slices-pattern.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-18",
+      "type": "docs",
+      "path": "docs/learn/guides/ssr-and-hydration.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/ssr-and-hydration.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-19",
+      "type": "docs",
+      "path": "docs/learn/guides/testing.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/testing.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-20",
+      "type": "docs",
+      "path": "docs/learn/guides/tutorial-tic-tac-toe.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/learn/guides/tutorial-tic-tac-toe.md",
+      "notes": ""
+    },
+    {
+      "id": "src-example-1",
+      "type": "example",
+      "path": "examples/demo/eslint.config.js",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/eslint.config.js",
+      "notes": ""
+    },
+    {
+      "id": "src-example-2",
+      "type": "example",
+      "path": "examples/demo/public/robots.txt",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/public/robots.txt",
+      "notes": ""
+    },
+    {
+      "id": "src-example-3",
+      "type": "example",
+      "path": "examples/demo/src/materials/layerMaterial.js",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/materials/layerMaterial.js",
+      "notes": ""
+    },
+    {
+      "id": "src-example-4",
+      "type": "example",
+      "path": "examples/demo/src/resources/javascript-code.js",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/resources/javascript-code.js",
+      "notes": ""
+    },
+    {
+      "id": "src-example-5",
+      "type": "example",
+      "path": "examples/demo/src/resources/typescript-code.js",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/resources/typescript-code.js",
+      "notes": ""
+    },
+    {
+      "id": "src-example-6",
+      "type": "example",
+      "path": "examples/demo/src/utils/copy-to-clipboard.js",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/utils/copy-to-clipboard.js",
+      "notes": ""
+    },
+    {
+      "id": "src-example-7",
+      "type": "example",
+      "path": "examples/demo/vite.config.js",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/vite.config.js",
+      "notes": ""
+    },
+    {
+      "id": "src-example-8",
+      "type": "example",
+      "path": "examples/starter/README.md",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/starter/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-example-9",
+      "type": "example",
+      "path": "examples/starter/src/vite-env.d.ts",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/starter/src/vite-env.d.ts",
+      "notes": ""
+    },
+    {
+      "id": "src-example-10",
+      "type": "example",
+      "path": "examples/starter/vite.config.ts",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/starter/vite.config.ts",
+      "notes": ""
+    },
+    {
+      "id": "src-asset-1",
+      "type": "file",
+      "path": "docs/bear.jpg",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/bear.jpg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-2",
+      "type": "file",
+      "path": "docs/favicon.ico",
+      "url": "https://github.com/pmndrs/zustand/blob/main/docs/favicon.ico",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-3",
+      "type": "file",
+      "path": "examples/demo/public/favicon.ico",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/public/favicon.ico",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-4",
+      "type": "file",
+      "path": "examples/demo/public/logo192.png",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/public/logo192.png",
+      "notes": "Repository asset detected as logo"
+    },
+    {
+      "id": "src-asset-5",
+      "type": "file",
+      "path": "examples/demo/public/logo512.png",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/public/logo512.png",
+      "notes": "Repository asset detected as logo"
+    },
+    {
+      "id": "src-asset-6",
+      "type": "file",
+      "path": "examples/demo/public/ogimage.jpg",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/public/ogimage.jpg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-7",
+      "type": "file",
+      "path": "examples/demo/public/vite.svg",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/public/vite.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-8",
+      "type": "file",
+      "path": "examples/demo/src/resources/bear.png",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/resources/bear.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-9",
+      "type": "file",
+      "path": "examples/demo/src/resources/bg.jpg",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/resources/bg.jpg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-10",
+      "type": "file",
+      "path": "examples/demo/src/resources/ground.png",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/resources/ground.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-11",
+      "type": "file",
+      "path": "examples/demo/src/resources/leaves1.png",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/resources/leaves1.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-12",
+      "type": "file",
+      "path": "examples/demo/src/resources/leaves2.png",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/resources/leaves2.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-13",
+      "type": "file",
+      "path": "examples/demo/src/resources/stars.png",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/demo/src/resources/stars.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-14",
+      "type": "file",
+      "path": "examples/starter/src/assets/zustand-mascot.svg",
+      "url": "https://github.com/pmndrs/zustand/blob/main/examples/starter/src/assets/zustand-mascot.svg",
+      "notes": "Repository asset detected as image"
     }
   ],
   "facts": [
     {
-      "id": "fact-description",
+      "id": "fact-1",
       "kind": "description",
-      "value": "🐻 Bear necessities for state management in React",
-      "sourceIds": [
-        "src-package-metadata"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-1",
-      "kind": "feature",
-      "value": "Simple and un-opinionated",
+      "value": "[](https://github.com/pmndrs/zustand/actions?query=workflow%3ATest) [](https://bundlejs.com/?q=zustand) [](https://www.npmjs.com/package/zustand) [](https://www.npmjs.com/package/zustand) [](https://discord.gg/poimandres",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-2",
-      "kind": "feature",
-      "value": "Makes hooks the primary means of consuming state",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-3",
-      "kind": "feature",
-      "value": "Doesn't wrap your app in context providers",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-4",
-      "kind": "feature",
-      "value": "Can inform components transiently (without causing render)",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-5",
-      "kind": "feature",
-      "value": "Renders components only on changes",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-6",
-      "kind": "feature",
-      "value": "Centralized, action-based state management",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-quickstart-1",
+      "id": "fact-2",
       "kind": "quickstart",
       "value": "npm install zustand",
       "sourceIds": [
@@ -100,36 +382,207 @@
       "confidence": "high"
     },
     {
-      "id": "fact-example-1",
-      "kind": "example",
-      "value": "You can try a live demo and read the docs.",
+      "id": "fact-3",
+      "kind": "quickstart",
+      "value": "git clone https://github.com/pmndrs/zustand",
+      "sourceIds": [
+        "src-example-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-4",
+      "kind": "quickstart",
+      "value": "pnpm dev",
+      "sourceIds": [
+        "src-example-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-5",
+      "kind": "quickstart",
+      "value": "npm install demo",
+      "sourceIds": [
+        "src-package-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-6",
+      "kind": "quickstart",
+      "value": "npm run dev",
+      "sourceIds": [
+        "src-package-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-7",
+      "kind": "quickstart",
+      "value": "npm run build",
+      "sourceIds": [
+        "src-package-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-8",
+      "kind": "feature",
+      "value": "Simple and un-opinionated",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-example-2",
-      "kind": "example",
-      "value": ":warning: This readme is written for JavaScript users. If you are a TypeScript user, be sure to check out our TypeScript Usage section.",
+      "id": "fact-9",
+      "kind": "feature",
+      "value": "Makes hooks the primary means of consuming state",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-example-3",
-      "kind": "example",
-      "value": "For more control over re-rendering, you may provide any custom equality function (this example requires the use of createWithEqualityFn).",
+      "id": "fact-10",
+      "kind": "feature",
+      "value": "Doesn't wrap your app in context providers",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-license",
-      "kind": "license",
-      "value": "MIT",
+      "id": "fact-11",
+      "kind": "feature",
+      "value": "Can inform components transiently (without causing render)",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-12",
+      "kind": "feature",
+      "value": "Less boilerplate",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-13",
+      "kind": "feature",
+      "value": "Renders components only on changes",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-14",
+      "kind": "example",
+      "value": "import { create } from 'zustand'\n\nconst useBearStore = create((set) => ({\n  bears: 0,\n  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),\n  removeAllBears: () => set({ bears: 0 }),\n}))",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-15",
+      "kind": "example",
+      "value": "function BearCounter() {\n  const bears = useBearStore((state) => state.bears)\n  return <h1>{bears} around here ...</h1>\n}\n\nfunction Controls() {\n  const increasePopulation = useBearStore((state) => state.increasePopulation)\n  return <button onClick={increasePopulation}>one up</button>\n}",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-16",
+      "kind": "example",
+      "value": "const state = useBearStore()",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-m4-positioning-17",
+      "kind": "positioning",
+      "value": "zustand provides bear necessities for state management in React.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-18",
+      "kind": "feature",
+      "value": "Simple and un-opinionated state management.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-19",
+      "kind": "feature",
+      "value": "Makes hooks the primary means of consuming state.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-20",
+      "kind": "feature",
+      "value": "Does not wrap the app in context providers.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-21",
+      "kind": "feature",
+      "value": "Can inform components transiently without causing render.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-22",
+      "kind": "feature",
+      "value": "Renders components only on changes.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-23",
+      "kind": "feature",
+      "value": "Supports centralized, action-based state management.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-24",
+      "kind": "example",
+      "value": "The README includes live demo and documentation links.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-25",
+      "kind": "example",
+      "value": "The README has JavaScript and TypeScript usage guidance.",
       "sourceIds": [
         "src-readme"
       ],
@@ -138,42 +591,158 @@
   ],
   "product": {
     "name": "zustand",
-    "oneLiner": "🐻 Bear necessities for state management in React",
+    "oneLiner": "zustand provides bear necessities for state management in React.",
     "audiences": [
-      "React developers",
-      "frontend teams"
+      "Developers",
+      "Frontend teams",
+      "AI builders"
     ],
-    "problems": [
-      "Developers need a faster way to complete a common workflow."
-    ],
+    "problems": [],
     "features": [
-      "Simple and un-opinionated",
-      "Makes hooks the primary means of consuming state",
-      "Doesn't wrap your app in context providers",
-      "Can inform components transiently (without causing render)",
-      "Renders components only on changes",
-      "Centralized, action-based state management"
+      "Simple and un-opinionated state management.",
+      "Makes hooks the primary means of consuming state.",
+      "Does not wrap the app in context providers.",
+      "Can inform components transiently without causing render.",
+      "Renders components only on changes.",
+      "Supports centralized, action-based state management."
     ],
     "useCases": [
-      "You can try a live demo and read the docs.",
-      ":warning: This readme is written for JavaScript users. If you are a TypeScript user, be sure to check out our TypeScript Usage section.",
-      "For more control over re-rendering, you may provide any custom equality function (this example requires the use of createWithEqualityFn)."
+      "The README includes live demo and documentation links.",
+      "The README has JavaScript and TypeScript usage guidance."
     ],
     "quickstart": [
       "npm install zustand"
     ],
     "examples": [
-      "You can try a live demo and read the docs.",
-      ":warning: This readme is written for JavaScript users. If you are a TypeScript user, be sure to check out our TypeScript Usage section.",
-      "For more control over re-rendering, you may provide any custom equality function (this example requires the use of createWithEqualityFn)."
+      "The README includes live demo and documentation links.",
+      "The README has JavaScript and TypeScript usage guidance."
     ],
     "contribution": {
-      "hasContributionGuide": true,
-      "notes": [
-        "Contribution guide detected in the repository."
-      ]
+      "hasContributionGuide": false,
+      "notes": []
     }
   },
-  "assets": [],
-  "gaps": []
+  "assets": [
+    {
+      "path": "docs/bear.jpg",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-1"
+      ]
+    },
+    {
+      "path": "docs/favicon.ico",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-2"
+      ]
+    },
+    {
+      "path": "examples/demo/public/favicon.ico",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-3"
+      ]
+    },
+    {
+      "path": "examples/demo/public/logo192.png",
+      "kind": "logo",
+      "sourceIds": [
+        "src-asset-4"
+      ]
+    },
+    {
+      "path": "examples/demo/public/logo512.png",
+      "kind": "logo",
+      "sourceIds": [
+        "src-asset-5"
+      ]
+    },
+    {
+      "path": "examples/demo/public/ogimage.jpg",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-6"
+      ]
+    },
+    {
+      "path": "examples/demo/public/vite.svg",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-7"
+      ]
+    },
+    {
+      "path": "examples/demo/src/resources/bear.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-8"
+      ]
+    },
+    {
+      "path": "examples/demo/src/resources/bg.jpg",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-9"
+      ]
+    },
+    {
+      "path": "examples/demo/src/resources/ground.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-10"
+      ]
+    },
+    {
+      "path": "examples/demo/src/resources/leaves1.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-11"
+      ]
+    },
+    {
+      "path": "examples/demo/src/resources/leaves2.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-12"
+      ]
+    },
+    {
+      "path": "examples/demo/src/resources/stars.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-13"
+      ]
+    },
+    {
+      "path": "examples/starter/src/assets/zustand-mascot.svg",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-14"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "ingestion-warning",
+      "message": "GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-error",
+      "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
+      "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
+    }
+  ],
+  "m4Validation": {
+    "upstreamCommit": "3fca8461798d4f488315ed2ccafcd364cebba67e",
+    "generatedWith": "python3 -m repo_stage.cli generate",
+    "maintainerEditPass": true,
+    "outreachReadiness": "ready-for-raw-feedback-after-human-preview"
+  }
 }

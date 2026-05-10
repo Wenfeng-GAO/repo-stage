@@ -5,39 +5,205 @@
     "owner": "sharkdp",
     "name": "bat",
     "description": "A cat(1) clone with wings.",
-    "defaultBranch": "HEAD",
-    "primaryLanguage": "Rust",
-    "license": "Apache-2.0 OR MIT",
+    "defaultBranch": "master",
+    "primaryLanguage": "",
+    "license": "LICENSE-APACHE",
     "topics": []
   },
   "sources": [
     {
-      "id": "src-readme",
-      "type": "file",
-      "path": "README.md",
-      "url": "https://github.com/sharkdp/bat/blob/HEAD/README.md",
-      "notes": "Primary repository README used for generated copy."
+      "id": "src-github",
+      "type": "github-metadata",
+      "path": "",
+      "url": "https://github.com/sharkdp/bat",
+      "notes": "GitHub repository metadata from ingestion"
     },
     {
-      "id": "src-package-metadata",
-      "type": "file",
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/sharkdp/bat/blob/master/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE-APACHE",
+      "url": "https://github.com/sharkdp/bat/blob/master/LICENSE-APACHE",
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
       "path": "Cargo.toml",
-      "url": "https://github.com/sharkdp/bat/blob/HEAD/Cargo.toml",
-      "notes": "Package metadata used for ecosystem and command hints."
+      "url": "https://github.com/sharkdp/bat/blob/master/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-2",
+      "type": "package",
+      "path": "tests/syntax-tests/highlighted/Go/go.mod",
+      "url": "https://github.com/sharkdp/bat/blob/master/tests/syntax-tests/highlighted/Go/go.mod",
+      "notes": ""
+    },
+    {
+      "id": "src-package-3",
+      "type": "package",
+      "path": "tests/syntax-tests/highlighted/Requirements.txt/requirements.txt",
+      "url": "https://github.com/sharkdp/bat/blob/master/tests/syntax-tests/highlighted/Requirements.txt/requirements.txt",
+      "notes": ""
+    },
+    {
+      "id": "src-package-4",
+      "type": "package",
+      "path": "tests/syntax-tests/highlighted/TOML/Cargo.toml",
+      "url": "https://github.com/sharkdp/bat/blob/master/tests/syntax-tests/highlighted/TOML/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-5",
+      "type": "package",
+      "path": "tests/syntax-tests/source/Go/go.mod",
+      "url": "https://github.com/sharkdp/bat/blob/master/tests/syntax-tests/source/Go/go.mod",
+      "notes": ""
+    },
+    {
+      "id": "src-package-6",
+      "type": "package",
+      "path": "tests/syntax-tests/source/Requirements.txt/requirements.txt",
+      "url": "https://github.com/sharkdp/bat/blob/master/tests/syntax-tests/source/Requirements.txt/requirements.txt",
+      "notes": ""
+    },
+    {
+      "id": "src-package-7",
+      "type": "package",
+      "path": "tests/syntax-tests/source/TOML/Cargo.toml",
+      "url": "https://github.com/sharkdp/bat/blob/master/tests/syntax-tests/source/TOML/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-example-1",
+      "type": "example",
+      "path": "examples/advanced.rs",
+      "url": "https://github.com/sharkdp/bat/blob/master/examples/advanced.rs",
+      "notes": ""
+    },
+    {
+      "id": "src-example-2",
+      "type": "example",
+      "path": "examples/buffer.rs",
+      "url": "https://github.com/sharkdp/bat/blob/master/examples/buffer.rs",
+      "notes": ""
+    },
+    {
+      "id": "src-example-3",
+      "type": "example",
+      "path": "examples/cat.rs",
+      "url": "https://github.com/sharkdp/bat/blob/master/examples/cat.rs",
+      "notes": ""
+    },
+    {
+      "id": "src-example-4",
+      "type": "example",
+      "path": "examples/inputs.rs",
+      "url": "https://github.com/sharkdp/bat/blob/master/examples/inputs.rs",
+      "notes": ""
+    },
+    {
+      "id": "src-example-5",
+      "type": "example",
+      "path": "examples/list_syntaxes_and_themes.rs",
+      "url": "https://github.com/sharkdp/bat/blob/master/examples/list_syntaxes_and_themes.rs",
+      "notes": ""
+    },
+    {
+      "id": "src-example-6",
+      "type": "example",
+      "path": "examples/simple.rs",
+      "url": "https://github.com/sharkdp/bat/blob/master/examples/simple.rs",
+      "notes": ""
+    },
+    {
+      "id": "src-example-7",
+      "type": "example",
+      "path": "examples/yaml.rs",
+      "url": "https://github.com/sharkdp/bat/blob/master/examples/yaml.rs",
+      "notes": ""
+    },
+    {
+      "id": "src-asset-1",
+      "type": "file",
+      "path": "doc/logo-header.svg",
+      "url": "https://github.com/sharkdp/bat/blob/master/doc/logo-header.svg",
+      "notes": "Repository asset detected as logo"
     }
   ],
   "facts": [
     {
-      "id": "fact-description",
+      "id": "fact-1",
       "kind": "description",
       "value": "A cat(1) clone with wings.",
       "sourceIds": [
-        "src-package-metadata"
+        "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-1",
+      "id": "fact-2",
+      "kind": "quickstart",
+      "value": "curl -s https://sh.rustup.rs | bat",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-3",
+      "kind": "quickstart",
+      "value": "make the change permanent. Alternatively, use `bat`'s",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-4",
+      "kind": "quickstart",
+      "value": "make install",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-5",
+      "kind": "quickstart",
+      "value": "brew install bat",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-6",
+      "kind": "quickstart",
+      "value": "cargo install --path . --locked",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-7",
+      "kind": "quickstart",
+      "value": "cargo install --locked bat",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-8",
       "kind": "feature",
       "value": "be for widely used systems",
       "sourceIds": [
@@ -46,7 +212,7 @@
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-2",
+      "id": "fact-9",
       "kind": "feature",
       "value": "be from somewhat official sources",
       "sourceIds": [
@@ -55,34 +221,34 @@
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-3",
+      "id": "fact-10",
       "kind": "feature",
-      "value": "ansi looks decent on any terminal. It uses 3-bit colors: black, red, green,",
+      "value": "`ansi` looks decent on any terminal. It uses 3-bit colors: black, red, green,",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-4",
+      "id": "fact-11",
       "kind": "feature",
-      "value": "base16 is designed for base16 terminal themes. It uses",
+      "value": "`base16` is designed for base16 terminal themes. It uses",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-5",
+      "id": "fact-12",
       "kind": "feature",
-      "value": "base16-256 is designed for tinted-shell.",
+      "value": "`base16-256` is designed for tinted-shell.",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-6",
+      "id": "fact-13",
       "kind": "feature",
       "value": "Enjoy maximum compatibility. Some terminal utilities do not support more than 3-bit colors.",
       "sourceIds": [
@@ -91,45 +257,126 @@
       "confidence": "medium"
     },
     {
-      "id": "fact-quickstart-1",
-      "kind": "quickstart",
-      "value": "cargo install bat",
+      "id": "fact-14",
+      "kind": "example",
+      "value": "curl -s https://sh.rustup.rs | bat",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "high"
     },
     {
-      "id": "fact-example-1",
+      "id": "fact-15",
       "kind": "example",
-      "value": "Be aware that in some cases, -h may not be a shorthand of --help (for example with ls). In cases where you need to use -h",
+      "value": "yaml2json .travis.yml | json_pp | bat -l json",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-16",
+      "kind": "example",
+      "value": "bat > note.md  # quickly create a new file\n\nbat header.md content.md footer.md > document.md\n\nbat -n main.rs  # show line numbers (only)\n\nbat f - g  # output 'f', then stdin, then 'g'.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-m4-positioning-17",
+      "kind": "positioning",
+      "value": "bat is a cat(1) clone with syntax highlighting and Git integration.",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-example-2",
-      "kind": "example",
-      "value": "You can use --style=numbers,changes, for example, to show only Git changes",
+      "id": "fact-m4-feature-18",
+      "kind": "feature",
+      "value": "Syntax highlighting for a large number of programming and markup languages.",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-example-3",
-      "kind": "example",
-      "value": "> For example, if your config contains --style=full,-snip, you can run bat with",
+      "id": "fact-m4-feature-19",
+      "kind": "feature",
+      "value": "Git integration shows modifications with respect to the index.",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-license",
-      "kind": "license",
-      "value": "Apache-2.0 OR MIT",
+      "id": "fact-m4-feature-20",
+      "kind": "feature",
+      "value": "Can show and highlight non-printable characters.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-21",
+      "kind": "feature",
+      "value": "Uses automatic paging for output that is too large for one screen.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-22",
+      "kind": "feature",
+      "value": "Works as a drop-in replacement for cat in non-interactive terminal workflows.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-quickstart-23",
+      "kind": "quickstart",
+      "value": "cargo install bat",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-quickstart-24",
+      "kind": "quickstart",
+      "value": "bat README.md",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-25",
+      "kind": "example",
+      "value": "Display a single file on the terminal.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-26",
+      "kind": "example",
+      "value": "Display multiple files at once.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-27",
+      "kind": "example",
+      "value": "Read from stdin and determine syntax automatically.",
       "sourceIds": [
         "src-readme"
       ],
@@ -138,42 +385,69 @@
   ],
   "product": {
     "name": "bat",
-    "oneLiner": "A cat(1) clone with wings.",
+    "oneLiner": "bat is a cat(1) clone with syntax highlighting and Git integration.",
     "audiences": [
-      "command-line users",
-      "developers"
+      "Developers",
+      "Frontend teams",
+      "AI builders"
     ],
-    "problems": [
-      "Developers need a simpler tool with less operational overhead."
-    ],
+    "problems": [],
     "features": [
-      "be for widely used systems",
-      "be from somewhat official sources",
-      "ansi looks decent on any terminal. It uses 3-bit colors: black, red, green,",
-      "base16 is designed for base16 terminal themes. It uses",
-      "base16-256 is designed for tinted-shell.",
-      "Enjoy maximum compatibility. Some terminal utilities do not support more than 3-bit colors."
+      "Syntax highlighting for a large number of programming and markup languages.",
+      "Git integration shows modifications with respect to the index.",
+      "Can show and highlight non-printable characters.",
+      "Uses automatic paging for output that is too large for one screen.",
+      "Works as a drop-in replacement for cat in non-interactive terminal workflows."
     ],
     "useCases": [
-      "Be aware that in some cases, -h may not be a shorthand of --help (for example with ls). In cases where you need to use -h",
-      "You can use --style=numbers,changes, for example, to show only Git changes",
-      "> For example, if your config contains --style=full,-snip, you can run bat with"
+      "Display a single file on the terminal.",
+      "Display multiple files at once.",
+      "Read from stdin and determine syntax automatically."
     ],
     "quickstart": [
-      "cargo install bat"
+      "cargo install bat",
+      "bat README.md"
     ],
     "examples": [
-      "Be aware that in some cases, -h may not be a shorthand of --help (for example with ls). In cases where you need to use -h",
-      "You can use --style=numbers,changes, for example, to show only Git changes",
-      "> For example, if your config contains --style=full,-snip, you can run bat with"
+      "Display a single file on the terminal.",
+      "Display multiple files at once.",
+      "Read from stdin and determine syntax automatically."
     ],
     "contribution": {
-      "hasContributionGuide": true,
-      "notes": [
-        "Contribution guide detected in the repository."
-      ]
+      "hasContributionGuide": false,
+      "notes": []
     }
   },
-  "assets": [],
-  "gaps": []
+  "assets": [
+    {
+      "path": "doc/logo-header.svg",
+      "kind": "logo",
+      "sourceIds": [
+        "src-asset-1"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "ingestion-warning",
+      "message": "GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-error",
+      "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
+      "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
+    }
+  ],
+  "m4Validation": {
+    "upstreamCommit": "f74082cee8c4215e514f13fd4b8182d93e633234",
+    "generatedWith": "python3 -m repo_stage.cli generate",
+    "maintainerEditPass": true,
+    "outreachReadiness": "ready-for-raw-feedback-after-human-preview"
+  }
 }

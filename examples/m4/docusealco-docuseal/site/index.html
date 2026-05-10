@@ -3,49 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>docuseal | RepoStage Preview</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>DocuSeal | RepoStage</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <nav><span>docuseal</span><a href="https://github.com/docusealco/docuseal">GitHub</a></nav>
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">docusealco / docuseal</p>
-        <h1>DocuSeal Open source document filling and signing DocuSeal is an open source platform that provides secure and efficient digital document signing and processing. Create PDF forms to have them filled and signed online on </h1>
-        <p class="lead">A static RepoStage preview generated from repository README and metadata. Claims are intentionally conservative and source-grounded.</p>
-        <div class="actions">
-          <a class="primary" href="#quickstart">Try the quickstart</a>
-          <a class="secondary" href="https://github.com/docusealco/docuseal">View repository</a>
-        </div>
-      </div>
-      <aside>
-        <strong>Repository facts</strong>
-        <dl>
-          <dt>License</dt><dd>LICENSE</dd>
-          <dt>Ecosystem</dt><dd>JavaScript/TypeScript</dd>
-          <dt>Sources</dt><dd>2 repository sources</dd>
-        </dl>
-      </aside>
-    </div>
-  </header>
   <main>
-    <section>
-      <h2>Why developers look at it</h2>
-      <div class="cards"><article>Developers need to understand where docuseal fits before trying it.</article></div>
+    <section class="hero">
+      <p class="eyebrow">Generated from repository sources</p>
+      <h1>DocuSeal</h1>
+      <p class="lead">DocuSeal is an open source platform for document filling and signing.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/docusealco/docuseal">View on GitHub</a>
+        <a class="button" href="#quickstart">Copy quickstart</a>
+      </div>
     </section>
-    <section>
-      <h2>Repository-grounded features</h2>
-      <div class="cards"><article>PDF form fields builder (WYSIWYG)</article><article>12 field types available (Signature, Date, File, Checkbox etc.)</article><article>Multiple submitters per document</article><article>Automated emails via SMTP</article><article>Files storage on disk or AWS S3, Google Storage, Azure Cloud</article><article>Automatic PDF eSignature</article></div>
+
+    <section id="quickstart" class="band">
+      <div>
+        <p class="eyebrow">Quickstart</p>
+        <h2>Start from commands found in the repo</h2>
+      </div>
+      <pre><code>docker run --name docuseal -p 3000:3000 -v.:/data docuseal/docuseal
+npm install docuseal</code></pre>
     </section>
-    <section id="quickstart">
-      <h2>Quickstart</h2>
-      <pre><code>npm install docuseal
-docker run --name docuseal -p 3000:3000 -v.:/data docuseal/docuseal</code></pre>
+
+    <section class="grid-section">
+      <div>
+        <p class="eyebrow">What it offers</p>
+        <h2>Source-grounded project highlights</h2>
+      </div>
+      <div class="cards"><article><p>Supports secure digital document signing and processing.</p></article><article><p>Can create PDF forms to have them filled and signed online.</p></article><article><p>Provides a Docker quickstart for local evaluation.</p></article><article><p>Exposes an npm package path for embedding or integration workflows.</p></article></div>
     </section>
-    <section>
-      <h2>Examples and use cases</h2>
-      <ul><li>No example prose was detected.</li></ul>
+
+    <section class="grid-section muted">
+      <div>
+        <p class="eyebrow">Use cases</p>
+        <h2>Where this project fits</h2>
+      </div>
+      <div class="cards"><article><p>Create PDF forms that can be filled and signed online.</p></article><article><p>Run DocuSeal locally with Docker before deciding on deployment.</p></article></div>
+    </section>
+
+    <section class="facts">
+      <div><span>Language</span><strong>Ruby</strong></div><div><span>License</span><strong>AGPL-3.0</strong></div><div><span>Repository</span><strong>docusealco/docuseal</strong></div>
     </section>
   </main>
 </body>

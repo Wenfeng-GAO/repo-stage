@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" role="img" aria-labelledby="title">
+  <title id="title">RepoStage mark</title>
+  <rect width="240" height="160" rx="16" fill="#eef2f3"/>
+  <path d="M44 110h152" stroke="#0f766e" stroke-width="10" stroke-linecap="round"/>
+  <path d="M70 94V58h100v36" fill="none" stroke="#15171c" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="92" cy="76" r="7" fill="#0f766e"/>
+  <circle cx="120" cy="76" r="7" fill="#0f766e"/>
+  <circle cx="148" cy="76" r="7" fill="#0f766e"/>
+</svg>

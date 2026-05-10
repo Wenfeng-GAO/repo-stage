@@ -1,0 +1,59 @@
+{
+  "repo": {
+    "url": "https://github.com/example/toolkit",
+    "description": "Toolkit helps developers generate typed API clients from OpenAPI specs.",
+    "defaultBranch": "main",
+    "primaryLanguage": "TypeScript",
+    "license": "MIT",
+    "topics": ["openapi", "typescript", "api-client"]
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "notes": "README with overview, install command, features, and usage."
+    },
+    {
+      "id": "src-package-json",
+      "type": "file",
+      "path": "package.json",
+      "notes": "Package metadata."
+    },
+    {
+      "id": "src-license",
+      "type": "file",
+      "path": "LICENSE",
+      "notes": "License text."
+    },
+    {
+      "id": "src-examples",
+      "type": "file",
+      "path": "examples/basic.ts",
+      "notes": "Basic generated client example."
+    }
+  ],
+  "product": {
+    "audiences": ["TypeScript API teams", "OpenAPI maintainers"],
+    "features": ["Generates typed clients", "Supports OpenAPI input files"],
+    "quickstart": ["npm install @example/toolkit", "npx toolkit generate openapi.yaml"],
+    "examples": ["Generate a client from examples/basic.ts"],
+    "useCases": ["Keep frontend clients aligned with backend API contracts"],
+    "contribution": {
+      "hasContributionGuide": true,
+      "notes": ["Contributions are documented in CONTRIBUTING.md"]
+    }
+  },
+  "assets": [
+    {
+      "kind": "screenshot",
+      "path": "docs/screenshot.png",
+      "sourceIds": ["src-readme"]
+    },
+    {
+      "kind": "demo",
+      "path": "https://example.com/toolkit-demo",
+      "sourceIds": ["src-readme"]
+    }
+  ]
+}

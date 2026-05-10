@@ -5,102 +5,242 @@
     "owner": "browser-use",
     "name": "browser-use",
     "description": "Make websites accessible for AI agents",
-    "defaultBranch": "HEAD",
-    "primaryLanguage": "Python",
-    "license": "MIT",
+    "defaultBranch": "main",
+    "primaryLanguage": "",
+    "license": "LICENSE",
     "topics": []
   },
   "sources": [
     {
-      "id": "src-readme",
-      "type": "file",
-      "path": "README.md",
-      "url": "https://github.com/browser-use/browser-use/blob/HEAD/README.md",
-      "notes": "Primary repository README used for generated copy."
+      "id": "src-github",
+      "type": "github-metadata",
+      "path": "",
+      "url": "https://github.com/browser-use/browser-use",
+      "notes": "GitHub repository metadata from ingestion"
     },
     {
-      "id": "src-package-metadata",
-      "type": "file",
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/browser-use/browser-use/blob/main/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE",
+      "url": "https://github.com/browser-use/browser-use/blob/main/LICENSE",
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
       "path": "pyproject.toml",
-      "url": "https://github.com/browser-use/browser-use/blob/HEAD/pyproject.toml",
-      "notes": "Package metadata used for ecosystem and command hints."
+      "url": "https://github.com/browser-use/browser-use/blob/main/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-example-1",
+      "type": "example",
+      "path": "examples/__init__.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/__init__.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-2",
+      "type": "example",
+      "path": "examples/apps/ad-use/README.md",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/ad-use/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-example-3",
+      "type": "example",
+      "path": "examples/apps/ad-use/ad_generator.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/ad-use/ad_generator.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-4",
+      "type": "example",
+      "path": "examples/apps/msg-use/README.md",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/msg-use/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-example-5",
+      "type": "example",
+      "path": "examples/apps/msg-use/login.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/msg-use/login.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-6",
+      "type": "example",
+      "path": "examples/apps/msg-use/scheduler.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/msg-use/scheduler.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-7",
+      "type": "example",
+      "path": "examples/apps/news-use/README.md",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/news-use/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-example-8",
+      "type": "example",
+      "path": "examples/apps/news-use/news_monitor.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/news-use/news_monitor.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-9",
+      "type": "example",
+      "path": "examples/browser/cloud_browser.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/browser/cloud_browser.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-10",
+      "type": "example",
+      "path": "examples/browser/custom_headers.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/browser/custom_headers.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-11",
+      "type": "example",
+      "path": "examples/browser/parallel_browser.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/browser/parallel_browser.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-12",
+      "type": "example",
+      "path": "examples/browser/playwright_integration.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/browser/playwright_integration.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-13",
+      "type": "example",
+      "path": "examples/browser/real_browser.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-14",
+      "type": "example",
+      "path": "examples/browser/save_cookies.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/browser/save_cookies.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-15",
+      "type": "example",
+      "path": "examples/browser/using_cdp.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/browser/using_cdp.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-16",
+      "type": "example",
+      "path": "examples/cloud/01_basic_task.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/cloud/01_basic_task.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-17",
+      "type": "example",
+      "path": "examples/cloud/02_fast_mode_gemini.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/cloud/02_fast_mode_gemini.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-18",
+      "type": "example",
+      "path": "examples/cloud/03_structured_output.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/cloud/03_structured_output.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-19",
+      "type": "example",
+      "path": "examples/cloud/04_proxy_usage.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/cloud/04_proxy_usage.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-20",
+      "type": "example",
+      "path": "examples/cloud/05_search_api.py",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/cloud/05_search_api.py",
+      "notes": ""
+    },
+    {
+      "id": "src-asset-1",
+      "type": "file",
+      "path": "examples/apps/ad-use/output/ad_20250908_150030.png",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/ad-use/output/ad_20250908_150030.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-2",
+      "type": "file",
+      "path": "examples/apps/ad-use/output/landing_page_20250908_150030.png",
+      "url": "https://github.com/browser-use/browser-use/blob/main/examples/apps/ad-use/output/landing_page_20250908_150030.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-3",
+      "type": "file",
+      "path": "static/NiceHack69.png",
+      "url": "https://github.com/browser-use/browser-use/blob/main/static/NiceHack69.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-4",
+      "type": "file",
+      "path": "static/accuracy_by_model_dark.png",
+      "url": "https://github.com/browser-use/browser-use/blob/main/static/accuracy_by_model_dark.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-5",
+      "type": "file",
+      "path": "static/accuracy_by_model_light.png",
+      "url": "https://github.com/browser-use/browser-use/blob/main/static/accuracy_by_model_light.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-6",
+      "type": "file",
+      "path": "static/browser-use-dark.png",
+      "url": "https://github.com/browser-use/browser-use/blob/main/static/browser-use-dark.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-7",
+      "type": "file",
+      "path": "static/browser-use.png",
+      "url": "https://github.com/browser-use/browser-use/blob/main/static/browser-use.png",
+      "notes": "Repository asset detected as image"
     }
   ],
   "facts": [
     {
-      "id": "fact-description",
+      "id": "fact-1",
       "kind": "description",
       "value": "Make websites accessible for AI agents",
       "sourceIds": [
-        "src-package-metadata"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-1",
-      "kind": "feature",
-      "value": "You need custom tools or deep code-level integration",
-      "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-2",
-      "kind": "feature",
-      "value": "We recommend pairing with our cloud browsers for leading stealth, proxy rotation, and scaling",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-3",
-      "kind": "feature",
-      "value": "Or self-host the open-source agent fully on your own machines",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-4",
-      "kind": "feature",
-      "value": "Much more powerful agent for complex tasks (see plot above)",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-5",
-      "kind": "feature",
-      "value": "Easiest way to start and scale",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-6",
-      "kind": "feature",
-      "value": "Best stealth with proxy rotation and captcha solving",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-quickstart-1",
-      "kind": "quickstart",
-      "value": "pip install browser-use",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "fact-quickstart-2",
+      "id": "fact-2",
       "kind": "quickstart",
       "value": "uv init && uv add browser-use && uv sync",
       "sourceIds": [
@@ -109,36 +249,189 @@
       "confidence": "high"
     },
     {
-      "id": "fact-example-1",
-      "kind": "example",
-      "value": "### 💡See more examples here ↗ and give us a star!",
+      "id": "fact-3",
+      "kind": "quickstart",
+      "value": "curl -o ~/.claude/skills/browser-use/SKILL.md \\",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-4",
+      "kind": "quickstart",
+      "value": "pip install -U browser-use",
+      "sourceIds": [
+        "src-example-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-5",
+      "kind": "quickstart",
+      "value": "git clone https://github.com/browser-use/browser-use.git",
+      "sourceIds": [
+        "src-example-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-6",
+      "kind": "quickstart",
+      "value": "pip install browser-use",
+      "sourceIds": [
+        "src-package-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-7",
+      "kind": "feature",
+      "value": "You need custom tools or deep code-level integration",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-example-2",
-      "kind": "example",
-      "value": "This creates a browserusedefault.py file with a working example. Available templates:",
+      "id": "fact-8",
+      "kind": "feature",
+      "value": "We recommend pairing with our cloud browsers for leading stealth, proxy rotation, and scaling",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-example-3",
-      "kind": "example",
-      "value": "- tools - Examples of custom tools and extending the agent",
+      "id": "fact-9",
+      "kind": "feature",
+      "value": "Or self-host the open-source agent fully on your own machines",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-license",
-      "kind": "license",
-      "value": "MIT",
+      "id": "fact-10",
+      "kind": "feature",
+      "value": "Much more powerful agent for complex tasks (see plot above)",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-11",
+      "kind": "feature",
+      "value": "Easiest way to start and scale",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-12",
+      "kind": "feature",
+      "value": "Best stealth with proxy rotation and captcha solving",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-13",
+      "kind": "example",
+      "value": "uv init && uv add browser-use && uv sync\n# uvx browser-use install  # Run if you don't have Chromium installed",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-14",
+      "kind": "example",
+      "value": "# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-15",
+      "kind": "example",
+      "value": "uvx browser-use init --template default",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-m4-positioning-16",
+      "kind": "positioning",
+      "value": "browser-use makes websites accessible for AI agents.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-17",
+      "kind": "feature",
+      "value": "Provides a Python quickstart for creating browser agents.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-18",
+      "kind": "feature",
+      "value": "Supports a human quickstart and LLM-oriented quickstart path.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-19",
+      "kind": "feature",
+      "value": "Can run a first browser agent from a short Python example.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-20",
+      "kind": "feature",
+      "value": "Includes optional Browser Use Cloud setup for users who want hosted browser automation.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-quickstart-21",
+      "kind": "quickstart",
+      "value": "pip install browser-use",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-22",
+      "kind": "example",
+      "value": "Run a first agent with Browser, Agent, and ChatBrowserUse.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-23",
+      "kind": "example",
+      "value": "Use the cloud API key path when choosing Browser Use Cloud.",
       "sourceIds": [
         "src-readme"
       ],
@@ -147,43 +440,108 @@
   ],
   "product": {
     "name": "browser-use",
-    "oneLiner": "Make websites accessible for AI agents",
+    "oneLiner": "browser-use makes websites accessible for AI agents.",
     "audiences": [
-      "command-line users",
-      "developers"
+      "Developers",
+      "Frontend teams",
+      "AI builders"
     ],
-    "problems": [
-      "Developers need a faster way to complete a common workflow."
-    ],
+    "problems": [],
     "features": [
-      "You need custom tools or deep code-level integration",
-      "We recommend pairing with our cloud browsers for leading stealth, proxy rotation, and scaling",
-      "Or self-host the open-source agent fully on your own machines",
-      "Much more powerful agent for complex tasks (see plot above)",
-      "Easiest way to start and scale",
-      "Best stealth with proxy rotation and captcha solving"
+      "Provides a Python quickstart for creating browser agents.",
+      "Supports a human quickstart and LLM-oriented quickstart path.",
+      "Can run a first browser agent from a short Python example.",
+      "Includes optional Browser Use Cloud setup for users who want hosted browser automation."
     ],
     "useCases": [
-      "### 💡See more examples here ↗ and give us a star!",
-      "This creates a browserusedefault.py file with a working example. Available templates:",
-      "- tools - Examples of custom tools and extending the agent"
+      "Run a first agent with Browser, Agent, and ChatBrowserUse.",
+      "Use the cloud API key path when choosing Browser Use Cloud."
     ],
     "quickstart": [
       "pip install browser-use",
       "uv init && uv add browser-use && uv sync"
     ],
     "examples": [
-      "### 💡See more examples here ↗ and give us a star!",
-      "This creates a browserusedefault.py file with a working example. Available templates:",
-      "- tools - Examples of custom tools and extending the agent"
+      "Run a first agent with Browser, Agent, and ChatBrowserUse.",
+      "Use the cloud API key path when choosing Browser Use Cloud."
     ],
     "contribution": {
-      "hasContributionGuide": true,
-      "notes": [
-        "Contribution guide detected in the repository."
-      ]
+      "hasContributionGuide": false,
+      "notes": []
     }
   },
-  "assets": [],
-  "gaps": []
+  "assets": [
+    {
+      "path": "examples/apps/ad-use/output/ad_20250908_150030.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-1"
+      ]
+    },
+    {
+      "path": "examples/apps/ad-use/output/landing_page_20250908_150030.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-2"
+      ]
+    },
+    {
+      "path": "static/NiceHack69.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-3"
+      ]
+    },
+    {
+      "path": "static/accuracy_by_model_dark.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-4"
+      ]
+    },
+    {
+      "path": "static/accuracy_by_model_light.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-5"
+      ]
+    },
+    {
+      "path": "static/browser-use-dark.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-6"
+      ]
+    },
+    {
+      "path": "static/browser-use.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-7"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "ingestion-warning",
+      "message": "GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-error",
+      "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
+      "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
+    }
+  ],
+  "m4Validation": {
+    "upstreamCommit": "9b4b8d8054a2d23f13a141aa7c871dea1e939450",
+    "generatedWith": "python3 -m repo_stage.cli generate",
+    "maintainerEditPass": true,
+    "outreachReadiness": "ready-for-raw-feedback-after-human-preview"
+  }
 }

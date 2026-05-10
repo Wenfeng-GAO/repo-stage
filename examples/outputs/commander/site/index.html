@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Commander.js - Node.js command-line interfaces</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="https://github.com/tj/commander.js">Commander.js</a>
+      <nav>
+        <a href="#quickstart">Quickstart</a>
+        <a href="#patterns">Patterns</a>
+        <a href="https://github.com/tj/commander.js">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Node.js CLI framework</p>
+          <h1>The complete solution for Node.js command-line interfaces.</h1>
+          <p class="lede">Commander describes your CLI, parses arguments into options and command arguments, displays usage errors, and implements automated help.</p>
+          <div class="actions">
+            <a class="button primary" href="#quickstart">Start with npm</a>
+            <a class="button secondary" href="https://github.com/tj/commander.js/tree/master/examples">Browse examples</a>
+          </div>
+        </div>
+        <div class="cli-card">
+          <div class="prompt">$ node split.js -s / --first a/b/c</div>
+          <div class="result">[ 'a' ]</div>
+          <div class="prompt">$ node string-util.js help split</div>
+          <div class="result muted">Usage: string-util split [options] &lt;string&gt;</div>
+        </div>
+      </section>
+
+      <section id="quickstart" class="quickstart">
+        <div>
+          <p class="section-label">Quickstart</p>
+          <h2>Describe the interface. Let Commander handle parsing and help.</h2>
+          <p>These commands and API calls are grounded in the README quick start.</p>
+        </div>
+        <pre><code>npm install commander</code></pre>
+        <pre><code>const { program } = require('commander');
+
+program
+  .option('--first')
+  .option('-s, --separator &lt;char&gt;')
+  .argument('&lt;string&gt;');
+
+program.parse();</code></pre>
+      </section>
+
+      <section id="patterns" class="pattern-grid">
+        <article>
+          <span>01</span>
+          <h3>Options</h3>
+          <p>Define boolean options, options with values, defaults, required values, variadic options, and custom processing.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Commands</h3>
+          <p>Model command arguments, action handlers, stand-alone executable subcommands, and life cycle hooks.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Automated Help</h3>
+          <p>Expose help output with custom help, error help display, command help, help groups, summaries, and descriptions.</p>
+        </article>
+      </section>
+
+      <section class="split">
+        <div>
+          <p class="section-label">For growing CLIs</p>
+          <h2>One set of parser primitives for small scripts and multi-command tools.</h2>
+        </div>
+        <div class="copy">
+          <p>The README starts with a small `split.js` example and then moves to a multi-command `string-util.js` program. The generated page mirrors that path: begin with one command, then scale into named commands with descriptions and help.</p>
+          <p>Package metadata confirms CommonJS, ESM, and TypeScript type entrypoints, with Node engine support declared as `&gt;=20`.</p>
+        </div>
+      </section>
+
+      <section class="trust">
+        <div>
+          <strong>MIT licensed</strong>
+          <span>From package.json</span>
+        </div>
+        <div>
+          <strong>CJS + ESM</strong>
+          <span>Exports both entrypoint styles</span>
+        </div>
+        <div>
+          <strong>TypeScript types</strong>
+          <span>Types declared in package metadata</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

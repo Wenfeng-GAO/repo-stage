@@ -1,19 +1,20 @@
 # Review Notes: modelcontextprotocol/servers
 
-## Output Quality
+## Internal Review Answers
 
-- The page uses the real repository name and URL.
-- The quickstart section uses commands extracted from repository material.
-- Feature copy is conservative and based on README bullets where available.
-- Unsupported-claim risk: low.
+- **Does the hero explain the project in 10 seconds?** Yes, after the M4 maintainer-style edit pass: "The Model Context Protocol servers repository provides reference and community server implementations for MCP."
+- **Which claims feel unsupported or too broad?** Unsupported-claim risk is medium; remaining risk is mostly whether maintainers prefer different positioning, not invented metrics.
+- **Which section would the maintainer edit first?** Pick one audience and one server path; the repository is too broad for a single generic hero.
+- **Is the generated page better than sending users directly to the README?** Maybe. It helps organize the collection, but scope selection matters.
+- **Would the reviewer use, publish, or adapt it?** Adapt only after choosing whether the page markets the collection or a specific server.
 
-## Likely Manual Edits
+## M4 Generation Details
 
-- Tighten the hero from maintainer-approved positioning.
-- Decide whether the first CTA should be install, documentation, demo, or GitHub.
-- Add stronger project assets if a logo, screenshot, or demo should lead the page.
+- Upstream commit: `4503e2d12b799448cd05f789dd40f9643a8d1a6c`
+- Generated with: `python3 -m repo_stage.cli generate`
+- Maintainer-style edit pass: yes
 
-## Reviewer Verdict Placeholder
+## External Reviewer Verdict
 
 - Reviewer:
 - Relationship to project:

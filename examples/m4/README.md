@@ -1,7 +1,9 @@
 # M4 External Validation Examples
 
-This directory contains first-pass RepoStage outputs for five real public
-repositories. Each example was generated with:
+This directory contains RepoStage M4 outputs for five real public repositories.
+Each example was generated with the current canonical local generator, then given
+a short maintainer-style edit pass for hero, features, quickstart, and use-case
+ordering:
 
 ```bash
 node scripts/generate-m4-examples.mjs
@@ -53,26 +55,26 @@ maintainer review:
 
 - Hero positioning needs maintainer-approved wording before publication.
 - Primary CTA needs project-specific choice: install, docs, demo, or GitHub.
-- Visual identity is too generic without project logos, screenshots, or demo media.
-- Quickstart extraction works when command blocks are clear, but needs manual confirmation.
-- License detection is conservative and should read package metadata or GitHub metadata next.
+- Visual identity is still too generic without project logos, screenshots, or demo media.
+- Quickstart extraction works when command blocks are clear, but maintainer confirmation is still needed.
 - Multi-package repos need better scope selection so the page does not summarize too broadly.
+- Generated evidence should stay pinned to the upstream commit recorded in each `validation-report.md`.
 
 ## Recommendation
 
-The next milestone should prioritize page quality and maintainer workflow before
-adding onboarding pages or social preview images.
+The next milestone should prioritize page quality and maintainer feedback loops
+before adding onboarding pages or social preview images.
 
 Evidence:
 
-- The generator can create five complete static examples with profiles, reports,
-  and screenshots.
-- The repeated weakness is not absence of more page types; it is that first-pass
-  page copy and visual identity need tighter maintainer review loops.
+- The canonical local generator can create five complete static examples with
+  profiles, reports, screenshots, and recorded upstream commits.
+- The repeated weakness is not absence of more page types; it is that page copy,
+  CTA priority, and visual identity need tighter maintainer review loops.
 - Social preview images should wait until the core page narrative is accurate.
 
 Concrete next scope:
 
-1. Improve source extraction for license, screenshots, demos, and primary install commands.
-2. Add a short maintainer editing pass that rewrites hero, CTA, and feature order.
-3. Send the five generated examples for external review using the outreach template in `docs/m4-external-validation.md`.
+1. Improve source extraction for screenshots, demos, primary CTA choice, and multi-package scope selection.
+2. Send the five generated examples for external review using the outreach template in `docs/m4-external-validation.md`.
+3. Use the first two external verdicts to decide whether to invest next in page quality, onboarding, or social preview images.

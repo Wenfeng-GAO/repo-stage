@@ -1,18 +1,28 @@
-# Validation Report: sharkdp/bat
+# Validation Report
 
-## Checks
+Status: **passed**
 
-- Valid JSON profile: pass
-- Real repository URL present: pass
-- Generated static HTML/CSS: pass
-- Facts reference known sources: pass
-- Quickstart detected: pass
-- License detected: pass
+## Errors
+
+None.
+
+## Warnings
+
+None.
+
+## Required Outputs
+
+- `site/index.html`
+- `site/styles.css`
+- `repo-profile.json`
+- `README-gap-report.md`
+- `validation-report.md`
+
+## M4 Validation Metadata
+
+- Upstream commit: `f74082cee8c4215e514f13fd4b8182d93e633234`
+- Generated with canonical CLI: `python3 -m repo_stage.cli generate`
+- Maintainer-style edit pass: yes
 - Desktop screenshot: pass
 - Mobile screenshot: pass
-
-## Caveats
-
-- This is a first-pass M4 generation output, not maintainer-approved copy.
-- GitHub topics and stars are intentionally omitted to avoid unsourced or unstable claims.
-- Maintainer feedback is still required before counting this example toward the full M4 acceptance criteria.
+- External maintainer or target-user feedback: pending

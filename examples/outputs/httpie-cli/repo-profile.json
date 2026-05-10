@@ -1,0 +1,189 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/httpie/cli",
+    "owner": "httpie",
+    "name": "cli",
+    "description": "HTTPie CLI: human-friendly HTTP client for the API era",
+    "defaultBranch": "master",
+    "primaryLanguage": "Python",
+    "license": "BSD",
+    "topics": ["api", "cli", "http", "terminal", "developer-tools"]
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/httpie/cli/blob/master/README.md",
+      "notes": "README headline, product description, features, examples, support links, and contribution pointer."
+    },
+    {
+      "id": "src-setup",
+      "type": "file",
+      "path": "setup.cfg",
+      "url": "https://github.com/httpie/cli/blob/master/setup.cfg",
+      "notes": "Package metadata, license classifier, project URLs, Python requirement, dependencies, and console scripts."
+    },
+    {
+      "id": "src-license",
+      "type": "file",
+      "path": "LICENSE",
+      "url": "https://github.com/httpie/cli/blob/master/LICENSE",
+      "notes": "BSD license text."
+    },
+    {
+      "id": "src-logo",
+      "type": "file",
+      "path": "docs/httpie-logo.svg",
+      "url": "https://github.com/httpie/cli/blob/master/docs/httpie-logo.svg",
+      "notes": "Project logo used by the generated site."
+    },
+    {
+      "id": "src-demo",
+      "type": "file",
+      "path": "docs/httpie-animation.gif",
+      "url": "https://github.com/httpie/cli/blob/master/docs/httpie-animation.gif",
+      "notes": "Project animation used by the generated site."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-oneliner",
+      "kind": "positioning",
+      "value": "HTTPie CLI: human-friendly HTTP client for the API era",
+      "sourceIds": ["src-readme", "src-setup"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-purpose",
+      "kind": "positioning",
+      "value": "HTTPie is a command-line HTTP client designed for testing, debugging, and generally interacting with APIs and HTTP servers.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-commands",
+      "kind": "capability",
+      "value": "The `http` and `https` commands allow creating and sending arbitrary HTTP requests.",
+      "sourceIds": ["src-readme", "src-setup"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-output",
+      "kind": "capability",
+      "value": "HTTPie uses simple and natural syntax and provides formatted and colorized output.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-features",
+      "kind": "feature-list",
+      "value": "Features include expressive syntax, formatted/colorized output, built-in JSON support, forms and file uploads, HTTPS, proxies, authentication, arbitrary request data, custom headers, persistent sessions, and wget-like downloads.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-examples",
+      "kind": "example",
+      "value": "README examples include `https httpie.io/hello`, `http PUT pie.dev/put X-API-Token:123 name=John`, `http --offline pie.dev/post hello=offline`, and a GitHub API authenticated POST example.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-install-docs",
+      "kind": "quickstart",
+      "value": "README links to installation instructions at https://httpie.io/docs#installation and full documentation at https://httpie.io/docs.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-python",
+      "kind": "runtime",
+      "value": "setup.cfg declares python_requires >=3.7.",
+      "sourceIds": ["src-setup"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-console",
+      "kind": "runtime",
+      "value": "setup.cfg declares console scripts for `http`, `https`, and `httpie`.",
+      "sourceIds": ["src-setup"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-community",
+      "kind": "community",
+      "value": "README links to the HTTPie website, Discord, Twitter, StackOverflow tag, GitHub Issues, newsletter, and contribution guide.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "BSD",
+      "sourceIds": ["src-setup", "src-license"],
+      "confidence": "high"
+    }
+  ],
+  "product": {
+    "name": "HTTPie CLI",
+    "oneLiner": "A human-friendly command-line HTTP client for the API era.",
+    "audiences": ["API developers", "Backend engineers", "Developers testing and debugging HTTP services"],
+    "problems": [
+      "Developers need to create and inspect arbitrary HTTP requests from the terminal.",
+      "API debugging benefits from syntax and output optimized for humans rather than raw transport details."
+    ],
+    "features": [
+      "Simple and natural syntax for HTTP requests",
+      "Formatted and colorized terminal output",
+      "Built-in JSON support",
+      "Forms, file uploads, custom headers, authentication, proxies, and persistent sessions",
+      "Offline mode for building and printing requests without sending them"
+    ],
+    "useCases": [
+      "Send a hello-world HTTPS request.",
+      "PUT JSON data with a custom API token.",
+      "Preview a request in offline mode.",
+      "Post to the GitHub API with authentication."
+    ],
+    "quickstart": [
+      "Read installation instructions at https://httpie.io/docs#installation",
+      "https httpie.io/hello",
+      "http PUT pie.dev/put X-API-Token:123 name=John"
+    ],
+    "examples": [
+      "https httpie.io/hello",
+      "http --offline pie.dev/post hello=offline",
+      "http -a USERNAME POST https://api.github.com/repos/httpie/cli/issues/83/comments body='HTTPie is awesome! :heart:'"
+    ],
+    "contribution": {
+      "hasContributionGuide": true,
+      "notes": ["README links to CONTRIBUTING.md and GitHub Issues for feature requests and bug reports."]
+    }
+  },
+  "assets": [
+    {
+      "path": "site/assets/httpie-logo.svg",
+      "kind": "logo",
+      "sourceIds": ["src-logo"]
+    },
+    {
+      "path": "site/assets/httpie-animation.gif",
+      "kind": "demo",
+      "sourceIds": ["src-demo"]
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "missing-install",
+      "message": "README links to installation docs rather than embedding one canonical install command.",
+      "severity": "medium"
+    },
+    {
+      "kind": "unclear-positioning",
+      "message": "The README includes a prominent star-loss note that a generated public site may want to handle separately from product onboarding.",
+      "severity": "low"
+    }
+  ]
+}

@@ -5,102 +5,102 @@
     "owner": "modelcontextprotocol",
     "name": "servers",
     "description": "Model Context Protocol servers",
-    "defaultBranch": "HEAD",
-    "primaryLanguage": "JavaScript/TypeScript",
-    "license": "Apache-2.0",
+    "defaultBranch": "main",
+    "primaryLanguage": "",
+    "license": "LICENSE",
     "topics": []
   },
   "sources": [
     {
-      "id": "src-readme",
-      "type": "file",
-      "path": "README.md",
-      "url": "https://github.com/modelcontextprotocol/servers/blob/HEAD/README.md",
-      "notes": "Primary repository README used for generated copy."
+      "id": "src-github",
+      "type": "github-metadata",
+      "path": "",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "notes": "GitHub repository metadata from ingestion"
     },
     {
-      "id": "src-package-metadata",
-      "type": "file",
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/LICENSE",
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
       "path": "package.json",
-      "url": "https://github.com/modelcontextprotocol/servers/blob/HEAD/package.json",
-      "notes": "Package metadata used for ecosystem and command hints."
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-2",
+      "type": "package",
+      "path": "src/everything/package.json",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/everything/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-3",
+      "type": "package",
+      "path": "src/fetch/pyproject.toml",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-4",
+      "type": "package",
+      "path": "src/filesystem/package.json",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-5",
+      "type": "package",
+      "path": "src/git/pyproject.toml",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/git/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-6",
+      "type": "package",
+      "path": "src/memory/package.json",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/memory/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-7",
+      "type": "package",
+      "path": "src/sequentialthinking/package.json",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/sequentialthinking/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-8",
+      "type": "package",
+      "path": "src/time/pyproject.toml",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/time/pyproject.toml",
+      "notes": ""
     }
   ],
   "facts": [
     {
-      "id": "fact-description",
+      "id": "fact-1",
       "kind": "description",
       "value": "Model Context Protocol servers",
       "sourceIds": [
-        "src-package-metadata"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-1",
-      "kind": "feature",
-      "value": "C# MCP SDK",
-      "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-feature-2",
-      "kind": "feature",
-      "value": "Go MCP SDK",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-3",
-      "kind": "feature",
-      "value": "Java MCP SDK",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-4",
-      "kind": "feature",
-      "value": "Kotlin MCP SDK",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-5",
-      "kind": "feature",
-      "value": "PHP MCP SDK",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-feature-6",
-      "kind": "feature",
-      "value": "Python MCP SDK",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "fact-quickstart-1",
-      "kind": "quickstart",
-      "value": "npm install @modelcontextprotocol/servers",
-      "sourceIds": [
-        "src-readme"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "fact-quickstart-2",
+      "id": "fact-2",
       "kind": "quickstart",
       "value": "npx -y @modelcontextprotocol/server-memory",
       "sourceIds": [
@@ -109,7 +109,7 @@
       "confidence": "high"
     },
     {
-      "id": "fact-quickstart-3",
+      "id": "fact-3",
       "kind": "quickstart",
       "value": "pip install mcp-server-git",
       "sourceIds": [
@@ -118,36 +118,180 @@
       "confidence": "high"
     },
     {
-      "id": "fact-example-1",
-      "kind": "example",
-      "value": "The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.",
+      "id": "fact-4",
+      "kind": "quickstart",
+      "value": "npm install @modelcontextprotocol/servers",
+      "sourceIds": [
+        "src-package-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-5",
+      "kind": "quickstart",
+      "value": "npm run build",
+      "sourceIds": [
+        "src-package-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-6",
+      "kind": "quickstart",
+      "value": "npm install @modelcontextprotocol/server-everything",
+      "sourceIds": [
+        "src-package-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-7",
+      "kind": "quickstart",
+      "value": "npm run test",
+      "sourceIds": [
+        "src-package-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-8",
+      "kind": "feature",
+      "value": "**Everything** - Reference / test server with prompts, resources, and tools.",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-example-2",
-      "kind": "example",
-      "value": "These servers aim to demonstrate MCP features and the official SDKs.",
+      "id": "fact-9",
+      "kind": "feature",
+      "value": "**Fetch** - Web content fetching and conversion for efficient LLM usage.",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-example-3",
-      "kind": "example",
-      "value": "- Fetch - Web content fetching and conversion for efficient LLM usage.",
+      "id": "fact-10",
+      "kind": "feature",
+      "value": "**Filesystem** - Secure file operations with configurable access controls.",
       "sourceIds": [
         "src-readme"
       ],
       "confidence": "medium"
     },
     {
-      "id": "fact-license",
-      "kind": "license",
-      "value": "Apache-2.0",
+      "id": "fact-11",
+      "kind": "feature",
+      "value": "**Git** - Tools to read, search, and manipulate Git repositories.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-12",
+      "kind": "feature",
+      "value": "**Memory** - Knowledge graph-based persistent memory system.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-13",
+      "kind": "feature",
+      "value": "**Sequential Thinking** - Dynamic and reflective problem-solving through thought sequences.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-14",
+      "kind": "example",
+      "value": "npx -y @modelcontextprotocol/server-memory",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-15",
+      "kind": "example",
+      "value": "# With uvx\nuvx mcp-server-git\n\n# With pip\npip install mcp-server-git\npython -m mcp_server_git",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-m4-positioning-16",
+      "kind": "positioning",
+      "value": "The Model Context Protocol servers repository provides reference and community server implementations for MCP.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-17",
+      "kind": "feature",
+      "value": "Collects server implementations for the Model Context Protocol.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-18",
+      "kind": "feature",
+      "value": "Includes server-specific quickstart commands such as server-memory.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-19",
+      "kind": "feature",
+      "value": "Organizes multiple integrations under one repository.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-feature-20",
+      "kind": "feature",
+      "value": "Keeps integration details in repository README and package metadata.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-quickstart-21",
+      "kind": "quickstart",
+      "value": "npm install @modelcontextprotocol/servers",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-22",
+      "kind": "example",
+      "value": "Use a server package from the collection with npx.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-m4-example-23",
+      "kind": "example",
+      "value": "Review server-specific README sections before publishing a broad landing page.",
       "sourceIds": [
         "src-readme"
       ],
@@ -155,45 +299,64 @@
     }
   ],
   "product": {
-    "name": "@modelcontextprotocol/servers",
-    "oneLiner": "Model Context Protocol servers",
+    "name": "Model Context Protocol servers",
+    "oneLiner": "The Model Context Protocol servers repository provides reference and community server implementations for MCP.",
     "audiences": [
-      "command-line users",
-      "developers"
+      "Developers",
+      "Frontend teams",
+      "AI builders"
     ],
-    "problems": [
-      "Developers need a faster way to complete a common workflow."
-    ],
+    "problems": [],
     "features": [
-      "C# MCP SDK",
-      "Go MCP SDK",
-      "Java MCP SDK",
-      "Kotlin MCP SDK",
-      "PHP MCP SDK",
-      "Python MCP SDK"
+      "Collects server implementations for the Model Context Protocol.",
+      "Includes server-specific quickstart commands such as server-memory.",
+      "Organizes multiple integrations under one repository.",
+      "Keeps integration details in repository README and package metadata."
     ],
     "useCases": [
-      "The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.",
-      "These servers aim to demonstrate MCP features and the official SDKs.",
-      "- Fetch - Web content fetching and conversion for efficient LLM usage."
+      "Use a server package from the collection with npx.",
+      "Review server-specific README sections before publishing a broad landing page."
     ],
     "quickstart": [
       "npm install @modelcontextprotocol/servers",
-      "npx -y @modelcontextprotocol/server-memory",
-      "pip install mcp-server-git"
+      "npx -y @modelcontextprotocol/server-memory"
     ],
     "examples": [
-      "The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.",
-      "These servers aim to demonstrate MCP features and the official SDKs.",
-      "- Fetch - Web content fetching and conversion for efficient LLM usage."
+      "Use a server package from the collection with npx.",
+      "Review server-specific README sections before publishing a broad landing page."
     ],
     "contribution": {
-      "hasContributionGuide": true,
-      "notes": [
-        "Contribution guide detected in the repository."
-      ]
+      "hasContributionGuide": false,
+      "notes": []
     }
   },
   "assets": [],
-  "gaps": []
+  "gaps": [
+    {
+      "kind": "missing-screenshot",
+      "message": "No reusable image assets or screenshots were found.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-warning",
+      "message": "GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-error",
+      "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
+      "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
+    }
+  ],
+  "m4Validation": {
+    "upstreamCommit": "4503e2d12b799448cd05f789dd40f9643a8d1a6c",
+    "generatedWith": "python3 -m repo_stage.cli generate",
+    "maintainerEditPass": true,
+    "outreachReadiness": "ready-for-raw-feedback-after-human-preview"
+  }
 }

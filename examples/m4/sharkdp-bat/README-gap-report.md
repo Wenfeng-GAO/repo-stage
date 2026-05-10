@@ -1,9 +1,15 @@
 # README Gap Report: sharkdp/bat
 
-No major extraction gaps were detected by the M4 generator.
+RepoStage only uses sourced repository facts. The items below explain what was missing or weak.
 
-## Manual Edit Notes
+- **low / ingestion-warning**: GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.
+- **medium / ingestion-error**: GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.
+- **low / unclear-use-cases**: Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.
 
-- Confirm the hero one-liner with a maintainer before publishing.
-- Replace conservative extracted feature copy with maintainer-preferred phrasing where needed.
-- Add screenshots or demo assets when the repository has a visual workflow but no detected image asset.
+## Output Contract
+
+- `site/index.html`
+- `site/styles.css`
+- `repo-profile.json`
+- `README-gap-report.md`
+- `validation-report.md`
