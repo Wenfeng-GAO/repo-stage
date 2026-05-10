@@ -1,0 +1,189 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/browser-use/browser-use",
+    "owner": "browser-use",
+    "name": "browser-use",
+    "description": "Make websites accessible for AI agents",
+    "defaultBranch": "HEAD",
+    "primaryLanguage": "Python",
+    "license": "MIT",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/browser-use/browser-use/blob/HEAD/README.md",
+      "notes": "Primary repository README used for generated copy."
+    },
+    {
+      "id": "src-package-metadata",
+      "type": "file",
+      "path": "pyproject.toml",
+      "url": "https://github.com/browser-use/browser-use/blob/HEAD/pyproject.toml",
+      "notes": "Package metadata used for ecosystem and command hints."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-description",
+      "kind": "description",
+      "value": "Make websites accessible for AI agents",
+      "sourceIds": [
+        "src-package-metadata"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-1",
+      "kind": "feature",
+      "value": "You need custom tools or deep code-level integration",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-2",
+      "kind": "feature",
+      "value": "We recommend pairing with our cloud browsers for leading stealth, proxy rotation, and scaling",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-3",
+      "kind": "feature",
+      "value": "Or self-host the open-source agent fully on your own machines",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-4",
+      "kind": "feature",
+      "value": "Much more powerful agent for complex tasks (see plot above)",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-5",
+      "kind": "feature",
+      "value": "Easiest way to start and scale",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-6",
+      "kind": "feature",
+      "value": "Best stealth with proxy rotation and captcha solving",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-quickstart-1",
+      "kind": "quickstart",
+      "value": "pip install browser-use",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-quickstart-2",
+      "kind": "quickstart",
+      "value": "uv init && uv add browser-use && uv sync",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-example-1",
+      "kind": "example",
+      "value": "### 💡See more examples here ↗ and give us a star!",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-example-2",
+      "kind": "example",
+      "value": "This creates a browserusedefault.py file with a working example. Available templates:",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-example-3",
+      "kind": "example",
+      "value": "- tools - Examples of custom tools and extending the agent",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "browser-use",
+    "oneLiner": "Make websites accessible for AI agents",
+    "audiences": [
+      "command-line users",
+      "developers"
+    ],
+    "problems": [
+      "Developers need a faster way to complete a common workflow."
+    ],
+    "features": [
+      "You need custom tools or deep code-level integration",
+      "We recommend pairing with our cloud browsers for leading stealth, proxy rotation, and scaling",
+      "Or self-host the open-source agent fully on your own machines",
+      "Much more powerful agent for complex tasks (see plot above)",
+      "Easiest way to start and scale",
+      "Best stealth with proxy rotation and captcha solving"
+    ],
+    "useCases": [
+      "### 💡See more examples here ↗ and give us a star!",
+      "This creates a browserusedefault.py file with a working example. Available templates:",
+      "- tools - Examples of custom tools and extending the agent"
+    ],
+    "quickstart": [
+      "pip install browser-use",
+      "uv init && uv add browser-use && uv sync"
+    ],
+    "examples": [
+      "### 💡See more examples here ↗ and give us a star!",
+      "This creates a browserusedefault.py file with a working example. Available templates:",
+      "- tools - Examples of custom tools and extending the agent"
+    ],
+    "contribution": {
+      "hasContributionGuide": true,
+      "notes": [
+        "Contribution guide detected in the repository."
+      ]
+    }
+  },
+  "assets": [],
+  "gaps": []
+}

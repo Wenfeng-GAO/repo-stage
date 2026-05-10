@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/pmndrs/zustand",
+    "owner": "pmndrs",
+    "name": "zustand",
+    "description": "🐻 Bear necessities for state management in React",
+    "defaultBranch": "HEAD",
+    "primaryLanguage": "JavaScript/TypeScript",
+    "license": "MIT",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/pmndrs/zustand/blob/HEAD/README.md",
+      "notes": "Primary repository README used for generated copy."
+    },
+    {
+      "id": "src-package-metadata",
+      "type": "file",
+      "path": "package.json",
+      "url": "https://github.com/pmndrs/zustand/blob/HEAD/package.json",
+      "notes": "Package metadata used for ecosystem and command hints."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-description",
+      "kind": "description",
+      "value": "🐻 Bear necessities for state management in React",
+      "sourceIds": [
+        "src-package-metadata"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-1",
+      "kind": "feature",
+      "value": "Simple and un-opinionated",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-2",
+      "kind": "feature",
+      "value": "Makes hooks the primary means of consuming state",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-3",
+      "kind": "feature",
+      "value": "Doesn't wrap your app in context providers",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-4",
+      "kind": "feature",
+      "value": "Can inform components transiently (without causing render)",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-5",
+      "kind": "feature",
+      "value": "Renders components only on changes",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-6",
+      "kind": "feature",
+      "value": "Centralized, action-based state management",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-quickstart-1",
+      "kind": "quickstart",
+      "value": "npm install zustand",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-example-1",
+      "kind": "example",
+      "value": "You can try a live demo and read the docs.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-example-2",
+      "kind": "example",
+      "value": ":warning: This readme is written for JavaScript users. If you are a TypeScript user, be sure to check out our TypeScript Usage section.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-example-3",
+      "kind": "example",
+      "value": "For more control over re-rendering, you may provide any custom equality function (this example requires the use of createWithEqualityFn).",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "MIT",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "zustand",
+    "oneLiner": "🐻 Bear necessities for state management in React",
+    "audiences": [
+      "React developers",
+      "frontend teams"
+    ],
+    "problems": [
+      "Developers need a faster way to complete a common workflow."
+    ],
+    "features": [
+      "Simple and un-opinionated",
+      "Makes hooks the primary means of consuming state",
+      "Doesn't wrap your app in context providers",
+      "Can inform components transiently (without causing render)",
+      "Renders components only on changes",
+      "Centralized, action-based state management"
+    ],
+    "useCases": [
+      "You can try a live demo and read the docs.",
+      ":warning: This readme is written for JavaScript users. If you are a TypeScript user, be sure to check out our TypeScript Usage section.",
+      "For more control over re-rendering, you may provide any custom equality function (this example requires the use of createWithEqualityFn)."
+    ],
+    "quickstart": [
+      "npm install zustand"
+    ],
+    "examples": [
+      "You can try a live demo and read the docs.",
+      ":warning: This readme is written for JavaScript users. If you are a TypeScript user, be sure to check out our TypeScript Usage section.",
+      "For more control over re-rendering, you may provide any custom equality function (this example requires the use of createWithEqualityFn)."
+    ],
+    "contribution": {
+      "hasContributionGuide": true,
+      "notes": [
+        "Contribution guide detected in the repository."
+      ]
+    }
+  },
+  "assets": [],
+  "gaps": []
+}

@@ -23,6 +23,18 @@ repo-profile.json
 README-gap-report.md
 ```
 
+For external validation, the repository also includes a local M4 example
+generator:
+
+```bash
+node scripts/generate-m4-examples.mjs
+```
+
+It creates first-pass examples under `examples/m4/` for real public
+repositories, including `repo-profile.json`, static site files, review notes,
+validation reports, and screenshots when Playwright screenshot support is
+available.
+
 The first version focuses on one job: generate a static landing page grounded in real repository facts from the README, docs, package metadata, examples, license, and project assets.
 
 ## Product Direction
@@ -35,6 +47,7 @@ Read the product documents:
 - [docs/repo-profile-schema.md](docs/repo-profile-schema.md)
 - [docs/quality-checklist.md](docs/quality-checklist.md)
 - [docs/agent-compatibility.md](docs/agent-compatibility.md)
+- [docs/m4-external-validation.md](docs/m4-external-validation.md)
 
 ## Status
 

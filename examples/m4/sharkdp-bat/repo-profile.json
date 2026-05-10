@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/sharkdp/bat",
+    "owner": "sharkdp",
+    "name": "bat",
+    "description": "A cat(1) clone with wings.",
+    "defaultBranch": "HEAD",
+    "primaryLanguage": "Rust",
+    "license": "Apache-2.0 OR MIT",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/sharkdp/bat/blob/HEAD/README.md",
+      "notes": "Primary repository README used for generated copy."
+    },
+    {
+      "id": "src-package-metadata",
+      "type": "file",
+      "path": "Cargo.toml",
+      "url": "https://github.com/sharkdp/bat/blob/HEAD/Cargo.toml",
+      "notes": "Package metadata used for ecosystem and command hints."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-description",
+      "kind": "description",
+      "value": "A cat(1) clone with wings.",
+      "sourceIds": [
+        "src-package-metadata"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-1",
+      "kind": "feature",
+      "value": "be for widely used systems",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-2",
+      "kind": "feature",
+      "value": "be from somewhat official sources",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-3",
+      "kind": "feature",
+      "value": "ansi looks decent on any terminal. It uses 3-bit colors: black, red, green,",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-4",
+      "kind": "feature",
+      "value": "base16 is designed for base16 terminal themes. It uses",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-5",
+      "kind": "feature",
+      "value": "base16-256 is designed for tinted-shell.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-6",
+      "kind": "feature",
+      "value": "Enjoy maximum compatibility. Some terminal utilities do not support more than 3-bit colors.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-quickstart-1",
+      "kind": "quickstart",
+      "value": "cargo install bat",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-example-1",
+      "kind": "example",
+      "value": "Be aware that in some cases, -h may not be a shorthand of --help (for example with ls). In cases where you need to use -h",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-example-2",
+      "kind": "example",
+      "value": "You can use --style=numbers,changes, for example, to show only Git changes",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-example-3",
+      "kind": "example",
+      "value": "> For example, if your config contains --style=full,-snip, you can run bat with",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "Apache-2.0 OR MIT",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "bat",
+    "oneLiner": "A cat(1) clone with wings.",
+    "audiences": [
+      "command-line users",
+      "developers"
+    ],
+    "problems": [
+      "Developers need a simpler tool with less operational overhead."
+    ],
+    "features": [
+      "be for widely used systems",
+      "be from somewhat official sources",
+      "ansi looks decent on any terminal. It uses 3-bit colors: black, red, green,",
+      "base16 is designed for base16 terminal themes. It uses",
+      "base16-256 is designed for tinted-shell.",
+      "Enjoy maximum compatibility. Some terminal utilities do not support more than 3-bit colors."
+    ],
+    "useCases": [
+      "Be aware that in some cases, -h may not be a shorthand of --help (for example with ls). In cases where you need to use -h",
+      "You can use --style=numbers,changes, for example, to show only Git changes",
+      "> For example, if your config contains --style=full,-snip, you can run bat with"
+    ],
+    "quickstart": [
+      "cargo install bat"
+    ],
+    "examples": [
+      "Be aware that in some cases, -h may not be a shorthand of --help (for example with ls). In cases where you need to use -h",
+      "You can use --style=numbers,changes, for example, to show only Git changes",
+      "> For example, if your config contains --style=full,-snip, you can run bat with"
+    ],
+    "contribution": {
+      "hasContributionGuide": true,
+      "notes": [
+        "Contribution guide detected in the repository."
+      ]
+    }
+  },
+  "assets": [],
+  "gaps": []
+}

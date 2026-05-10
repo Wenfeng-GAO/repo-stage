@@ -1,0 +1,35 @@
+:root {
+  color: #17201b;
+  background: #f7f5ef;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+.hero { min-height: 76vh; padding: 28px clamp(20px, 5vw, 72px); background: #e8f0ea; border-bottom: 1px solid #c9d7cd; }
+nav { display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+nav a { text-decoration: none; border-bottom: 1px solid currentColor; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 48px; align-items: end; margin-top: 12vh; }
+.eyebrow { color: #386b51; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; }
+h1 { max-width: 960px; margin: 0; font-size: clamp(2.1rem, 5vw, 5rem); line-height: 1.02; letter-spacing: 0; }
+.lead { max-width: 720px; font-size: 1.18rem; line-height: 1.65; color: #46504a; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.actions a { min-height: 44px; display: inline-flex; align-items: center; padding: 0 18px; border-radius: 6px; text-decoration: none; font-weight: 700; }
+.primary { background: #17201b; color: #fff; }
+.secondary { border: 1px solid #17201b; }
+aside { background: #fffdf7; border: 1px solid #cfd7cf; border-radius: 8px; padding: 22px; }
+dt { margin-top: 16px; color: #5e6a63; font-size: 0.8rem; text-transform: uppercase; }
+dd { margin: 4px 0 0; font-weight: 700; }
+main { padding: 56px clamp(20px, 5vw, 72px); }
+section { max-width: 1120px; margin: 0 auto 56px; }
+h2 { font-size: 1.6rem; margin-bottom: 18px; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+article { background: #fff; border: 1px solid #d8d8d1; border-radius: 8px; padding: 18px; line-height: 1.5; }
+pre { overflow: auto; background: #18211c; color: #f3fff7; padding: 20px; border-radius: 8px; }
+li { margin: 10px 0; line-height: 1.55; }
+@media (max-width: 760px) {
+  .hero { min-height: auto; padding-bottom: 48px; }
+  .hero-grid { grid-template-columns: 1fr; margin-top: 64px; gap: 28px; }
+  .cards { grid-template-columns: 1fr; }
+  h1 { font-size: 2.25rem; }
+}

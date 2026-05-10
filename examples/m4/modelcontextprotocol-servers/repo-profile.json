@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "owner": "modelcontextprotocol",
+    "name": "servers",
+    "description": "Model Context Protocol servers",
+    "defaultBranch": "HEAD",
+    "primaryLanguage": "JavaScript/TypeScript",
+    "license": "Apache-2.0",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/HEAD/README.md",
+      "notes": "Primary repository README used for generated copy."
+    },
+    {
+      "id": "src-package-metadata",
+      "type": "file",
+      "path": "package.json",
+      "url": "https://github.com/modelcontextprotocol/servers/blob/HEAD/package.json",
+      "notes": "Package metadata used for ecosystem and command hints."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-description",
+      "kind": "description",
+      "value": "Model Context Protocol servers",
+      "sourceIds": [
+        "src-package-metadata"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-1",
+      "kind": "feature",
+      "value": "C# MCP SDK",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-2",
+      "kind": "feature",
+      "value": "Go MCP SDK",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-3",
+      "kind": "feature",
+      "value": "Java MCP SDK",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-4",
+      "kind": "feature",
+      "value": "Kotlin MCP SDK",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-5",
+      "kind": "feature",
+      "value": "PHP MCP SDK",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-6",
+      "kind": "feature",
+      "value": "Python MCP SDK",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-quickstart-1",
+      "kind": "quickstart",
+      "value": "npm install @modelcontextprotocol/servers",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-quickstart-2",
+      "kind": "quickstart",
+      "value": "npx -y @modelcontextprotocol/server-memory",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-quickstart-3",
+      "kind": "quickstart",
+      "value": "pip install mcp-server-git",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-example-1",
+      "kind": "example",
+      "value": "The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-example-2",
+      "kind": "example",
+      "value": "These servers aim to demonstrate MCP features and the official SDKs.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-example-3",
+      "kind": "example",
+      "value": "- Fetch - Web content fetching and conversion for efficient LLM usage.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "Apache-2.0",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "@modelcontextprotocol/servers",
+    "oneLiner": "Model Context Protocol servers",
+    "audiences": [
+      "command-line users",
+      "developers"
+    ],
+    "problems": [
+      "Developers need a faster way to complete a common workflow."
+    ],
+    "features": [
+      "C# MCP SDK",
+      "Go MCP SDK",
+      "Java MCP SDK",
+      "Kotlin MCP SDK",
+      "PHP MCP SDK",
+      "Python MCP SDK"
+    ],
+    "useCases": [
+      "The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.",
+      "These servers aim to demonstrate MCP features and the official SDKs.",
+      "- Fetch - Web content fetching and conversion for efficient LLM usage."
+    ],
+    "quickstart": [
+      "npm install @modelcontextprotocol/servers",
+      "npx -y @modelcontextprotocol/server-memory",
+      "pip install mcp-server-git"
+    ],
+    "examples": [
+      "The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.",
+      "These servers aim to demonstrate MCP features and the official SDKs.",
+      "- Fetch - Web content fetching and conversion for efficient LLM usage."
+    ],
+    "contribution": {
+      "hasContributionGuide": true,
+      "notes": [
+        "Contribution guide detected in the repository."
+      ]
+    }
+  },
+  "assets": [],
+  "gaps": []
+}

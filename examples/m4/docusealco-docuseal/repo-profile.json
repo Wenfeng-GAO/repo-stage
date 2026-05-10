@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/docusealco/docuseal",
+    "owner": "docusealco",
+    "name": "docuseal",
+    "description": "DocuSeal Open source document filling and signing DocuSeal is an open source platform that provides secure and efficient digital document signing and processing. Create PDF forms to have them filled and signed online on ",
+    "defaultBranch": "HEAD",
+    "primaryLanguage": "JavaScript/TypeScript",
+    "license": "LICENSE",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/docusealco/docuseal/blob/HEAD/README.md",
+      "notes": "Primary repository README used for generated copy."
+    },
+    {
+      "id": "src-package-metadata",
+      "type": "file",
+      "path": "package.json",
+      "url": "https://github.com/docusealco/docuseal/blob/HEAD/package.json",
+      "notes": "Package metadata used for ecosystem and command hints."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-description",
+      "kind": "description",
+      "value": "DocuSeal Open source document filling and signing DocuSeal is an open source platform that provides secure and efficient digital document signing and processing. Create PDF forms to have them filled and signed online on ",
+      "sourceIds": [
+        "src-package-metadata"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-1",
+      "kind": "feature",
+      "value": "PDF form fields builder (WYSIWYG)",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-2",
+      "kind": "feature",
+      "value": "12 field types available (Signature, Date, File, Checkbox etc.)",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-3",
+      "kind": "feature",
+      "value": "Multiple submitters per document",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-4",
+      "kind": "feature",
+      "value": "Automated emails via SMTP",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-5",
+      "kind": "feature",
+      "value": "Files storage on disk or AWS S3, Google Storage, Azure Cloud",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-6",
+      "kind": "feature",
+      "value": "Automatic PDF eSignature",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-quickstart-1",
+      "kind": "quickstart",
+      "value": "npm install docuseal",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-quickstart-2",
+      "kind": "quickstart",
+      "value": "docker run --name docuseal -p 3000:3000 -v.:/data docuseal/docuseal",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "LICENSE",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "docuseal",
+    "oneLiner": "DocuSeal Open source document filling and signing DocuSeal is an open source platform that provides secure and efficient digital document signing and processing. Create PDF forms to have them filled and signed online on ",
+    "audiences": [
+      "React developers",
+      "frontend teams"
+    ],
+    "problems": [
+      "Developers need to understand where docuseal fits before trying it."
+    ],
+    "features": [
+      "PDF form fields builder (WYSIWYG)",
+      "12 field types available (Signature, Date, File, Checkbox etc.)",
+      "Multiple submitters per document",
+      "Automated emails via SMTP",
+      "Files storage on disk or AWS S3, Google Storage, Azure Cloud",
+      "Automatic PDF eSignature"
+    ],
+    "useCases": [],
+    "quickstart": [
+      "npm install docuseal",
+      "docker run --name docuseal -p 3000:3000 -v.:/data docuseal/docuseal"
+    ],
+    "examples": [],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [],
+  "gaps": [
+    {
+      "kind": "missing-example",
+      "message": "No obvious example-oriented prose was extracted.",
+      "severity": "medium"
+    },
+    {
+      "kind": "missing-contributing",
+      "message": "No CONTRIBUTING.md file was detected.",
+      "severity": "low"
+    }
+  ]
+}
