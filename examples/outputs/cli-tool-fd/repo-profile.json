@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/sharkdp/fd",
+    "owner": "sharkdp",
+    "name": "fd",
+    "description": "fd is a simple, fast and user-friendly alternative to find.",
+    "defaultBranch": "master",
+    "primaryLanguage": "",
+    "license": "LICENSE-APACHE",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-github",
+      "type": "github-metadata",
+      "path": "",
+      "url": "https://github.com/sharkdp/fd",
+      "notes": "GitHub repository metadata from ingestion"
+    },
+    {
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/sharkdp/fd/blob/master/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE-APACHE",
+      "url": "https://github.com/sharkdp/fd/blob/master/LICENSE-APACHE",
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
+      "path": "Cargo.toml",
+      "url": "https://github.com/sharkdp/fd/blob/master/Cargo.toml",
+      "notes": ""
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-1",
+      "kind": "description",
+      "value": "fd is a simple, fast and user-friendly alternative to find.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-2",
+      "kind": "quickstart",
+      "value": "brew install fd",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-3",
+      "kind": "quickstart",
+      "value": "npm install -g fd-find",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-4",
+      "kind": "quickstart",
+      "value": "cargo install fd-find",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-5",
+      "kind": "quickstart",
+      "value": "make` is also needed for the build.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-6",
+      "kind": "quickstart",
+      "value": "git clone https://github.com/sharkdp/fd",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-7",
+      "kind": "quickstart",
+      "value": "cargo build",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-8",
+      "kind": "feature",
+      "value": "Intuitive syntax: `fd PATTERN` instead of `find -iname '*PATTERN*'`.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-9",
+      "kind": "feature",
+      "value": "Regular expression (default) and glob-based patterns.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-10",
+      "kind": "feature",
+      "value": "Very fast due to parallelized directory traversal.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-11",
+      "kind": "feature",
+      "value": "Uses colors to highlight different file types (same as `ls`).",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-12",
+      "kind": "feature",
+      "value": "Supports parallel command execution",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-13",
+      "kind": "feature",
+      "value": "Smart case: the search is case-insensitive by default. It switches to",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "fd-find",
+    "oneLiner": "fd is a simple, fast and user-friendly alternative to find.",
+    "audiences": [
+      "Developers",
+      "Frontend teams",
+      "AI builders"
+    ],
+    "problems": [],
+    "features": [
+      "Intuitive syntax: `fd PATTERN` instead of `find -iname '*PATTERN*'`.",
+      "Regular expression (default) and glob-based patterns.",
+      "Very fast due to parallelized directory traversal.",
+      "Uses colors to highlight different file types (same as `ls`).",
+      "Supports parallel command execution",
+      "Smart case: the search is case-insensitive by default. It switches to"
+    ],
+    "useCases": [
+      "Use from the command line in local development workflows.",
+      "Integrate repository capabilities into developer applications."
+    ],
+    "quickstart": [
+      "brew install fd",
+      "npm install -g fd-find",
+      "cargo install fd-find",
+      "make` is also needed for the build.",
+      "git clone https://github.com/sharkdp/fd",
+      "cargo build"
+    ],
+    "examples": [
+      "If called with just a single argument like this, *fd* searches the current directory recursively\nfor any entries that *contain* the pattern `netfl`.\n\n### Regular expression search\n\nThe search pattern is treated as a regular expression. Here, we search for entries that start\nwith `x` and end with `rc`:",
+      "The regular expression syntax used by `fd` is [documented here](https://docs.rs/regex/latest/regex/#syntax).\n\n### Specifying the root directory\n\nIf we want to search a specific directory, it can be given as a second argument to *fd*:",
+      "### List all files, recursively\n\n*fd* can be called with no arguments. This is very useful to get a quick overview of all entries\nin the current directory, recursively (similar to `ls -R`):"
+    ],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [
+    {
+      "path": "doc/logo.png",
+      "kind": "logo",
+      "sourceIds": []
+    },
+    {
+      "path": "doc/logo.svg",
+      "kind": "logo",
+      "sourceIds": []
+    },
+    {
+      "path": "doc/screencast.svg",
+      "kind": "image",
+      "sourceIds": []
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "ingestion-warning",
+      "message": "GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-error",
+      "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
+      "severity": "medium"
+    }
+  ]
+}

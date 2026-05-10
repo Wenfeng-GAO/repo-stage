@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/openai/openai-agents-python",
+    "owner": "openai",
+    "name": "openai-agents-python",
+    "description": "The OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs.",
+    "defaultBranch": "main",
+    "primaryLanguage": "",
+    "license": "LICENSE",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-github",
+      "type": "github-metadata",
+      "path": "",
+      "url": "https://github.com/openai/openai-agents-python",
+      "notes": "GitHub repository metadata from ingestion"
+    },
+    {
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/LICENSE",
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
+      "path": "examples/realtime/twilio/requirements.txt",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/realtime/twilio/requirements.txt",
+      "notes": ""
+    },
+    {
+      "id": "src-package-2",
+      "type": "package",
+      "path": "examples/realtime/twilio_sip/requirements.txt",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/realtime/twilio_sip/requirements.txt",
+      "notes": ""
+    },
+    {
+      "id": "src-package-3",
+      "type": "package",
+      "path": "pyproject.toml",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-1",
+      "type": "docs",
+      "path": "docs/agents.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/agents.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-2",
+      "type": "docs",
+      "path": "docs/config.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/config.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-3",
+      "type": "docs",
+      "path": "docs/context.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/context.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-4",
+      "type": "docs",
+      "path": "docs/examples.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/examples.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-5",
+      "type": "docs",
+      "path": "docs/guardrails.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/guardrails.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-6",
+      "type": "docs",
+      "path": "docs/handoffs.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/handoffs.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-7",
+      "type": "docs",
+      "path": "docs/human_in_the_loop.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/human_in_the_loop.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-8",
+      "type": "docs",
+      "path": "docs/index.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/index.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-9",
+      "type": "docs",
+      "path": "docs/ja/agents.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/agents.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-10",
+      "type": "docs",
+      "path": "docs/ja/config.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/config.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-11",
+      "type": "docs",
+      "path": "docs/ja/context.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/context.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-12",
+      "type": "docs",
+      "path": "docs/ja/examples.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/examples.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-13",
+      "type": "docs",
+      "path": "docs/ja/guardrails.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/guardrails.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-14",
+      "type": "docs",
+      "path": "docs/ja/handoffs.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/handoffs.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-15",
+      "type": "docs",
+      "path": "docs/ja/human_in_the_loop.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/human_in_the_loop.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-16",
+      "type": "docs",
+      "path": "docs/ja/index.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/index.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-17",
+      "type": "docs",
+      "path": "docs/ja/mcp.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/mcp.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-18",
+      "type": "docs",
+      "path": "docs/ja/models/index.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/models/index.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-19",
+      "type": "docs",
+      "path": "docs/ja/models/litellm.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/models/litellm.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-20",
+      "type": "docs",
+      "path": "docs/ja/multi_agent.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/docs/ja/multi_agent.md",
+      "notes": ""
+    },
+    {
+      "id": "src-example-1",
+      "type": "example",
+      "path": "examples/__init__.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/__init__.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-2",
+      "type": "example",
+      "path": "examples/agent_patterns/README.md",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-example-3",
+      "type": "example",
+      "path": "examples/agent_patterns/agents_as_tools.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/agents_as_tools.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-4",
+      "type": "example",
+      "path": "examples/agent_patterns/agents_as_tools_conditional.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/agents_as_tools_conditional.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-5",
+      "type": "example",
+      "path": "examples/agent_patterns/agents_as_tools_streaming.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/agents_as_tools_streaming.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-6",
+      "type": "example",
+      "path": "examples/agent_patterns/agents_as_tools_structured.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/agents_as_tools_structured.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-7",
+      "type": "example",
+      "path": "examples/agent_patterns/deterministic.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/deterministic.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-8",
+      "type": "example",
+      "path": "examples/agent_patterns/forcing_tool_use.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/forcing_tool_use.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-9",
+      "type": "example",
+      "path": "examples/agent_patterns/human_in_the_loop.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/human_in_the_loop.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-10",
+      "type": "example",
+      "path": "examples/agent_patterns/human_in_the_loop_custom_rejection.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/human_in_the_loop_custom_rejection.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-11",
+      "type": "example",
+      "path": "examples/agent_patterns/human_in_the_loop_stream.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/human_in_the_loop_stream.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-12",
+      "type": "example",
+      "path": "examples/agent_patterns/input_guardrails.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/input_guardrails.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-13",
+      "type": "example",
+      "path": "examples/agent_patterns/llm_as_a_judge.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/llm_as_a_judge.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-14",
+      "type": "example",
+      "path": "examples/agent_patterns/output_guardrails.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/output_guardrails.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-15",
+      "type": "example",
+      "path": "examples/agent_patterns/parallelization.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/parallelization.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-16",
+      "type": "example",
+      "path": "examples/agent_patterns/routing.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/routing.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-17",
+      "type": "example",
+      "path": "examples/agent_patterns/streaming_guardrails.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/agent_patterns/streaming_guardrails.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-18",
+      "type": "example",
+      "path": "examples/auto_mode.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/auto_mode.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-19",
+      "type": "example",
+      "path": "examples/basic/agent_lifecycle_example.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/basic/agent_lifecycle_example.py",
+      "notes": ""
+    },
+    {
+      "id": "src-example-20",
+      "type": "example",
+      "path": "examples/basic/dynamic_system_prompt.py",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/examples/basic/dynamic_system_prompt.py",
+      "notes": ""
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-1",
+      "kind": "description",
+      "value": "The OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-2",
+      "kind": "quickstart",
+      "value": "pip install openai-agents",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-3",
+      "kind": "quickstart",
+      "value": "uv init",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-4",
+      "kind": "quickstart",
+      "value": "uv add openai-agents",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-5",
+      "kind": "feature",
+      "value": "[`wrapper.context`][agents.run_context.RunContextWrapper.context] for your own mutable app state and dependencies.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-6",
+      "kind": "feature",
+      "value": "[`wrapper.usage`][agents.run_context.RunContextWrapper.usage] for aggregated request and token usage across the current run.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-7",
+      "kind": "feature",
+      "value": "[`wrapper.tool_input`][agents.run_context.RunContextWrapper.tool_input] for structured input when the current run is executing inside [`Agent.as_tool()`][agents.agent.Agent.as_tool].",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-8",
+      "kind": "feature",
+      "value": "[`wrapper.approve_tool(...)`][agents.run_context.RunContextWrapper.approve_tool] / [`wrapper.reject_tool(...)`][agents.run_context.RunContextWrapper.reject_tool] when you need to update approval state programmatically.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "openai-agents-python",
+    "oneLiner": "The OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs.",
+    "audiences": [
+      "Developers",
+      "Frontend teams",
+      "AI builders"
+    ],
+    "problems": [],
+    "features": [
+      "[`wrapper.context`][agents.run_context.RunContextWrapper.context] for your own mutable app state and dependencies.",
+      "[`wrapper.usage`][agents.run_context.RunContextWrapper.usage] for aggregated request and token usage across the current run.",
+      "[`wrapper.tool_input`][agents.run_context.RunContextWrapper.tool_input] for structured input when the current run is executing inside [`Agent.as_tool()`][agents.agent.Agent.as_tool].",
+      "[`wrapper.approve_tool(...)`][agents.run_context.RunContextWrapper.approve_tool] / [`wrapper.reject_tool(...)`][agents.run_context.RunContextWrapper.reject_tool] when you need to update approval state programmatically."
+    ],
+    "useCases": [
+      "Use from the command line in local development workflows.",
+      "Integrate repository capabilities into developer applications."
+    ],
+    "quickstart": [
+      "pip install openai-agents",
+      "uv init",
+      "uv add openai-agents"
+    ],
+    "examples": [
+      "python -m venv .venv\nsource .venv/bin/activate  # On Windows: .venv\\Scripts\\activate\npip install openai-agents",
+      "uv init\nuv add openai-agents",
+      "from agents import Agent, ModelSettings, function_tool\n\n@function_tool\ndef get_weather(city: str) -> str:\n    \"\"\"returns weather info for the specified city.\"\"\"\n    return f\"The weather in {city} is sunny\"\n\nagent = Agent(\n    name=\"Haiku agent\",\n    instructions=\"Always respond in haiku form\",\n    model=\"gpt-5-nano\",\n    tools=[get_weather],\n)"
+    ],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [
+    {
+      "path": "docs/assets/images/favicon-platform.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "docs/assets/images/graph.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "docs/assets/images/harness_with_compute.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "docs/assets/images/mcp-tracing.jpg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "docs/assets/images/orchestration.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "docs/assets/logo.svg",
+      "kind": "logo",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/basic/media/image_bison.jpg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/realtime/app/static/favicon.ico",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/sandbox/tutorials/vision_website_clone/reference-site.png",
+      "kind": "image",
+      "sourceIds": []
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "ingestion-warning",
+      "message": "GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-error",
+      "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
+      "severity": "medium"
+    }
+  ]
+}

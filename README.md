@@ -46,6 +46,35 @@ The command writes a structured JSON report containing:
 
 Three smoke-test fixture URLs live in [examples/fixtures/public-repos.txt](examples/fixtures/public-repos.txt).
 
+## Local Generate Prototype
+
+Run the M2 local generator directly with Python:
+
+```bash
+python3 -m repo_stage.cli generate https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+Or install the console command in editable mode:
+
+```bash
+python3 -m pip install -e .
+repo-stage generate https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+The command reuses the ingestion pipeline above, then writes:
+
+```text
+site/
+  index.html
+  styles.css
+  assets/
+repo-profile.json
+README-gap-report.md
+validation-report.md
+```
+
+The prototype extracts conservative facts from the ingestion report, generates a static one-page site, and validates the output. Missing README material is recorded as gaps or warnings; unsupported or failed generation writes failure reports instead of presenting a partial site as successful.
+
 ## Product Direction
 
 Read the product documents:
@@ -59,7 +88,7 @@ Read the product documents:
 
 ## Status
 
-RepoStage is currently in product planning. The product name is confirmed, the public repository is created, and the first reviewable product, development, agent-portable Skill, schema, compatibility, and quality documents are checked in.
+RepoStage now includes an M2 local prototype CLI. The first verification outputs are saved under `examples/outputs/` for a CLI tool, React/UI library, AI agent project, developer infrastructure project, and design/creative tool.
 
 ## License
 

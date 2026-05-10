@@ -1,0 +1,506 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/excalidraw/excalidraw",
+    "owner": "excalidraw",
+    "name": "excalidraw",
+    "description": "An open source virtual hand-drawn style whiteboard. </br> Collaborative and end-to-end encrypted. </br>",
+    "defaultBranch": "master",
+    "primaryLanguage": "",
+    "license": "LICENSE",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-github",
+      "type": "github-metadata",
+      "path": "",
+      "url": "https://github.com/excalidraw/excalidraw",
+      "notes": "GitHub repository metadata from ingestion"
+    },
+    {
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/LICENSE",
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
+      "path": "dev-docs/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/dev-docs/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-2",
+      "type": "package",
+      "path": "examples/with-nextjs/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-nextjs/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-3",
+      "type": "package",
+      "path": "examples/with-script-in-browser/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-script-in-browser/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-4",
+      "type": "package",
+      "path": "excalidraw-app/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/excalidraw-app/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-5",
+      "type": "package",
+      "path": "package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-6",
+      "type": "package",
+      "path": "packages/common/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/common/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-7",
+      "type": "package",
+      "path": "packages/element/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/element/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-8",
+      "type": "package",
+      "path": "packages/excalidraw/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-9",
+      "type": "package",
+      "path": "packages/fractional-indexing/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/fractional-indexing/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-10",
+      "type": "package",
+      "path": "packages/math/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/math/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-package-11",
+      "type": "package",
+      "path": "packages/utils/package.json",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/utils/package.json",
+      "notes": ""
+    },
+    {
+      "id": "src-example-1",
+      "type": "example",
+      "path": "examples/with-nextjs/README.md",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-nextjs/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-example-2",
+      "type": "example",
+      "path": "examples/with-nextjs/next.config.js",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-nextjs/next.config.js",
+      "notes": ""
+    },
+    {
+      "id": "src-example-3",
+      "type": "example",
+      "path": "examples/with-script-in-browser/utils.ts",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/examples/with-script-in-browser/utils.ts",
+      "notes": ""
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-1",
+      "kind": "description",
+      "value": "An open source virtual hand-drawn style whiteboard. </br> Collaborative and end-to-end encrypted. </br>",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-2",
+      "kind": "quickstart",
+      "value": "npm install react react-dom @excalidraw/excalidraw",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-3",
+      "kind": "quickstart",
+      "value": "yarn add react react-dom @excalidraw/excalidraw",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-4",
+      "kind": "quickstart",
+      "value": "npm run dev",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-5",
+      "kind": "quickstart",
+      "value": "yarn dev",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-6",
+      "kind": "quickstart",
+      "value": "pnpm dev",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-7",
+      "kind": "quickstart",
+      "value": "bun dev",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-8",
+      "kind": "feature",
+      "value": "💯&nbsp;Free & open-source.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-9",
+      "kind": "feature",
+      "value": "🎨&nbsp;Infinite, canvas-based whiteboard.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-10",
+      "kind": "feature",
+      "value": "✍️&nbsp;Hand-drawn like style.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-11",
+      "kind": "feature",
+      "value": "🌓&nbsp;Dark mode.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-12",
+      "kind": "feature",
+      "value": "🏗️&nbsp;Customizable.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-13",
+      "kind": "feature",
+      "value": "📷&nbsp;Image support.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "docs",
+    "oneLiner": "An open source virtual hand-drawn style whiteboard. </br> Collaborative and end-to-end encrypted. </br>",
+    "audiences": [
+      "Developers",
+      "Frontend teams",
+      "AI builders"
+    ],
+    "problems": [],
+    "features": [
+      "💯&nbsp;Free & open-source.",
+      "🎨&nbsp;Infinite, canvas-based whiteboard.",
+      "✍️&nbsp;Hand-drawn like style.",
+      "🌓&nbsp;Dark mode.",
+      "🏗️&nbsp;Customizable.",
+      "📷&nbsp;Image support."
+    ],
+    "useCases": [
+      "Use from the command line in local development workflows.",
+      "Build application interfaces with reusable components.",
+      "Integrate repository capabilities into developer applications."
+    ],
+    "quickstart": [
+      "npm install react react-dom @excalidraw/excalidraw",
+      "yarn add react react-dom @excalidraw/excalidraw",
+      "npm run dev",
+      "yarn dev",
+      "pnpm dev",
+      "bun dev"
+    ],
+    "examples": [
+      "npm install react react-dom @excalidraw/excalidraw\n# or\nyarn add react react-dom @excalidraw/excalidraw",
+      "npm run dev\n# or\nyarn dev\n# or\npnpm dev\n# or\nbun dev"
+    ],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [
+    {
+      "path": ".github/assets/crowdin.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": ".github/assets/sentry.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": ".github/assets/vercel.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/docs/assets/aggressive-block-fingerprint.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/docs/assets/block-fingerprint.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/docs/assets/brave-shield.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/docs/assets/nerd-stats.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/docusaurus.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/doremon.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/favicon.ico",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/favicon.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/logo.svg",
+      "kind": "logo",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/og-image-2.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/og-image.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/pika.jpeg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/undraw_add_files.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/undraw_blank_canvas.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/undraw_innovative.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "dev-docs/static/img/welcome-screen-overview.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-nextjs/public/images/doremon.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-nextjs/public/images/excalibot.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-nextjs/public/images/pika.jpeg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-nextjs/public/images/rocket.jpeg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-nextjs/src/app/favicon.ico",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-script-in-browser/public/images/doremon.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-script-in-browser/public/images/excalibot.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-script-in-browser/public/images/pika.jpeg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "examples/with-script-in-browser/public/images/rocket.jpeg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "packages/excalidraw/tests/fixtures/deer.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "packages/excalidraw/tests/fixtures/smiley.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "packages/excalidraw/tests/fixtures/smiley_embedded_v2.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "packages/excalidraw/tests/fixtures/smiley_embedded_v2.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "packages/excalidraw/tests/fixtures/svg-image-exporting-reference.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "packages/excalidraw/tests/fixtures/test_embedded_v1.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "packages/excalidraw/tests/fixtures/test_embedded_v1.svg",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "public/android-chrome-192x192.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "public/android-chrome-512x512.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "public/favicon-16x16.png",
+      "kind": "image",
+      "sourceIds": []
+    },
+    {
+      "path": "public/favicon-32x32.png",
+      "kind": "image",
+      "sourceIds": []
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "ingestion-warning",
+      "message": "GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-error",
+      "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
+      "severity": "medium"
+    }
+  ]
+}

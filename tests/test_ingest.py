@@ -7,6 +7,7 @@ from repo_stage.ingest import (
     GitHubRepo,
     IngestError,
     _fetch_readme,
+    _is_license_path,
     _local_paths,
     _local_text_source,
     parse_github_url,
@@ -40,6 +41,10 @@ class ParseGitHubUrlTest(unittest.TestCase):
 
 
 class LocalFallbackSafetyTest(unittest.TestCase):
+    def test_license_path_accepts_split_license_files(self) -> None:
+        self.assertTrue(_is_license_path("LICENSE-APACHE"))
+        self.assertTrue(_is_license_path("LICENSE.MIT"))
+
     def test_local_paths_skip_symlinks(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp) / "repo"
