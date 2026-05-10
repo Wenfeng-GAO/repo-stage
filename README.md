@@ -25,6 +25,27 @@ README-gap-report.md
 
 The first version focuses on one job: generate a static landing page grounded in real repository facts from the README, docs, package metadata, examples, license, and project assets.
 
+## Local Ingestion Prototype
+
+Run the public GitHub repository ingestion step directly:
+
+```bash
+python3 scripts/repo-stage-ingest https://github.com/owner/repo --out generated/owner-repo-ingestion.json
+```
+
+The command writes a structured JSON report containing:
+
+- validated repository owner/name and GitHub metadata
+- README content when available
+- docs and example text files
+- package metadata from files such as `package.json`, `pyproject.toml`, `Cargo.toml`, and `go.mod`
+- license metadata and reusable image assets
+- rate-limit details, warnings, readable errors, and content gaps for downstream profiling
+
+`GITHUB_TOKEN` is optional. Public repositories should work without a token until GitHub's unauthenticated rate limit is exhausted; when that happens the report or error explains the degraded path.
+
+Three smoke-test fixture URLs live in [examples/fixtures/public-repos.txt](examples/fixtures/public-repos.txt).
+
 ## Product Direction
 
 Read the product documents:
