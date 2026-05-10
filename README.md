@@ -123,6 +123,7 @@ Read the product documents:
 - [docs/quality-checklist.md](docs/quality-checklist.md)
 - [docs/agent-compatibility.md](docs/agent-compatibility.md)
 - [docs/m4-external-validation.md](docs/m4-external-validation.md)
+- [docs/m4-verification.md](docs/m4-verification.md)
 
 ## Skill Package
 
