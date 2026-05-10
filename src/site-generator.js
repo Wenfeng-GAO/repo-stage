@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, lstat, mkdir, readFile, realpath, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { validateRepoProfile } from "./repo-profile.js";
 
@@ -135,9 +135,10 @@ function validateProductList(items, pathName, allowedFactValues, errors) {
 
 async function copyProfileAssets(profile, profileDir, assetsDir) {
   const copied = [];
+  const profileRoot = await realpath(profileDir);
   for (const asset of profile.assets || []) {
     if (!COPYABLE_ASSET_KINDS.has(asset.kind) || isRemoteUrl(asset.path)) continue;
-    const sourcePath = path.resolve(profileDir, asset.path);
+    const sourcePath = await resolveProfileAssetPath(profileRoot, asset.path);
     const fileName = `${asset.kind}-${path.basename(asset.path)}`;
     await copyFile(sourcePath, path.join(assetsDir, fileName));
     copied.push({
@@ -146,6 +147,25 @@ async function copyProfileAssets(profile, profileDir, assetsDir) {
     });
   }
   return copied;
+}
+
+async function resolveProfileAssetPath(profileRoot, assetPath) {
+  const resolvedPath = path.resolve(profileRoot, assetPath);
+  const stats = await lstat(resolvedPath);
+  if (stats.isSymbolicLink()) {
+    throw new Error(`Profile asset cannot be a symlink: ${assetPath}`);
+  }
+  if (!stats.isFile()) {
+    throw new Error(`Profile asset must be a regular file: ${assetPath}`);
+  }
+
+  const realAssetPath = await realpath(resolvedPath);
+  const relativePath = path.relative(profileRoot, realAssetPath);
+  if (relativePath.startsWith("..") || path.isAbsolute(relativePath)) {
+    throw new Error(`Profile asset is outside the profile root: ${assetPath}`);
+  }
+
+  return realAssetPath;
 }
 
 function renderHtml(profile, model, heroAsset) {

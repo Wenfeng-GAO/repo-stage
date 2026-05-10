@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, rm, stat } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, rm, stat, symlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -115,6 +115,70 @@ test("rejects profile assets without known source references", () => {
 
   assert.equal(validation.valid, false);
   assert.ok(validation.errors.some((error) => error.includes("assets[0] references unknown source ID")));
+});
+
+test("rejects local profile assets outside the profile root", async () => {
+  const tmp = await mkdtemp(path.join(tmpdir(), "repo-stage-outside-asset-"));
+  try {
+    const profileDir = path.join(tmp, "profile");
+    await mkdir(profileDir, { recursive: true });
+    await writeFile(path.join(tmp, "secret.txt"), "do not copy");
+    await writeFile(
+      path.join(profileDir, "repo-profile.json"),
+      `${JSON.stringify(minimalProfile({
+        assets: [
+          {
+            kind: "logo",
+            path: "../secret.txt",
+            sourceIds: ["src-readme"]
+          }
+        ]
+      }), null, 2)}\n`
+    );
+
+    await assert.rejects(
+      generateSiteFromProfile({
+        profilePath: path.join(profileDir, "repo-profile.json"),
+        outDir: path.join(tmp, "out")
+      }),
+      /outside the profile root/
+    );
+  } finally {
+    await rm(tmp, { recursive: true, force: true });
+  }
+});
+
+test("rejects symlinked local profile assets", async () => {
+  const tmp = await mkdtemp(path.join(tmpdir(), "repo-stage-symlink-asset-"));
+  try {
+    const profileDir = path.join(tmp, "profile");
+    const assetsDir = path.join(profileDir, "assets");
+    await mkdir(assetsDir, { recursive: true });
+    await writeFile(path.join(tmp, "secret.svg"), "<svg></svg>");
+    await symlink(path.join(tmp, "secret.svg"), path.join(assetsDir, "logo.svg"));
+    await writeFile(
+      path.join(profileDir, "repo-profile.json"),
+      `${JSON.stringify(minimalProfile({
+        assets: [
+          {
+            kind: "logo",
+            path: "assets/logo.svg",
+            sourceIds: ["src-readme"]
+          }
+        ]
+      }), null, 2)}\n`
+    );
+
+    await assert.rejects(
+      generateSiteFromProfile({
+        profilePath: path.join(profileDir, "repo-profile.json"),
+        outDir: path.join(tmp, "out")
+      }),
+      /cannot be a symlink/
+    );
+  } finally {
+    await rm(tmp, { recursive: true, force: true });
+  }
 });
 
 function minimalProfile(overrides = {}) {
