@@ -84,6 +84,22 @@ Generate reports from an existing output set with:
 python3 scripts/repo_stage_reports.py --profile repo-profile.json --site site --out .
 ```
 
+## Local Profile Prototype
+
+Convert an ingestion report into a sourced `repo-profile.json`:
+
+```bash
+python3 scripts/repo-stage-profile generate examples/fixtures/ingestion/complete-ingestion.json --out generated/repo-profile.json
+```
+
+Validate a profile:
+
+```bash
+python3 scripts/repo-stage-profile validate generated/repo-profile.json
+```
+
+The profile generator consumes the M1 ingestion report shape (`readme`, `packageMetadata`, `docs`, `examples`, `assets`, and `gaps`) and preserves M1 source IDs such as `src-package-1`, `src-doc-1`, and `src-example-1` in fact references.
+
 ## Product Direction
 
 Read the product documents:

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "repo-stage-ingestion.v0",
+  "ingestedAt": "2026-05-10T00:00:00Z",
+  "repo": {
+    "url": "https://github.com/example/sparse",
+    "owner": "example",
+    "name": "sparse",
+    "description": "Sparse is a small command-line note utility.",
+    "defaultBranch": "main",
+    "primaryLanguage": "Go",
+    "license": "",
+    "topics": ["cli", "notes"],
+    "homepage": "",
+    "visibility": "public",
+    "metadataUrl": "https://github.com/example/sparse"
+  },
+  "rateLimit": {
+    "usedToken": false,
+    "limit": null,
+    "remaining": null,
+    "resetEpoch": null,
+    "degraded": false,
+    "notes": []
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/example/sparse/blob/main/README.md",
+      "bytes": 180,
+      "notes": ""
+    }
+  ],
+  "readme": {
+    "path": "README.md",
+    "url": "https://github.com/example/sparse/blob/main/README.md",
+    "bytes": 180,
+    "content": "# Sparse\n\nSparse is a small command-line note utility.\n\n## Features\n\n- Stores notes from a terminal\n"
+  },
+  "license": null,
+  "packageMetadata": [],
+  "docs": [],
+  "examples": [],
+  "assets": [],
+  "gaps": [
+    {
+      "kind": "missing-install",
+      "message": "No obvious installation command was found.",
+      "severity": "medium"
+    },
+    {
+      "kind": "missing-example",
+      "message": "No examples directory or obvious example text was found.",
+      "severity": "medium"
+    },
+    {
+      "kind": "missing-license",
+      "message": "No license file or GitHub license metadata was found.",
+      "severity": "high"
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

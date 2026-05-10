@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "repo-stage-ingestion.v0",
+  "ingestedAt": "2026-05-10T00:00:00Z",
+  "repo": {
+    "url": "https://github.com/example/toolkit",
+    "owner": "example",
+    "name": "toolkit",
+    "description": "Toolkit helps developers generate typed API clients from OpenAPI specs.",
+    "defaultBranch": "main",
+    "primaryLanguage": "TypeScript",
+    "license": "MIT",
+    "topics": ["api-client", "openapi", "typescript"],
+    "homepage": "",
+    "visibility": "public",
+    "metadataUrl": "https://github.com/example/toolkit"
+  },
+  "rateLimit": {
+    "usedToken": false,
+    "limit": null,
+    "remaining": null,
+    "resetEpoch": null,
+    "degraded": false,
+    "notes": []
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/example/toolkit/blob/main/README.md",
+      "bytes": 700,
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE",
+      "url": "https://github.com/example/toolkit/blob/main/LICENSE",
+      "bytes": 1200,
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
+      "path": "package.json",
+      "url": "https://github.com/example/toolkit/blob/main/package.json",
+      "bytes": 300,
+      "notes": ""
+    },
+    {
+      "id": "src-doc-1",
+      "type": "docs",
+      "path": "docs/usage.md",
+      "url": "https://github.com/example/toolkit/blob/main/docs/usage.md",
+      "bytes": 250,
+      "notes": ""
+    },
+    {
+      "id": "src-example-1",
+      "type": "example",
+      "path": "examples/basic.ts",
+      "url": "https://github.com/example/toolkit/blob/main/examples/basic.ts",
+      "bytes": 180,
+      "notes": ""
+    }
+  ],
+  "readme": {
+    "path": "README.md",
+    "url": "https://github.com/example/toolkit/blob/main/README.md",
+    "bytes": 700,
+    "content": "# Toolkit\n\nToolkit helps developers generate typed API clients from OpenAPI specs.\n\n## Features\n\n- Generates typed clients from OpenAPI files\n- Keeps frontend clients aligned with backend API contracts\n\n## Installation\n\n```bash\nnpm install @example/toolkit\n```\n\n## Usage\n\n```bash\nnpx toolkit generate openapi.yaml\n```\n"
+  },
+  "license": {
+    "path": "LICENSE",
+    "url": "https://github.com/example/toolkit/blob/main/LICENSE",
+    "bytes": 1200,
+    "content": "MIT License"
+  },
+  "packageMetadata": [
+    {
+      "path": "package.json",
+      "url": "https://github.com/example/toolkit/blob/main/package.json",
+      "bytes": 300,
+      "content": "{\"name\":\"@example/toolkit\",\"description\":\"Generate typed API clients\"}",
+      "parsed": {
+        "name": "@example/toolkit",
+        "version": "1.0.0",
+        "description": "Generate typed API clients",
+        "scripts": {
+          "test": "node --test"
+        },
+        "dependencies": [],
+        "devDependencies": []
+      }
+    }
+  ],
+  "docs": [
+    {
+      "path": "docs/usage.md",
+      "url": "https://github.com/example/toolkit/blob/main/docs/usage.md",
+      "bytes": 250,
+      "content": "# Usage Guide\n\nGenerate clients from OpenAPI documents."
+    }
+  ],
+  "examples": [
+    {
+      "path": "examples/basic.ts",
+      "url": "https://github.com/example/toolkit/blob/main/examples/basic.ts",
+      "bytes": 180,
+      "content": "// Basic generated client example\nconst client = createClient();"
+    }
+  ],
+  "assets": [
+    {
+      "path": "docs/screenshot.png",
+      "kind": "screenshot",
+      "url": "https://github.com/example/toolkit/blob/main/docs/screenshot.png",
+      "rawUrl": "https://raw.githubusercontent.com/example/toolkit/main/docs/screenshot.png"
+    }
+  ],
+  "gaps": [],
+  "warnings": [],
+  "errors": []
+}
