@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/tj/commander.js",
+    "owner": "tj",
+    "name": "commander.js",
+    "description": "The complete solution for node.js command-line interfaces.",
+    "defaultBranch": "master",
+    "primaryLanguage": "JavaScript",
+    "license": "MIT",
+    "topics": ["cli", "command", "option", "parser", "argument", "argv"]
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "Readme.md",
+      "url": "https://github.com/tj/commander.js/blob/master/Readme.md",
+      "notes": "README positioning, install command, quickstart, options, commands, automated help, TypeScript, and examples references."
+    },
+    {
+      "id": "src-package",
+      "type": "file",
+      "path": "package.json",
+      "url": "https://github.com/tj/commander.js/blob/master/package.json",
+      "notes": "Package description, keywords, license, module exports, TypeScript types, scripts, and Node engine."
+    },
+    {
+      "id": "src-examples",
+      "type": "file",
+      "path": "examples/",
+      "url": "https://github.com/tj/commander.js/tree/master/examples",
+      "notes": "README links to split.js, string-util.js, and other examples."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-oneliner",
+      "kind": "positioning",
+      "value": "The complete solution for node.js command-line interfaces.",
+      "sourceIds": ["src-readme", "src-package"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-install",
+      "kind": "quickstart",
+      "value": "npm install commander",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-quickstart",
+      "kind": "example",
+      "value": "Commander lets developers describe a command line interface, parses arguments into options and command arguments, displays usage errors, and implements help.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-options",
+      "kind": "feature",
+      "value": "Commander supports boolean options, options with values, default values, required options, variadic options, version options, and custom option processing.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-commands",
+      "kind": "feature",
+      "value": "Commander supports commands, command arguments, action handlers, stand-alone executable subcommands, and life cycle hooks.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-help",
+      "kind": "feature",
+      "value": "Commander implements automated help with custom help, error help display, command help, help groups, and description/summary support.",
+      "sourceIds": ["src-readme"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-modules",
+      "kind": "runtime",
+      "value": "package.json exports CommonJS, ESM, and TypeScript type definitions.",
+      "sourceIds": ["src-package"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-node",
+      "kind": "runtime",
+      "value": "package.json declares Node engine support: >=20.",
+      "sourceIds": ["src-package"],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-license",
+      "kind": "license",
+      "value": "MIT",
+      "sourceIds": ["src-package"],
+      "confidence": "high"
+    }
+  ],
+  "product": {
+    "name": "Commander.js",
+    "oneLiner": "The complete solution for Node.js command-line interfaces.",
+    "audiences": ["Node.js CLI authors", "Tooling teams", "Package maintainers with command-line workflows"],
+    "problems": [
+      "Command-line programs need reliable parsing for options, arguments, usage errors, and help output.",
+      "Small CLIs and multi-command tools need the same primitives without building parsers from scratch."
+    ],
+    "features": [
+      "Boolean and value options with defaults, required values, and custom processing",
+      "Commands, command arguments, action handlers, and subcommands",
+      "Automated help output with custom help configuration",
+      "CommonJS, ESM, and TypeScript type entrypoints"
+    ],
+    "useCases": [
+      "Build a small Node.js executable with options and arguments.",
+      "Create a multi-command CLI with per-command help.",
+      "Share one parser setup across JavaScript and TypeScript projects."
+    ],
+    "quickstart": [
+      "npm install commander",
+      "const { program } = require('commander');",
+      "program.option('--first').argument('<string>').parse();"
+    ],
+    "examples": [
+      "examples/split.js",
+      "examples/string-util.js",
+      "options-common.js in the README"
+    ],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": ["The M1 profile did not identify a top-level contributing guide in the fixture clone."]
+    }
+  },
+  "assets": [],
+  "gaps": [
+    {
+      "kind": "missing-screenshot",
+      "message": "No project screenshot or logo asset was identified in the inspected files.",
+      "severity": "medium"
+    },
+    {
+      "kind": "missing-demo",
+      "message": "README provides code and console examples but no hosted demo.",
+      "severity": "low"
+    },
+    {
+      "kind": "missing-contributing",
+      "message": "No top-level contribution guide was found during manual profiling.",
+      "severity": "medium"
+    }
+  ]
+}
