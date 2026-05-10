@@ -1,0 +1,39 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">RepoStage README banner</title>
+  <desc id="desc">RepoStage turns a GitHub repository README into a grounded static project website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="0.58" stop-color="#17324D"/>
+      <stop offset="1" stop-color="#1F3A2E"/>
+    </linearGradient>
+    <linearGradient id="stage" x1="164" y1="330" x2="1036" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="0.48" stop-color="#A7F3D0"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+    <filter id="softShadow" x="-40" y="-40" width="1280" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#020617" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <path d="M0 326C120 296 236 300 348 326C482 357 600 358 742 324C877 291 1030 280 1200 312V420H0V326Z" fill="#0B1220" opacity="0.58"/>
+  <path d="M73 82H360C386.51 82 408 103.49 408 130V264C408 290.51 386.51 312 360 312H73C46.49 312 25 290.51 25 264V130C25 103.49 46.49 82 73 82Z" fill="#F8FAFC" opacity="0.96" filter="url(#softShadow)"/>
+  <rect x="59" y="122" width="112" height="12" rx="6" fill="#0F172A"/>
+  <rect x="59" y="154" width="284" height="9" rx="4.5" fill="#CBD5E1"/>
+  <rect x="59" y="178" width="232" height="9" rx="4.5" fill="#CBD5E1"/>
+  <rect x="59" y="222" width="150" height="14" rx="7" fill="#14B8A6"/>
+  <rect x="59" y="250" width="250" height="9" rx="4.5" fill="#CBD5E1"/>
+  <path d="M438 204H516" stroke="#A7F3D0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M500 174L533 204L500 234" stroke="#A7F3D0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M594 86H1032C1058.51 86 1080 107.49 1080 134V308C1080 334.51 1058.51 356 1032 356H594C567.49 356 546 334.51 546 308V134C546 107.49 567.49 86 594 86Z" fill="#F8FAFC" opacity="0.98" filter="url(#softShadow)"/>
+  <rect x="590" y="130" width="446" height="24" rx="12" fill="#0F172A"/>
+  <rect x="590" y="180" width="192" height="16" rx="8" fill="#14B8A6"/>
+  <rect x="590" y="218" width="392" height="11" rx="5.5" fill="#CBD5E1"/>
+  <rect x="590" y="246" width="316" height="11" rx="5.5" fill="#CBD5E1"/>
+  <rect x="590" y="296" width="132" height="30" rx="15" fill="#0F766E"/>
+  <rect x="742" y="296" width="154" height="30" rx="15" fill="#E2E8F0"/>
+  <path d="M164 340H1036" stroke="url(#stage)" stroke-width="8" stroke-linecap="round"/>
+  <text x="600" y="67" text-anchor="middle" fill="#ECFEFF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="58" font-weight="800" letter-spacing="0">RepoStage</text>
+  <text x="600" y="392" text-anchor="middle" fill="#D1FAE5" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="650" letter-spacing="0">README in. Grounded project website out.</text>
+</svg>

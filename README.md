@@ -1,55 +1,57 @@
+<p align="center">
+  <img src="assets/readme-banner.svg" alt="RepoStage: README in. Grounded project website out." width="100%">
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-0f766e"></a>
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-2563eb">
+  <img alt="Node 20+" src="https://img.shields.io/badge/node-20%2B-111827">
+  <img alt="MVP status" src="https://img.shields.io/badge/status-local%20prototype-f59e0b">
+</p>
+
 # RepoStage
 
-RepoStage turns a public GitHub repository into a polished one-page static website.
+RepoStage turns a public GitHub repository into a polished, grounded one-page static website.
 
-It is for open-source maintainers who already have a useful repo, but need a clearer project page so other developers can understand it, try it, star it, and contribute.
-
-## MVP
-
-Input:
-
-```text
-https://github.com/owner/repo
-```
-
-Output:
-
-```text
-site/
-  index.html
-  styles.css
-  assets/
-repo-profile.json
-README-gap-report.md
-validation-report.md
-```
-
-The first version focuses on one job: generate a static landing page grounded in real repository facts from the README, docs, package metadata, examples, license, and project assets.
-
-## Local Ingestion Prototype
-
-Run the public GitHub repository ingestion step directly:
+It is built for open-source maintainers who already have a useful repo, but need a clearer project page so other developers can understand it, try it, star it, and contribute. The current MVP reads repository facts, writes a structured profile, generates a portable static site, and reports what still needs human attention.
 
 ```bash
-python3 scripts/repo-stage-ingest https://github.com/owner/repo --out generated/owner-repo-ingestion.json
+python3 -m repo_stage.cli generate https://github.com/owner/repo --out ./generated/owner-repo
 ```
 
-The command writes a structured JSON report containing:
+## What It Produces
 
-- validated repository owner/name and GitHub metadata
-- README content when available
-- docs and example text files
-- package metadata from files such as `package.json`, `pyproject.toml`, `Cargo.toml`, and `go.mod`
-- license metadata and reusable image assets
-- rate-limit details, warnings, readable errors, and content gaps for downstream profiling
+```text
+generated/owner-repo/
+  site/
+    index.html
+    styles.css
+    assets/
+  repo-profile.json
+  README-gap-report.md
+  validation-report.md
+```
 
-`GITHUB_TOKEN` is optional. Public repositories should work without a token until GitHub's unauthenticated rate limit is exhausted; when that happens the report or error explains the degraded path.
+The generated page is static HTML/CSS that can be opened locally, committed to a repo, or adapted for GitHub Pages. Copy is rendered from high/medium confidence facts and repository metadata; unsupported claims are omitted or pushed into the gap report.
 
-Three smoke-test fixture URLs live in [examples/fixtures/public-repos.txt](examples/fixtures/public-repos.txt).
+<p align="center">
+  <img src="assets/readme-workflow.svg" alt="RepoStage workflow: ingest, profile, generate, validate" width="100%">
+</p>
 
-## Local Generate Prototype
+## Why RepoStage Exists
 
-Run the M2 local generator directly with Python:
+Many open-source projects have enough substance in their README, docs, examples, package metadata, and license to support a strong public page. What they often lack is the time to turn that material into a coherent first impression.
+
+RepoStage treats the repository as the source of truth:
+
+- **Grounded by default:** generated claims must trace back to repository inputs.
+- **Useful output, not a mockup:** the result is a portable `site/` directory plus profile and validation reports.
+- **Maintainer-oriented:** missing install steps, examples, screenshots, license details, and positioning gaps are called out directly.
+- **Agent-portable:** the reusable Skill package lives in `skills/repo-stage/` for Codex, Claude, and other file-system-capable coding agents.
+
+## Quickstart
+
+Run the local generator directly with Python:
 
 ```bash
 python3 -m repo_stage.cli generate https://github.com/owner/repo --out ./generated/owner-repo
@@ -62,31 +64,17 @@ python3 -m pip install -e .
 repo-stage generate https://github.com/owner/repo --out ./generated/owner-repo
 ```
 
-The command reuses the ingestion pipeline above, then writes:
+`GITHUB_TOKEN` is optional. Public repositories should work without a token until GitHub's unauthenticated rate limit is exhausted; when that happens the report or error explains the degraded path.
 
-```text
-site/
-  index.html
-  styles.css
-  assets/
-repo-profile.json
-README-gap-report.md
-validation-report.md
-```
+## Local Prototype Commands
 
-The prototype extracts conservative facts from the ingestion report, generates a static one-page site, and validates the output. Missing README material is recorded as gaps or warnings; unsupported or failed generation writes failure reports instead of presenting a partial site as successful.
-
-## Report Helper
-
-Generate reports from an existing output set with:
+Ingest a public GitHub repository:
 
 ```bash
-python3 scripts/repo_stage_reports.py --profile repo-profile.json --site site --out .
+python3 scripts/repo-stage-ingest https://github.com/owner/repo --out generated/owner-repo-ingestion.json
 ```
 
-## Local Profile Prototype
-
-Convert an ingestion report into a sourced `repo-profile.json`:
+Convert an ingestion report into a sourced profile:
 
 ```bash
 python3 scripts/repo-stage-profile generate examples/fixtures/ingestion/complete-ingestion.json --out generated/repo-profile.json
@@ -98,18 +86,36 @@ Validate a profile:
 python3 scripts/repo-stage-profile validate generated/repo-profile.json
 ```
 
-The profile generator consumes the M1 ingestion report shape (`readme`, `packageMetadata`, `docs`, `examples`, `assets`, and `gaps`) and preserves M1 source IDs such as `src-package-1`, `src-doc-1`, and `src-example-1` in fact references.
+Generate reports from an existing output set:
 
-## Product Direction
+```bash
+python3 scripts/repo_stage_reports.py --profile repo-profile.json --site site --out .
+```
 
-Read the product documents:
+## Node Site Generator
 
-- [docs/product-design.md](docs/product-design.md)
-- [docs/development-plan.md](docs/development-plan.md)
-- [docs/skill-spec.md](docs/skill-spec.md)
-- [docs/repo-profile-schema.md](docs/repo-profile-schema.md)
-- [docs/quality-checklist.md](docs/quality-checklist.md)
-- [docs/agent-compatibility.md](docs/agent-compatibility.md)
+The repository also includes the M2 Node-based profile/site utilities:
+
+```bash
+npm run generate:profile -- --input fixtures/ingestion/complete.json --out repo-profile.json
+npm run validate:profile -- repo-profile.json
+npm run generate:site -- --profile fixtures/profiles/repo-stage/repo-profile.json --out generated/repo-stage
+npm run generate:fixtures
+npm test
+```
+
+The site generator writes the same output contract:
+
+```text
+output/
+  site/
+    index.html
+    styles.css
+    assets/
+  repo-profile.json
+  README-gap-report.md
+  validation-report.md
+```
 
 ## Skill Package
 
@@ -126,58 +132,25 @@ python3 skills/repo-stage/scripts/repo_stage_generate.py \
 python3 skills/repo-stage/scripts/validate_output.py examples/outputs/tiny-cli-tool
 ```
 
+## Examples
+
+Checked-in verification outputs live under [examples/outputs/](examples/outputs/). They cover several repository shapes, including CLI tools, React/UI libraries, AI agent projects, developer infrastructure, and design/creative tools.
+
+Fixture URLs for smoke tests live in [examples/fixtures/public-repos.txt](examples/fixtures/public-repos.txt).
+
+## Documentation
+
+- [Product design](docs/product-design.md)
+- [Development plan](docs/development-plan.md)
+- [Skill specification](docs/skill-spec.md)
+- [Repo profile schema](docs/repo-profile-schema.md)
+- [Quality checklist](docs/quality-checklist.md)
+- [Agent compatibility](docs/agent-compatibility.md)
+- [Ingestion details](docs/ingestion.md)
+
 ## Status
 
-RepoStage now includes an M2 local prototype CLI. The first verification outputs are saved under `examples/outputs/` for a CLI tool, React/UI library, AI agent project, developer infrastructure project, and design/creative tool.
-
-The M3 agent-portable Skill package is also checked in with templates, scripts, references, a checklist, a fixture, and generated fixture output.
-
-## Local Prototype
-
-Generate a sourced `repo-profile.json` from an ingestion fixture:
-
-```bash
-npm run generate:profile -- --input fixtures/ingestion/complete.json --out repo-profile.json
-```
-
-Validate a profile:
-
-```bash
-npm run validate:profile -- repo-profile.json
-```
-
-Generate a portable static site from a sourced profile:
-
-```bash
-npm run generate:site -- --profile fixtures/profiles/repo-stage/repo-profile.json --out generated/repo-stage
-```
-
-Generate the checked-in site fixtures:
-
-```bash
-npm run generate:fixtures
-```
-
-Run regression tests:
-
-```bash
-npm test
-```
-
-The site generator writes:
-
-```text
-output/
-  site/
-    index.html
-    styles.css
-    assets/
-  repo-profile.json
-  README-gap-report.md
-  validation-report.md
-```
-
-Website copy is rendered from high/medium confidence facts and repository metadata. Product fields that are not backed by matching sourced facts are rejected before generation.
+RepoStage is a local MVP prototype. It can ingest public GitHub repos, generate `repo-profile.json`, produce a static one-page site, and create README gap and validation reports. It is not yet a hosted SaaS, visual editor, pitch-deck generator, or full launch asset suite.
 
 ## License
 
