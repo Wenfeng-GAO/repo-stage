@@ -57,9 +57,24 @@ Read the product documents:
 - [docs/quality-checklist.md](docs/quality-checklist.md)
 - [docs/agent-compatibility.md](docs/agent-compatibility.md)
 
+## Skill Package
+
+The reusable agent-portable Skill lives in [skills/repo-stage/SKILL.md](skills/repo-stage/SKILL.md).
+
+Run the included fixture:
+
+```bash
+python3 skills/repo-stage/scripts/repo_stage_generate.py \
+  --repo-path examples/fixtures/tiny-cli-tool \
+  --repo-url https://github.com/example/tiny-cli-tool \
+  --out examples/outputs/tiny-cli-tool
+
+python3 skills/repo-stage/scripts/validate_output.py examples/outputs/tiny-cli-tool
+```
+
 ## Status
 
-RepoStage is currently in product planning. The product name is confirmed, the public repository is created, and the first reviewable product, development, agent-portable Skill, schema, compatibility, and quality documents are checked in.
+RepoStage is currently in skill packaging. The product name is confirmed, the public repository is created, and the first reviewable product, development, agent-portable Skill, schema, compatibility, quality documents, templates, scripts, checklist, and fixture output are checked in.
 
 ## License
 
