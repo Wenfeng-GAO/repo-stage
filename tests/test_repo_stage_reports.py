@@ -147,6 +147,37 @@ class RepoStageReportsTest(unittest.TestCase):
             self.assertIn("[fail] HTML source grounding", validation)
             self.assertIn("Enterprise grade SOC2 ready platform with zero setup", validation)
 
+    def test_short_repo_name_does_not_ground_substring_claim(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            tmpdir = Path(directory)
+            profile = self.profile(
+                repo={
+                    "url": "https://github.com/example/r",
+                    "owner": "example",
+                    "name": "r",
+                    "description": "",
+                    "defaultBranch": "main",
+                    "primaryLanguage": "Python",
+                    "license": "MIT",
+                    "topics": [],
+                }
+            )
+
+            result = self.run_report(
+                tmpdir,
+                profile=profile,
+                html=(
+                    '<html><body><h1>r</h1>'
+                    '<p>Enterprise grade SOC2 ready platform with zero setup</p>'
+                    '<a href="https://github.com/example/r">GitHub</a></body></html>'
+                ),
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            validation = (tmpdir / "validation-report.md").read_text()
+            self.assertIn("[fail] HTML source grounding", validation)
+            self.assertIn("Enterprise grade SOC2 ready platform with zero setup", validation)
+
     def test_missing_files_fail_validation(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             tmpdir = Path(directory)

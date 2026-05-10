@@ -349,14 +349,25 @@ def should_skip_claim_block(block: str) -> bool:
 def text_supports_claim(support: str, claim: str) -> bool:
     if not support or not claim:
         return False
-    if claim in support or support in claim:
+    support_words = support.split()
+    claim_words = claim.split()
+    if not support_words or not claim_words:
+        return False
+    if words_contain_phrase(support_words, claim_words) or words_contain_phrase(claim_words, support_words):
         return True
-    support_words = set(support.split())
-    claim_words = set(claim.split())
     if len(claim_words) <= 3:
         return True
-    overlap = claim_words & support_words
-    return len(overlap) / len(claim_words) >= 0.8
+    overlap = set(claim_words) & set(support_words)
+    return len(overlap) / len(set(claim_words)) >= 0.8
+
+
+def words_contain_phrase(haystack: list[str], needle: list[str]) -> bool:
+    if len(needle) > len(haystack):
+        return False
+    for index in range(0, len(haystack) - len(needle) + 1):
+        if haystack[index : index + len(needle)] == needle:
+            return True
+    return False
 
 
 def validate_links(site_dir: Path) -> Check:
