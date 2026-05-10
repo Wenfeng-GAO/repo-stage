@@ -8,6 +8,8 @@ The first version is intentionally narrow:
 
 RepoStage is not a commercial website builder, hosted SaaS, pitch-deck generator, or full visual editor in the MVP. It is a local, repo-aware generation workflow for open-source maintainers.
 
+The first implementation shape should be a Codex/Multica Skill with supporting templates, scripts, examples, and validation checks.
+
 ## Name
 
 Confirmed product name:
@@ -193,9 +195,15 @@ For each repo, produce:
 
 The milestone is complete when at least one maintainer says they would use or publish the generated page after minor edits.
 
+## Resolved Direction
+
+- First product shape: Codex/Multica Skill first, not a standalone SaaS.
+- First output path: default to `site/`.
+- GitHub credentials: optional for public repos; degrade gracefully under rate limits.
+- Page generator: static HTML/CSS first; add a framework only after the static version is validated.
+
 ## Open Questions
 
-- Should the first interface be CLI-only, Open Design skill-only, or both?
-- Should generated pages default to `site/`, `website/`, or `docs/`?
-- Should GitHub API credentials be optional or required for richer metadata?
-- Should the page generator be pure static HTML/CSS first, or use a framework template such as Astro?
+- Should RepoStage also expose a CLI wrapper after the Skill workflow is stable?
+- Which three public repos should become the first golden examples?
+- Should generated pages be optimized first for GitHub Pages, plain ZIP export, or both?

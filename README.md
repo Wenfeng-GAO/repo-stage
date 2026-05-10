@@ -27,13 +27,17 @@ The first version focuses on one job: generate a static landing page grounded in
 
 ## Product Direction
 
-Read the product design document:
+Read the product documents:
 
 - [docs/product-design.md](docs/product-design.md)
+- [docs/development-plan.md](docs/development-plan.md)
+- [docs/skill-spec.md](docs/skill-spec.md)
+- [docs/repo-profile-schema.md](docs/repo-profile-schema.md)
+- [docs/quality-checklist.md](docs/quality-checklist.md)
 
 ## Status
 
-RepoStage is currently in project initialization. The product name is confirmed, the public repository is created, and the first product design document is checked in.
+RepoStage is currently in product planning. The product name is confirmed, the public repository is created, and the first reviewable product, development, Skill, schema, and quality documents are checked in.
 
 ## License
 
