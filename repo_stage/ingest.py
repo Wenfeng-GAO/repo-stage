@@ -269,7 +269,7 @@ def _ingest_repo_with_git_fallback(repo_ref: GitHubRepo, api_error: str) -> dict
         paths = _local_paths(checkout)
 
         readme = _local_first_text(repo_ref, default_branch, checkout, paths, lambda path: Path(path).name.lower() in README_NAMES)
-        license_source = _local_first_text(repo_ref, default_branch, checkout, paths, lambda path: path.lower() in LICENSE_NAMES)
+        license_source = _local_first_text(repo_ref, default_branch, checkout, paths, _is_license_path)
         package_metadata = _local_package_metadata(repo_ref, default_branch, checkout, paths)
         docs = _local_text_group(repo_ref, default_branch, checkout, paths, _is_doc_path, MAX_DOC_FILES)
         examples = _local_text_group(repo_ref, default_branch, checkout, paths, _is_example_path, MAX_EXAMPLE_FILES)
@@ -426,7 +426,7 @@ def _fetch_license(
     errors: list[dict[str, str]],
 ) -> dict[str, Any] | None:
     for path in paths:
-        if path.lower() in LICENSE_NAMES:
+        if _is_license_path(path):
             return _fetch_text_source(client, repo, branch, path, errors, "license")
     return None
 
@@ -595,6 +595,11 @@ def _is_doc_path(path: str) -> bool:
 def _is_example_path(path: str) -> bool:
     lower = path.lower()
     return lower.startswith(("examples/", "example/", "samples/", "sample/")) and Path(lower).suffix in DOC_EXTENSIONS | {".js", ".ts", ".py", ".go", ".rs", ".java", ".rb"}
+
+
+def _is_license_path(path: str) -> bool:
+    name = Path(path).name.lower()
+    return name in LICENSE_NAMES or name.startswith(("license-", "license."))
 
 
 def _license_name(repo_meta: dict[str, Any], license_source: dict[str, Any] | None) -> str:

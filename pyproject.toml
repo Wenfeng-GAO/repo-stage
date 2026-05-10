@@ -1,0 +1,15 @@
+[project]
+name = "repo-stage"
+version = "0.1.0"
+description = "Generate a grounded one-page static website from a public GitHub repository."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "RepoStage contributors" }]
+
+[project.scripts]
+repo-stage = "repo_stage.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
