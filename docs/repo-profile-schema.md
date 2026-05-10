@@ -122,6 +122,8 @@ Initial gap kinds:
 - `unclear-positioning`
 - `sparse-docs`
 
+`README-gap-report.md` must be generated from these `gaps[]` entries so the report and profile stay consistent. Agents may add unsourced low-confidence positioning ideas to the report, but those ideas must not appear as final website claims unless later supported by sources.
+
 ## Validation Rules
 
 The schema validator should fail when:
@@ -139,3 +141,5 @@ The validator should warn when:
 - No examples are available.
 - Product one-liner is empty.
 - More than half of page sections depend on medium-confidence facts.
+
+`validation-report.md` should record each check as `pass`, `warn`, `fail`, or `skipped`. Required checks cover URL validity, output files, schema shape, source references, generated HTML content, visible HTML claim grounding, local links, and claim-safety patterns. Optional browser, desktop, and mobile checks should be marked `skipped` with a reason when the runtime lacks render or screenshot tooling.

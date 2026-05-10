@@ -100,6 +100,7 @@ site/
   assets/          # copied or generated assets when needed
 repo-profile.json
 README-gap-report.md
+validation-report.md
 ```
 
 The generated page should include:

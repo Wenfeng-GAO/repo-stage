@@ -21,6 +21,7 @@ site/
   assets/
 repo-profile.json
 README-gap-report.md
+validation-report.md
 ```
 
 The first version focuses on one job: generate a static landing page grounded in real repository facts from the README, docs, package metadata, examples, license, and project assets.
@@ -74,6 +75,14 @@ validation-report.md
 ```
 
 The prototype extracts conservative facts from the ingestion report, generates a static one-page site, and validates the output. Missing README material is recorded as gaps or warnings; unsupported or failed generation writes failure reports instead of presenting a partial site as successful.
+
+## Report Helper
+
+Generate reports from an existing output set with:
+
+```bash
+python3 scripts/repo_stage_reports.py --profile repo-profile.json --site site --out .
+```
 
 ## Product Direction
 
