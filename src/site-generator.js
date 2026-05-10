@@ -29,7 +29,7 @@ export async function generateSiteFromProfile({ profilePath, outDir }) {
 
   const copiedAssets = await copyProfileAssets(profile, profileDir, assetsDir);
   const heroAsset = copiedAssets.find((asset) => asset.kind === "logo") || copiedAssets.find((asset) => asset.kind === "screenshot");
-  const html = renderHtml(profile, siteModel, heroAsset);
+  const html = trimTrailingLineWhitespace(renderHtml(profile, siteModel, heroAsset));
   const bannedMatch = BANNED_CLAIMS.find((pattern) => pattern.test(html));
   if (bannedMatch) {
     throw new Error(`Generated HTML contains banned claim pattern: ${bannedMatch}`);
@@ -65,6 +65,9 @@ export function validateProfileForSite(profile) {
   validateProductList(profile.product?.examples, "product.examples", allowedFactValues, errors);
   validateProductList(profile.product?.quickstart, "product.quickstart", allowedFactValues, errors);
   validateProductList(profile.product?.contribution?.notes, "product.contribution.notes", allowedFactValues, errors);
+  if (profile.product?.contribution?.hasContributionGuide && !allowedFacts.some((fact) => fact.kind === "contribution")) {
+    errors.push("product.contribution.hasContributionGuide requires at least one high/medium sourced contribution fact.");
+  }
 
   for (const [index, asset] of (profile.assets || []).entries()) {
     if (!asset.path) {
@@ -290,10 +293,10 @@ function renderTrust(profile) {
 }
 
 function renderContribution(profile, facts) {
-  if (!profile.product?.contribution?.hasContributionGuide && !facts.length) return "";
+  if (!facts.length) return "";
   return `<section class="section contributor">
     <div><p class="eyebrow">Contribute</p><h2>Help improve ${escapeHtml(profile.product?.name || profile.repo.name)}</h2></div>
-    ${facts.length ? `<ul>${facts.map((fact) => `<li data-sources="${escapeHtml(fact.sourceIds.join(","))}">${escapeHtml(fact.value)}</li>`).join("")}</ul>` : "<p>The profile indicates contribution material is available in the repository.</p>"}
+    <ul>${facts.map((fact) => `<li data-sources="${escapeHtml(fact.sourceIds.join(","))}">${escapeHtml(fact.value)}</li>`).join("")}</ul>
     <a class="button secondary" href="${escapeHtml(profile.repo.url)}">Review the repo</a>
   </section>`;
 }
@@ -463,4 +466,8 @@ function escapeHtml(value = "") {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function trimTrailingLineWhitespace(value) {
+  return value.replace(/[ \t]+$/gm, "");
 }

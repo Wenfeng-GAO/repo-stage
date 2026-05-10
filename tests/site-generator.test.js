@@ -117,6 +117,25 @@ test("rejects profile assets without known source references", () => {
   assert.ok(validation.errors.some((error) => error.includes("assets[0] references unknown source ID")));
 });
 
+test("rejects contributor CTA boolean without a sourced contribution fact", () => {
+  const profile = minimalProfile({
+    product: {
+      name: "Toolkit",
+      oneLiner: "",
+      features: [],
+      quickstart: ["npm install toolkit"],
+      useCases: [],
+      examples: [],
+      contribution: { hasContributionGuide: true, notes: [] }
+    }
+  });
+
+  const validation = validateProfileForSite(profile);
+
+  assert.equal(validation.valid, false);
+  assert.ok(validation.errors.includes("product.contribution.hasContributionGuide requires at least one high/medium sourced contribution fact."));
+});
+
 test("rejects local profile assets outside the profile root", async () => {
   const tmp = await mkdtemp(path.join(tmpdir(), "repo-stage-outside-asset-"));
   try {
