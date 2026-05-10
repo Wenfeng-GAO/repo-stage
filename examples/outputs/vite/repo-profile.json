@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/vitejs/vite",
+    "owner": "vitejs",
+    "name": "vite",
+    "description": "Vite is a frontend build tool that provides a development server and optimized production builds.",
+    "defaultBranch": "main",
+    "primaryLanguage": "TypeScript",
+    "license": "MIT",
+    "topics": [
+      "frontend",
+      "build-tool",
+      "dev-server"
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/vitejs/vite/blob/main/README.md",
+      "notes": "Project positioning, package manager commands, and feature summary."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-one-liner",
+      "kind": "positioning",
+      "value": "Frontend tooling for a fast development server and optimized production builds.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-problem",
+      "kind": "problem",
+      "value": "Frontend projects need a quick development loop and a separate optimized production build.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-solution",
+      "kind": "solution",
+      "value": "Vite provides a development server and production build command for frontend projects.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-create",
+      "kind": "feature",
+      "value": "The README documents npm create vite@latest as a starting command.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-dev-server",
+      "kind": "feature",
+      "value": "Vite includes a dev server workflow for frontend projects.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-build",
+      "kind": "feature",
+      "value": "The project documents building frontend output for production.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-command",
+      "kind": "quickstart",
+      "value": "npm create vite@latest",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-use-case",
+      "kind": "use-case",
+      "value": "Start a new frontend app from the command line.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "Vite",
+    "oneLiner": "Frontend tooling for a fast development server and optimized production builds.",
+    "audiences": [
+      "Frontend developers",
+      "JavaScript framework users"
+    ],
+    "problems": [
+      "Frontend projects need a quick development loop and a separate optimized production build."
+    ],
+    "features": [
+      "The README documents npm create vite@latest as a starting command.",
+      "Vite includes a dev server workflow for frontend projects.",
+      "The project documents building frontend output for production."
+    ],
+    "useCases": [
+      "Start a new frontend app from the command line."
+    ],
+    "quickstart": [
+      "npm create vite@latest"
+    ],
+    "examples": [],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [],
+  "gaps": [
+    {
+      "kind": "missing-screenshot",
+      "message": "This fixture does not include a sourced screenshot or product image.",
+      "severity": "low"
+    }
+  ]
+}

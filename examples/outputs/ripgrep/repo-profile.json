@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/BurntSushi/ripgrep",
+    "owner": "BurntSushi",
+    "name": "ripgrep",
+    "description": "ripgrep recursively searches directories for a regex pattern while respecting gitignore rules.",
+    "defaultBranch": "master",
+    "primaryLanguage": "Rust",
+    "license": "Unlicense OR MIT",
+    "topics": [
+      "search",
+      "regex",
+      "command-line"
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/BurntSushi/ripgrep/blob/master/README.md",
+      "notes": "Project summary, usage examples, and feature descriptions."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-one-liner",
+      "kind": "positioning",
+      "value": "A line-oriented search tool that recursively searches directories for regex patterns.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-problem",
+      "kind": "problem",
+      "value": "Searching source trees can produce noise from ignored, hidden, or binary files.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-solution",
+      "kind": "solution",
+      "value": "ripgrep recursively searches your current directory for a regex pattern.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-ignore",
+      "kind": "feature",
+      "value": "ripgrep respects gitignore rules and automatically skips hidden files and binary files.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-cli",
+      "kind": "feature",
+      "value": "ripgrep is exposed as the rg command for terminal search workflows.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-command",
+      "kind": "quickstart",
+      "value": "rg fast README.md",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-use-case",
+      "kind": "use-case",
+      "value": "Find references in a repository from the terminal.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "product": {
+    "name": "ripgrep",
+    "oneLiner": "A line-oriented search tool that recursively searches directories for regex patterns.",
+    "audiences": [
+      "Command-line users",
+      "Developers working in source trees"
+    ],
+    "problems": [
+      "Searching source trees can produce noise from ignored, hidden, or binary files."
+    ],
+    "features": [
+      "ripgrep respects gitignore rules and automatically skips hidden files and binary files.",
+      "ripgrep is exposed as the rg command for terminal search workflows."
+    ],
+    "useCases": [
+      "Find references in a repository from the terminal."
+    ],
+    "quickstart": [
+      "rg fast README.md"
+    ],
+    "examples": [],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [],
+  "gaps": [
+    {
+      "kind": "missing-screenshot",
+      "message": "This fixture does not include a sourced screenshot or project image.",
+      "severity": "low"
+    }
+  ]
+}

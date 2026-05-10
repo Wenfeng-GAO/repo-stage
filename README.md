@@ -61,6 +61,53 @@ Read the product documents:
 
 RepoStage is currently in product planning. The product name is confirmed, the public repository is created, and the first reviewable product, development, agent-portable Skill, schema, compatibility, and quality documents are checked in.
 
+## Local Prototype
+
+Generate a sourced `repo-profile.json` from an ingestion fixture:
+
+```bash
+npm run generate:profile -- --input fixtures/ingestion/complete.json --out repo-profile.json
+```
+
+Validate a profile:
+
+```bash
+npm run validate:profile -- repo-profile.json
+```
+
+Generate a portable static site from a sourced profile:
+
+```bash
+npm run generate:site -- --profile fixtures/profiles/repo-stage/repo-profile.json --out generated/repo-stage
+```
+
+Generate the checked-in site fixtures:
+
+```bash
+npm run generate:fixtures
+```
+
+Run regression tests:
+
+```bash
+npm test
+```
+
+The site generator writes:
+
+```text
+output/
+  site/
+    index.html
+    styles.css
+    assets/
+  repo-profile.json
+  README-gap-report.md
+  validation-report.md
+```
+
+Website copy is rendered from high/medium confidence facts and repository metadata. Product fields that are not backed by matching sourced facts are rejected before generation.
+
 ## License
 
 Apache-2.0

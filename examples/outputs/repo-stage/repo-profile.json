@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/Wenfeng-GAO/repo-stage",
+    "owner": "Wenfeng-GAO",
+    "name": "repo-stage",
+    "description": "RepoStage turns a public GitHub repository into a polished one-page static website.",
+    "defaultBranch": "main",
+    "primaryLanguage": "Markdown",
+    "license": "Apache-2.0",
+    "topics": [
+      "static-site",
+      "open-source",
+      "developer-tools"
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-readme",
+      "type": "file",
+      "path": "README.md",
+      "url": "https://github.com/Wenfeng-GAO/repo-stage/blob/main/README.md",
+      "notes": "Project overview and MVP output contract."
+    },
+    {
+      "id": "src-product-design",
+      "type": "file",
+      "path": "docs/product-design.md",
+      "url": "https://github.com/Wenfeng-GAO/repo-stage/blob/main/docs/product-design.md",
+      "notes": "Positioning, target users, and generated page sections."
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-problem",
+      "kind": "problem",
+      "value": "Open-source maintainers may have useful repositories but weak external presentation.",
+      "sourceIds": [
+        "src-readme",
+        "src-product-design"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-solution",
+      "kind": "solution",
+      "value": "RepoStage turns an existing open-source repo into a launch-ready project page.",
+      "sourceIds": [
+        "src-product-design"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-one-liner",
+      "kind": "positioning",
+      "value": "README in, project website out.",
+      "sourceIds": [
+        "src-product-design"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-feature-profile",
+      "kind": "feature",
+      "value": "The workflow converts README, docs, package metadata, examples, license, and assets into repo-profile.json.",
+      "sourceIds": [
+        "src-product-design"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-feature-static",
+      "kind": "feature",
+      "value": "The required output includes site/index.html, site/styles.css, repo-profile.json, and README-gap-report.md.",
+      "sourceIds": [
+        "src-readme",
+        "src-product-design"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-feature-structure",
+      "kind": "feature",
+      "value": "Generated pages include hero, problem and solution, features, quickstart, examples, trust, and contribution sections when sourced.",
+      "sourceIds": [
+        "src-product-design"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-quickstart",
+      "kind": "quickstart",
+      "value": "repo-stage generate https://github.com/owner/repo --out site",
+      "sourceIds": [
+        "src-product-design"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-use-case",
+      "kind": "use-case",
+      "value": "Turn a public GitHub URL into local site files.",
+      "sourceIds": [
+        "src-product-design"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "product": {
+    "name": "RepoStage",
+    "oneLiner": "README in, project website out.",
+    "audiences": [
+      "Open-source maintainers",
+      "Developer-tool authors"
+    ],
+    "problems": [
+      "Open-source maintainers may have useful repositories but weak external presentation."
+    ],
+    "features": [
+      "The workflow converts README, docs, package metadata, examples, license, and assets into repo-profile.json.",
+      "The required output includes site/index.html, site/styles.css, repo-profile.json, and README-gap-report.md.",
+      "Generated pages include hero, problem and solution, features, quickstart, examples, trust, and contribution sections when sourced."
+    ],
+    "useCases": [
+      "Turn a public GitHub URL into local site files."
+    ],
+    "quickstart": [
+      "repo-stage generate https://github.com/owner/repo --out site"
+    ],
+    "examples": [],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [
+    {
+      "path": "assets/repo-stage-mark.svg",
+      "kind": "logo",
+      "sourceIds": [
+        "src-readme"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "missing-screenshot",
+      "message": "No project screenshot is available yet.",
+      "severity": "medium"
+    }
+  ]
+}

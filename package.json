@@ -1,0 +1,21 @@
+{
+  "name": "repo-stage",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "repo-stage-generate-profile": "./bin/generate-profile.js",
+    "repo-stage-validate-profile": "./bin/validate-profile.js",
+    "repo-stage-generate-site": "./bin/generate-site.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "generate:profile": "node ./bin/generate-profile.js",
+    "validate:profile": "node ./bin/validate-profile.js",
+    "generate:site": "node ./bin/generate-site.js",
+    "generate:fixtures": "node ./bin/generate-site.js --fixtures fixtures/profiles --out examples/outputs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
