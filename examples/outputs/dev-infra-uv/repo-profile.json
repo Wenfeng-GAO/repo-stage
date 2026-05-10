@@ -1,0 +1,1385 @@
+{
+  "schemaVersion": "repo-profile.v0",
+  "repo": {
+    "url": "https://github.com/astral-sh/uv",
+    "owner": "astral-sh",
+    "name": "uv",
+    "description": "[](https://github.com/astral-sh/uv) [](https://pypi.python.org/pypi/uv) [](https://pypi.python.org/pypi/uv) [](https://pypi.python.org/pypi/uv) [](https://github.com/astral-sh/uv/actions) [](https://discord.gg/astral-sh)",
+    "defaultBranch": "main",
+    "primaryLanguage": "",
+    "license": "LICENSE-APACHE",
+    "topics": []
+  },
+  "sources": [
+    {
+      "id": "src-github",
+      "type": "github-metadata",
+      "path": "",
+      "url": "https://github.com/astral-sh/uv",
+      "notes": "GitHub repository metadata from ingestion"
+    },
+    {
+      "id": "src-readme",
+      "type": "readme",
+      "path": "README.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/README.md",
+      "notes": ""
+    },
+    {
+      "id": "src-license",
+      "type": "license",
+      "path": "LICENSE-APACHE",
+      "url": "https://github.com/astral-sh/uv/blob/main/LICENSE-APACHE",
+      "notes": ""
+    },
+    {
+      "id": "src-package-1",
+      "type": "package",
+      "path": "Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-2",
+      "type": "package",
+      "path": "crates/uv-audit/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-audit/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-3",
+      "type": "package",
+      "path": "crates/uv-auth/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-auth/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-4",
+      "type": "package",
+      "path": "crates/uv-bench/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-bench/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-5",
+      "type": "package",
+      "path": "crates/uv-bin-install/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-bin-install/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-6",
+      "type": "package",
+      "path": "crates/uv-build-backend/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-build-backend/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-7",
+      "type": "package",
+      "path": "crates/uv-build-frontend/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-build-frontend/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-8",
+      "type": "package",
+      "path": "crates/uv-build/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-build/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-9",
+      "type": "package",
+      "path": "crates/uv-build/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-build/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-10",
+      "type": "package",
+      "path": "crates/uv-cache-info/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-cache-info/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-11",
+      "type": "package",
+      "path": "crates/uv-cache-key/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-cache-key/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-12",
+      "type": "package",
+      "path": "crates/uv-cache/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-cache/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-13",
+      "type": "package",
+      "path": "crates/uv-cli/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-cli/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-14",
+      "type": "package",
+      "path": "crates/uv-client/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-client/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-15",
+      "type": "package",
+      "path": "crates/uv-configuration/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-configuration/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-16",
+      "type": "package",
+      "path": "crates/uv-console/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-console/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-17",
+      "type": "package",
+      "path": "crates/uv-dev/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-dev/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-18",
+      "type": "package",
+      "path": "crates/uv-dirs/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-dirs/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-19",
+      "type": "package",
+      "path": "crates/uv-dispatch/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-dispatch/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-20",
+      "type": "package",
+      "path": "crates/uv-distribution-filename/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-distribution-filename/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-21",
+      "type": "package",
+      "path": "crates/uv-distribution-types/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-distribution-types/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-22",
+      "type": "package",
+      "path": "crates/uv-distribution/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-distribution/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-23",
+      "type": "package",
+      "path": "crates/uv-extract/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-extract/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-24",
+      "type": "package",
+      "path": "crates/uv-fastid/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-fastid/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-25",
+      "type": "package",
+      "path": "crates/uv-flags/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-flags/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-26",
+      "type": "package",
+      "path": "crates/uv-fs/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-fs/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-27",
+      "type": "package",
+      "path": "crates/uv-git-types/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-git-types/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-28",
+      "type": "package",
+      "path": "crates/uv-git/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-git/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-29",
+      "type": "package",
+      "path": "crates/uv-globfilter/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-globfilter/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-30",
+      "type": "package",
+      "path": "crates/uv-install-wheel/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-install-wheel/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-31",
+      "type": "package",
+      "path": "crates/uv-installer/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-installer/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-32",
+      "type": "package",
+      "path": "crates/uv-keyring/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-keyring/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-33",
+      "type": "package",
+      "path": "crates/uv-logging/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-logging/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-34",
+      "type": "package",
+      "path": "crates/uv-macros/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-macros/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-35",
+      "type": "package",
+      "path": "crates/uv-metadata/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-metadata/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-36",
+      "type": "package",
+      "path": "crates/uv-normalize/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-normalize/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-37",
+      "type": "package",
+      "path": "crates/uv-once-map/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-once-map/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-38",
+      "type": "package",
+      "path": "crates/uv-options-metadata/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-options-metadata/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-39",
+      "type": "package",
+      "path": "crates/uv-pep440/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-pep440/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-40",
+      "type": "package",
+      "path": "crates/uv-pep508/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-pep508/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-41",
+      "type": "package",
+      "path": "crates/uv-performance-memory-allocator/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-performance-memory-allocator/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-42",
+      "type": "package",
+      "path": "crates/uv-platform-tags/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-platform-tags/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-43",
+      "type": "package",
+      "path": "crates/uv-platform/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-platform/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-44",
+      "type": "package",
+      "path": "crates/uv-preview/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-preview/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-45",
+      "type": "package",
+      "path": "crates/uv-publish/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-publish/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-46",
+      "type": "package",
+      "path": "crates/uv-pypi-types/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-pypi-types/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-47",
+      "type": "package",
+      "path": "crates/uv-python/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-python/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-48",
+      "type": "package",
+      "path": "crates/uv-redacted/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-redacted/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-49",
+      "type": "package",
+      "path": "crates/uv-requirements-txt/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-requirements-txt/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-50",
+      "type": "package",
+      "path": "crates/uv-requirements/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-requirements/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-51",
+      "type": "package",
+      "path": "crates/uv-resolver/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-resolver/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-52",
+      "type": "package",
+      "path": "crates/uv-scripts/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-scripts/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-53",
+      "type": "package",
+      "path": "crates/uv-settings/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-settings/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-54",
+      "type": "package",
+      "path": "crates/uv-shell/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-shell/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-55",
+      "type": "package",
+      "path": "crates/uv-small-str/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-small-str/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-56",
+      "type": "package",
+      "path": "crates/uv-state/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-state/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-57",
+      "type": "package",
+      "path": "crates/uv-static/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-static/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-58",
+      "type": "package",
+      "path": "crates/uv-test/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-test/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-59",
+      "type": "package",
+      "path": "crates/uv-tool/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-tool/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-60",
+      "type": "package",
+      "path": "crates/uv-torch/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-torch/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-61",
+      "type": "package",
+      "path": "crates/uv-trampoline-builder/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-trampoline-builder/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-62",
+      "type": "package",
+      "path": "crates/uv-trampoline/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-trampoline/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-63",
+      "type": "package",
+      "path": "crates/uv-types/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-types/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-64",
+      "type": "package",
+      "path": "crates/uv-unix/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-unix/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-65",
+      "type": "package",
+      "path": "crates/uv-version/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-version/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-66",
+      "type": "package",
+      "path": "crates/uv-virtualenv/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-virtualenv/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-67",
+      "type": "package",
+      "path": "crates/uv-warnings/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-warnings/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-68",
+      "type": "package",
+      "path": "crates/uv-windows/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-windows/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-69",
+      "type": "package",
+      "path": "crates/uv-workspace/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv-workspace/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-70",
+      "type": "package",
+      "path": "crates/uv/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/crates/uv/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-71",
+      "type": "package",
+      "path": "pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-72",
+      "type": "package",
+      "path": "scripts/benchmark/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/scripts/benchmark/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-73",
+      "type": "package",
+      "path": "scripts/scenarios/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/scripts/scenarios/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-74",
+      "type": "package",
+      "path": "test/ecosystem/airflow/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/ecosystem/airflow/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-75",
+      "type": "package",
+      "path": "test/ecosystem/black/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/ecosystem/black/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-76",
+      "type": "package",
+      "path": "test/ecosystem/github-wikidata-bot/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/ecosystem/github-wikidata-bot/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-77",
+      "type": "package",
+      "path": "test/ecosystem/home-assistant-core/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/ecosystem/home-assistant-core/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-78",
+      "type": "package",
+      "path": "test/ecosystem/packse/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/ecosystem/packse/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-79",
+      "type": "package",
+      "path": "test/ecosystem/saleor/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/ecosystem/saleor/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-80",
+      "type": "package",
+      "path": "test/ecosystem/transformers/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/ecosystem/transformers/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-81",
+      "type": "package",
+      "path": "test/ecosystem/warehouse/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/ecosystem/warehouse/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-82",
+      "type": "package",
+      "path": "test/packages/anyio_local/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/anyio_local/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-83",
+      "type": "package",
+      "path": "test/packages/black_editable/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/black_editable/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-84",
+      "type": "package",
+      "path": "test/packages/built-by-uv/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/built-by-uv/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-85",
+      "type": "package",
+      "path": "test/packages/dependent_locals/first_local/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/dependent_locals/first_local/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-86",
+      "type": "package",
+      "path": "test/packages/dependent_locals/second_local/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/dependent_locals/second_local/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-87",
+      "type": "package",
+      "path": "test/packages/deptry_reproducer/Cargo.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/deptry_reproducer/Cargo.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-88",
+      "type": "package",
+      "path": "test/packages/deptry_reproducer/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/deptry_reproducer/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-89",
+      "type": "package",
+      "path": "test/packages/executable_file/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/executable_file/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-90",
+      "type": "package",
+      "path": "test/packages/fake-uv/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/fake-uv/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-91",
+      "type": "package",
+      "path": "test/packages/flit_editable/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/flit_editable/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-92",
+      "type": "package",
+      "path": "test/packages/hatchling_dynamic/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/hatchling_dynamic/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-93",
+      "type": "package",
+      "path": "test/packages/hatchling_editable/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/hatchling_editable/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-94",
+      "type": "package",
+      "path": "test/packages/keyring_test_plugin/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/keyring_test_plugin/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-95",
+      "type": "package",
+      "path": "test/packages/package.name.with.dots/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/package.name.with.dots/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-96",
+      "type": "package",
+      "path": "test/packages/poetry_editable/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/poetry_editable/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-97",
+      "type": "package",
+      "path": "test/packages/root_editable/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/root_editable/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-98",
+      "type": "package",
+      "path": "test/packages/setuptools_editable/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/packages/setuptools_editable/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-99",
+      "type": "package",
+      "path": "test/requirements/transformers/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/requirements/transformers/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-100",
+      "type": "package",
+      "path": "test/workspaces/albatross-dependency-rainbow/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-dependency-rainbow/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-101",
+      "type": "package",
+      "path": "test/workspaces/albatross-groups-only/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-groups-only/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-102",
+      "type": "package",
+      "path": "test/workspaces/albatross-in-example/examples/bird-feeder/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-in-example/examples/bird-feeder/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-103",
+      "type": "package",
+      "path": "test/workspaces/albatross-in-example/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-in-example/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-104",
+      "type": "package",
+      "path": "test/workspaces/albatross-just-project/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-just-project/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-105",
+      "type": "package",
+      "path": "test/workspaces/albatross-project-in-excluded/excluded/bird-feeder/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-project-in-excluded/excluded/bird-feeder/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-106",
+      "type": "package",
+      "path": "test/workspaces/albatross-project-in-excluded/packages/seeds/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-project-in-excluded/packages/seeds/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-107",
+      "type": "package",
+      "path": "test/workspaces/albatross-project-in-excluded/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-project-in-excluded/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-108",
+      "type": "package",
+      "path": "test/workspaces/albatross-root-workspace/packages/bird-feeder/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-root-workspace/packages/bird-feeder/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-109",
+      "type": "package",
+      "path": "test/workspaces/albatross-root-workspace/packages/seeds/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-root-workspace/packages/seeds/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-110",
+      "type": "package",
+      "path": "test/workspaces/albatross-root-workspace/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-root-workspace/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-111",
+      "type": "package",
+      "path": "test/workspaces/albatross-virtual-workspace/packages/albatross/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-virtual-workspace/packages/albatross/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-112",
+      "type": "package",
+      "path": "test/workspaces/albatross-virtual-workspace/packages/bird-feeder/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-virtual-workspace/packages/bird-feeder/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-113",
+      "type": "package",
+      "path": "test/workspaces/albatross-virtual-workspace/packages/seeds/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-virtual-workspace/packages/seeds/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-package-114",
+      "type": "package",
+      "path": "test/workspaces/albatross-virtual-workspace/pyproject.toml",
+      "url": "https://github.com/astral-sh/uv/blob/main/test/workspaces/albatross-virtual-workspace/pyproject.toml",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-1",
+      "type": "docs",
+      "path": "docs/concepts/authentication/certificates.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/authentication/certificates.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-2",
+      "type": "docs",
+      "path": "docs/concepts/authentication/cli.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/authentication/cli.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-3",
+      "type": "docs",
+      "path": "docs/concepts/authentication/git.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/authentication/git.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-4",
+      "type": "docs",
+      "path": "docs/concepts/authentication/http.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/authentication/http.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-5",
+      "type": "docs",
+      "path": "docs/concepts/authentication/index.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/authentication/index.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-6",
+      "type": "docs",
+      "path": "docs/concepts/authentication/third-party.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/authentication/third-party.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-7",
+      "type": "docs",
+      "path": "docs/concepts/build-backend.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/build-backend.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-8",
+      "type": "docs",
+      "path": "docs/concepts/cache.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/cache.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-9",
+      "type": "docs",
+      "path": "docs/concepts/configuration-files.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/configuration-files.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-10",
+      "type": "docs",
+      "path": "docs/concepts/index.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/index.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-11",
+      "type": "docs",
+      "path": "docs/concepts/indexes.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/indexes.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-12",
+      "type": "docs",
+      "path": "docs/concepts/preview.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/preview.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-13",
+      "type": "docs",
+      "path": "docs/concepts/projects/build.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/build.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-14",
+      "type": "docs",
+      "path": "docs/concepts/projects/config.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/config.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-15",
+      "type": "docs",
+      "path": "docs/concepts/projects/dependencies.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/dependencies.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-16",
+      "type": "docs",
+      "path": "docs/concepts/projects/export.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/export.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-17",
+      "type": "docs",
+      "path": "docs/concepts/projects/index.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/index.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-18",
+      "type": "docs",
+      "path": "docs/concepts/projects/init.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/init.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-19",
+      "type": "docs",
+      "path": "docs/concepts/projects/layout.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/layout.md",
+      "notes": ""
+    },
+    {
+      "id": "src-doc-20",
+      "type": "docs",
+      "path": "docs/concepts/projects/run.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/concepts/projects/run.md",
+      "notes": ""
+    },
+    {
+      "id": "src-asset-1",
+      "type": "file",
+      "path": "assets/png/Astral.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/Astral.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-2",
+      "type": "file",
+      "path": "assets/png/install-cold.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/install-cold.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-3",
+      "type": "file",
+      "path": "assets/png/install-warm.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/install-warm.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-4",
+      "type": "file",
+      "path": "assets/png/resolve-cold.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/resolve-cold.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-5",
+      "type": "file",
+      "path": "assets/png/resolve-warm.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/png/resolve-warm.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-6",
+      "type": "file",
+      "path": "assets/svg/Astral.svg",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/svg/Astral.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-7",
+      "type": "file",
+      "path": "assets/svg/Benchmark-Dark.svg",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/svg/Benchmark-Dark.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-8",
+      "type": "file",
+      "path": "assets/svg/Benchmark-Light.svg",
+      "url": "https://github.com/astral-sh/uv/blob/main/assets/svg/Benchmark-Light.svg",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-9",
+      "type": "file",
+      "path": "docs/assets/favicon.ico",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/favicon.ico",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-10",
+      "type": "file",
+      "path": "docs/assets/github-add-environment.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/github-add-environment.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-11",
+      "type": "file",
+      "path": "docs/assets/logo-letter.svg",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/logo-letter.svg",
+      "notes": "Repository asset detected as logo"
+    },
+    {
+      "id": "src-asset-12",
+      "type": "file",
+      "path": "docs/assets/pypi-add-trusted-publisher.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/pypi-add-trusted-publisher.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-13",
+      "type": "file",
+      "path": "docs/assets/pypi-with-trusted-publisher.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/pypi-with-trusted-publisher.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-14",
+      "type": "file",
+      "path": "docs/assets/uv_gui_script_hello_world.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/uv_gui_script_hello_world.png",
+      "notes": "Repository asset detected as image"
+    },
+    {
+      "id": "src-asset-15",
+      "type": "file",
+      "path": "docs/assets/uv_gui_script_hello_world_pyqt.png",
+      "url": "https://github.com/astral-sh/uv/blob/main/docs/assets/uv_gui_script_hello_world_pyqt.png",
+      "notes": "Repository asset detected as image"
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-1",
+      "kind": "description",
+      "value": "[](https://github.com/astral-sh/uv) [](https://pypi.python.org/pypi/uv) [](https://pypi.python.org/pypi/uv) [](https://pypi.python.org/pypi/uv) [](https://github.com/astral-sh/uv/actions) [](https://discord.gg/astral-sh)",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-2",
+      "kind": "quickstart",
+      "value": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-3",
+      "kind": "quickstart",
+      "value": "pip install uv",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-4",
+      "kind": "quickstart",
+      "value": "pipx install uv",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-5",
+      "kind": "quickstart",
+      "value": "uv self update",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-6",
+      "kind": "quickstart",
+      "value": "uv init example",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-7",
+      "kind": "quickstart",
+      "value": "uv add ruff",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-8",
+      "kind": "feature",
+      "value": "A single tool to replace `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-9",
+      "kind": "feature",
+      "value": "10-100x faster than `pip`.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-10",
+      "kind": "feature",
+      "value": "Provides comprehensive project management, with a",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-11",
+      "kind": "feature",
+      "value": "Runs scripts, with support for",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-12",
+      "kind": "feature",
+      "value": "Installs and manages Python versions.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-13",
+      "kind": "feature",
+      "value": "Runs and installs tools published as Python packages.",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-14",
+      "kind": "example",
+      "value": "# On macOS and Linux.\ncurl -LsSf https://astral.sh/uv/install.sh | sh",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-15",
+      "kind": "example",
+      "value": "# On Windows.\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fact-16",
+      "kind": "example",
+      "value": "# With pip.\npip install uv",
+      "sourceIds": [
+        "src-readme"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "product": {
+    "name": "uv",
+    "oneLiner": "[](https://github.com/astral-sh/uv) [](https://pypi.python.org/pypi/uv) [](https://pypi.python.org/pypi/uv) [](https://pypi.python.org/pypi/uv) [](https://github.com/astral-sh/uv/actions) [](https://discord.gg/astral-sh)",
+    "audiences": [
+      "Developers",
+      "Frontend teams",
+      "AI builders"
+    ],
+    "problems": [],
+    "features": [
+      "A single tool to replace `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and",
+      "10-100x faster than `pip`.",
+      "Provides comprehensive project management, with a",
+      "Runs scripts, with support for",
+      "Installs and manages Python versions.",
+      "Runs and installs tools published as Python packages."
+    ],
+    "useCases": [],
+    "quickstart": [
+      "curl -LsSf https://astral.sh/uv/install.sh | sh",
+      "pip install uv",
+      "pipx install uv",
+      "uv self update",
+      "uv init example",
+      "uv add ruff"
+    ],
+    "examples": [
+      "# On macOS and Linux.\ncurl -LsSf https://astral.sh/uv/install.sh | sh",
+      "# On Windows.\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"",
+      "# With pip.\npip install uv"
+    ],
+    "contribution": {
+      "hasContributionGuide": false,
+      "notes": []
+    }
+  },
+  "assets": [
+    {
+      "path": "assets/png/Astral.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-1"
+      ]
+    },
+    {
+      "path": "assets/png/install-cold.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-2"
+      ]
+    },
+    {
+      "path": "assets/png/install-warm.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-3"
+      ]
+    },
+    {
+      "path": "assets/png/resolve-cold.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-4"
+      ]
+    },
+    {
+      "path": "assets/png/resolve-warm.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-5"
+      ]
+    },
+    {
+      "path": "assets/svg/Astral.svg",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-6"
+      ]
+    },
+    {
+      "path": "assets/svg/Benchmark-Dark.svg",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-7"
+      ]
+    },
+    {
+      "path": "assets/svg/Benchmark-Light.svg",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-8"
+      ]
+    },
+    {
+      "path": "docs/assets/favicon.ico",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-9"
+      ]
+    },
+    {
+      "path": "docs/assets/github-add-environment.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-10"
+      ]
+    },
+    {
+      "path": "docs/assets/logo-letter.svg",
+      "kind": "logo",
+      "sourceIds": [
+        "src-asset-11"
+      ]
+    },
+    {
+      "path": "docs/assets/pypi-add-trusted-publisher.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-12"
+      ]
+    },
+    {
+      "path": "docs/assets/pypi-with-trusted-publisher.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-13"
+      ]
+    },
+    {
+      "path": "docs/assets/uv_gui_script_hello_world.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-14"
+      ]
+    },
+    {
+      "path": "docs/assets/uv_gui_script_hello_world_pyqt.png",
+      "kind": "image",
+      "sourceIds": [
+        "src-asset-15"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "ingestion-warning",
+      "message": "GitHub API metadata was unavailable; used shallow git clone fallback with reduced metadata.",
+      "severity": "low"
+    },
+    {
+      "kind": "ingestion-error",
+      "message": "GitHub API request was forbidden or rate limited. Set GITHUB_TOKEN if the public API limit is exhausted.",
+      "severity": "medium"
+    },
+    {
+      "kind": "unclear-use-cases",
+      "message": "Heuristic use-case suggestions are kept out of the generated site until they can be tied to exact source facts.",
+      "severity": "low"
+    }
+  ]
+}

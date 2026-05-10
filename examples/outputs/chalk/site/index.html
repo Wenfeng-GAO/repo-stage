@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chalk - Terminal string styling done right</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="https://github.com/chalk/chalk" aria-label="Chalk on GitHub">
+        <img src="assets/logo.svg" alt="Chalk">
+      </a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#quickstart">Quickstart</a>
+        <a href="https://github.com/chalk/chalk">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Node.js terminal styling</p>
+          <h1>Terminal string styling done right.</h1>
+          <p class="lede">Chalk gives CLI authors an expressive, composable API for colored terminal output with automatic color support detection and no runtime dependencies.</p>
+          <div class="actions">
+            <a class="button primary" href="#quickstart">Install Chalk</a>
+            <a class="button secondary" href="https://github.com/chalk/chalk">View repository</a>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Chalk usage example">
+          <div class="terminal-bar"><span></span><span></span><span></span></div>
+          <pre><code>import chalk from 'chalk';
+
+const error = chalk.bold.red;
+const warning = chalk.hex('#FFA500');
+
+console.log(error('Error!'));
+console.log(warning('Warning!'));</code></pre>
+        </div>
+      </section>
+
+      <section class="split">
+        <div>
+          <p class="section-label">Why it exists</p>
+          <h2>Readable CLI output without side effects.</h2>
+        </div>
+        <p>Chalk is built for developers who need emphasis, hierarchy, and status in terminal output without extending <code>String.prototype</code>. It chains and nests styles while adapting to the terminal's color capabilities.</p>
+      </section>
+
+      <section id="features" class="feature-grid" aria-label="Chalk features">
+        <article>
+          <h3>Composable API</h3>
+          <p>Chain foreground colors, background colors, and modifiers in the order that reads best for your code.</p>
+        </article>
+        <article>
+          <h3>Nested styles</h3>
+          <p>Style a substring inside a styled line and let Chalk return to the outer style cleanly.</p>
+        </article>
+        <article>
+          <h3>Color-aware output</h3>
+          <p>Automatic detection handles disabled colors, basic colors, 256-color terminals, and Truecolor.</p>
+        </article>
+        <article>
+          <h3>No dependencies</h3>
+          <p>The README highlights a focused implementation with no runtime dependencies.</p>
+        </article>
+      </section>
+
+      <section id="quickstart" class="quickstart">
+        <div>
+          <p class="section-label">Quickstart</p>
+          <h2>Install from npm and style your first line.</h2>
+        </div>
+        <pre><code>npm install chalk</code></pre>
+        <pre><code>import chalk from 'chalk';
+
+console.log(chalk.blue('Hello world!'));</code></pre>
+        <p class="note">Chalk 5 is ESM. The README recommends Chalk 4 for some TypeScript or build-tool setups.</p>
+      </section>
+
+      <section class="media-section">
+        <div>
+          <p class="section-label">From the repo</p>
+          <h2>Real terminal styling examples.</h2>
+          <p>The generated page reuses the screenshot shipped in the Chalk repository so the visual example stays grounded in project assets.</p>
+        </div>
+        <img src="assets/screenshot.png" alt="Chalk terminal screenshot">
+      </section>
+
+      <section class="trust">
+        <div>
+          <strong>MIT licensed</strong>
+          <span>From package.json</span>
+        </div>
+        <div>
+          <strong>ESM package</strong>
+          <span>Chalk 5 module type</span>
+        </div>
+        <div>
+          <strong>Large npm footprint</strong>
+          <span>README states ~115,000 dependents as of July 4, 2024</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

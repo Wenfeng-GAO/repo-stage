@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{PROJECT_NAME}} | Project Site</title>
+    <meta name="description" content="{{ONE_LINER}}">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="{{GITHUB_URL}}">{{PROJECT_NAME}}</a>
+        <a class="nav-link" href="{{GITHUB_URL}}">GitHub</a>
+      </nav>
+      <div class="hero-grid">
+        <section class="hero-copy" aria-labelledby="hero-title">
+          <p class="eyebrow">{{OWNER}}/{{REPO_NAME}}</p>
+          <h1 id="hero-title">{{PROJECT_NAME}}</h1>
+          <p class="lede">{{ONE_LINER}}</p>
+          <div class="actions">
+            <a class="button primary" href="#quickstart">Quickstart</a>
+            <a class="button secondary" href="{{GITHUB_URL}}">View source</a>
+          </div>
+        </section>
+        <aside class="summary" aria-label="Repository summary">
+          <dl>
+            <div>
+              <dt>Language</dt>
+              <dd>{{PRIMARY_LANGUAGE}}</dd>
+            </div>
+            <div>
+              <dt>License</dt>
+              <dd>{{LICENSE}}</dd>
+            </div>
+            <div>
+              <dt>Source</dt>
+              <dd><a href="{{GITHUB_URL}}">{{GITHUB_URL}}</a></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">Why it matters</p>
+          <h2>What the repository shows</h2>
+        </div>
+        <div class="feature-grid">
+{{FEATURE_CARDS}}
+        </div>
+      </section>
+
+      <section class="section split" id="quickstart">
+        <div>
+          <p class="eyebrow">Quickstart</p>
+          <h2>Start from the documented commands</h2>
+          <p>These commands are extracted from repository source material.</p>
+        </div>
+        <pre><code>{{QUICKSTART}}</code></pre>
+      </section>
+
+      <section class="section split" id="examples">
+        <div>
+          <p class="eyebrow">Use cases</p>
+          <h2>Where it fits</h2>
+        </div>
+        <ul class="use-cases">
+{{USE_CASES}}
+        </ul>
+      </section>
+
+      <section class="section trust">
+        <div>
+          <p class="eyebrow">Project facts</p>
+          <h2>Grounded in the repo</h2>
+        </div>
+        <p>{{TRUST_COPY}}</p>
+      </section>
+    </main>
+  </body>
+</html>

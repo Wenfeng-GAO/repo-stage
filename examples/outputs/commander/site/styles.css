@@ -1,0 +1,293 @@
+:root {
+  --ink: #111827;
+  --muted: #647084;
+  --paper: #f7f9fc;
+  --panel: #ffffff;
+  --line: #d9e1ee;
+  --accent: #2454d6;
+  --accent-2: #0f8b73;
+  --code: #121721;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+main {
+  width: min(1140px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 0;
+}
+
+.wordmark {
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: var(--muted);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.84fr);
+  gap: 46px;
+  align-items: center;
+  min-height: 560px;
+  padding: 34px 0 72px;
+  border-top: 1px solid var(--line);
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 12px;
+  color: var(--accent-2);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 880px;
+  margin-bottom: 22px;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.05;
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.lede {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 21px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.cli-card,
+pre {
+  overflow-x: auto;
+  border: 1px solid #242b38;
+  border-radius: 8px;
+  background: var(--code);
+  color: #eff5ff;
+  box-shadow: 0 24px 64px rgba(36, 84, 214, 0.18);
+}
+
+.cli-card {
+  padding: 24px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.prompt {
+  color: #8ab4ff;
+}
+
+.result {
+  margin: 8px 0 24px;
+  color: #d2f5df;
+}
+
+.result:last-child {
+  margin-bottom: 0;
+}
+
+.muted {
+  color: #a9b4c7;
+}
+
+.quickstart,
+.split {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
+  gap: 36px;
+  padding: 76px 0;
+  border-top: 1px solid var(--line);
+}
+
+.quickstart p,
+.copy p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+pre {
+  margin: 0;
+  padding: 22px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.quickstart pre + pre {
+  margin-top: 14px;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.pattern-grid article {
+  min-height: 260px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.pattern-grid span {
+  display: block;
+  margin-bottom: 44px;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.pattern-grid p {
+  color: var(--muted);
+}
+
+.trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  margin-bottom: 56px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.trust div {
+  padding: 22px;
+  background: white;
+}
+
+.trust strong,
+.trust span {
+  display: block;
+}
+
+.trust span {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .quickstart,
+  .split,
+  .trust {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .pattern-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header,
+  main {
+    width: min(100% - 32px, 1140px);
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .lede {
+    font-size: 18px;
+  }
+
+  pre,
+  .cli-card {
+    font-size: 13px;
+  }
+}

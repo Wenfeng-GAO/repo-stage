@@ -1,0 +1,9 @@
+{
+  "name": "tiny-cli-tool",
+  "description": "Format plain text task lists for terminal workflows.",
+  "version": "0.1.0",
+  "bin": {
+    "tiny-cli-tool": "./bin/tiny-cli-tool.js"
+  },
+  "license": "MIT"
+}

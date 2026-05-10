@@ -68,7 +68,8 @@ The site must be static and portable. It should work when opened locally or comm
 6. Plan the page structure and copy from sourced facts.
 7. Generate static HTML/CSS and copy usable assets.
 8. Validate schema, source grounding, links, desktop rendering, and mobile rendering.
-9. Report output paths and any quality caveats.
+9. Write `validation-report.md`.
+10. Report output paths and any quality caveats.
 
 ## Source Grounding Rules
 
@@ -86,6 +87,30 @@ The generated website must not state:
 - Enterprise, pricing, compliance, or security claims unless explicitly sourced.
 
 Suggestions without source support belong in `README-gap-report.md`, not in the website.
+
+## Report Contract
+
+Every successful or partially successful generation must write both reports:
+
+- `README-gap-report.md`
+- `validation-report.md`
+
+`README-gap-report.md` must be derived from `repo-profile.json.gaps`. It should summarize missing or weak install, quickstart, example, demo, screenshot, license, contributing, audience, positioning, and documentation source material. If the agent finds positioning ideas that may be valuable but are not supported by sources, those ideas must be listed in the gap report and omitted from the generated website.
+
+`validation-report.md` must record the repository URL, output directory, required output files, schema validation, source grounding, visible HTML claim grounding, local link checks, HTML content checks, HTML render review, desktop review, and mobile review. Each check must use one of these statuses:
+
+- `pass`: completed successfully.
+- `warn`: completed with a caveat the maintainer should review.
+- `fail`: failed and must be fixed before publishing.
+- `skipped`: not run because an optional capability was unavailable or a prerequisite failed.
+
+Skipped checks must include the reason. Browser-based rendering and screenshot checks are optional capabilities; when unavailable, the Skill should still produce files and mark those checks as skipped.
+
+The portable report helper can be run after `repo-profile.json` and `site/` exist:
+
+```bash
+python3 scripts/repo_stage_reports.py --profile repo-profile.json --site site --out .
+```
 
 ## Failure Modes
 

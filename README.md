@@ -21,6 +21,7 @@ site/
   assets/
 repo-profile.json
 README-gap-report.md
+validation-report.md
 ```
 
 The first version focuses on one job: generate a static landing page grounded in real repository facts from the README, docs, package metadata, examples, license, and project assets.
@@ -46,6 +47,43 @@ The command writes a structured JSON report containing:
 
 Three smoke-test fixture URLs live in [examples/fixtures/public-repos.txt](examples/fixtures/public-repos.txt).
 
+## Local Generate Prototype
+
+Run the M2 local generator directly with Python:
+
+```bash
+python3 -m repo_stage.cli generate https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+Or install the console command in editable mode:
+
+```bash
+python3 -m pip install -e .
+repo-stage generate https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+The command reuses the ingestion pipeline above, then writes:
+
+```text
+site/
+  index.html
+  styles.css
+  assets/
+repo-profile.json
+README-gap-report.md
+validation-report.md
+```
+
+The prototype extracts conservative facts from the ingestion report, generates a static one-page site, and validates the output. Missing README material is recorded as gaps or warnings; unsupported or failed generation writes failure reports instead of presenting a partial site as successful.
+
+## Report Helper
+
+Generate reports from an existing output set with:
+
+```bash
+python3 scripts/repo_stage_reports.py --profile repo-profile.json --site site --out .
+```
+
 ## Product Direction
 
 Read the product documents:
@@ -57,9 +95,26 @@ Read the product documents:
 - [docs/quality-checklist.md](docs/quality-checklist.md)
 - [docs/agent-compatibility.md](docs/agent-compatibility.md)
 
+## Skill Package
+
+The reusable agent-portable Skill lives in [skills/repo-stage/SKILL.md](skills/repo-stage/SKILL.md).
+
+Run the included fixture:
+
+```bash
+python3 skills/repo-stage/scripts/repo_stage_generate.py \
+  --repo-path examples/fixtures/tiny-cli-tool \
+  --repo-url https://github.com/example/tiny-cli-tool \
+  --out examples/outputs/tiny-cli-tool
+
+python3 skills/repo-stage/scripts/validate_output.py examples/outputs/tiny-cli-tool
+```
+
 ## Status
 
-RepoStage is currently in product planning. The product name is confirmed, the public repository is created, and the first reviewable product, development, agent-portable Skill, schema, compatibility, and quality documents are checked in.
+RepoStage now includes an M2 local prototype CLI. The first verification outputs are saved under `examples/outputs/` for a CLI tool, React/UI library, AI agent project, developer infrastructure project, and design/creative tool.
+
+The M3 agent-portable Skill package is also checked in with templates, scripts, references, a checklist, a fixture, and generated fixture output.
 
 ## Local Prototype
 
