@@ -1,3 +1,8 @@
+---
+name: repo-stage
+description: Turn a public open-source GitHub repository into a polished, source-grounded, one-page static website. Use when the user wants to generate a static project site, landing page, or GitHub Pages-ready page from a public repo URL.
+---
+
 # RepoStage
 
 Use RepoStage when a user wants to turn a public open-source GitHub repository into a polished, source-grounded, one-page static website.
