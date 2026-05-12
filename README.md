@@ -13,13 +13,84 @@
 
 RepoStage turns a public GitHub repository into a polished, grounded one-page static website.
 
-It is built for open-source maintainers who already have a useful repo, but need a clearer project page so other developers can understand it, try it, star it, and contribute. The current MVP reads repository facts, writes a structured profile, generates a portable static site, and reports what still needs human attention.
+Use it when you already have a useful open-source repo and want a clearer project page that helps other developers understand it, try it, star it, and contribute.
+
+## Installation
+
+### Quick Install from GitHub
+
+Install the `repo-stage` command into an isolated Python environment:
+
+```bash
+pipx install git+https://github.com/Wenfeng-GAO/repo-stage.git
+repo-stage generate https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+`pipx` is recommended for regular use because it keeps RepoStage out of your project environment. If you use `uv`, the equivalent tool install path is:
+
+```bash
+uv tool install git+https://github.com/Wenfeng-GAO/repo-stage.git
+repo-stage generate https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+### Install from a Local Checkout
+
+```bash
+git clone https://github.com/Wenfeng-GAO/repo-stage.git
+cd repo-stage
+python3 -m pip install -e .
+repo-stage generate https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+You can also run the generator without installing:
 
 ```bash
 python3 -m repo_stage.cli generate https://github.com/owner/repo --out ./generated/owner-repo
 ```
 
-## What It Produces
+### Agent Skill Install
+
+The reusable skill lives in `skills/repo-stage/`. For agents that load file-system skills, copy or symlink that directory into the agent's skill directory, then invoke it by name:
+
+```bash
+# Example manual install path; adjust for your agent runtime.
+mkdir -p ~/.claude/skills
+ln -s "$(pwd)/skills/repo-stage" ~/.claude/skills/repo-stage
+```
+
+RepoStage is not currently published as an npm package. The repository does include Node-based profile and site utilities, but `package.json` is marked `private` and the Python CLI is the complete public-repo ingestion path today. A future npm install would need a published package and a `repo-stage` bin that wraps or ports the full CLI workflow.
+
+## Usage
+
+RepoStage can be used as a local CLI or as an agent skill.
+
+### CLI
+
+Generate a grounded static site from a public GitHub repository:
+
+```bash
+repo-stage generate https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+The output directory is portable and can be opened locally, committed to a repo, or adapted for GitHub Pages.
+
+### Agent Invocation
+
+After installing the skill in an agent runtime that supports slash commands, invoke it directly:
+
+```text
+/repo-stage https://github.com/owner/repo
+/repo-stage https://github.com/owner/repo --out ./generated/owner-repo
+```
+
+In runtimes that trigger skills with `$skill-name`, use:
+
+```text
+$repo-stage generate a one-page project site for https://github.com/owner/repo
+$repo-stage use ./generated/owner-repo as the output directory
+```
+
+## Output
 
 ```text
 generated/owner-repo/
@@ -38,31 +109,17 @@ The generated page is static HTML/CSS that can be opened locally, committed to a
   <img src="assets/readme-workflow.svg" alt="RepoStage workflow: ingest, profile, generate, validate" width="100%">
 </p>
 
-## Why RepoStage Exists
+## Why Use RepoStage
+
+RepoStage is for maintainers who want a public-facing project page without rewriting their README by hand.
+
+- **Fast first page:** turn an existing public repo into a static site output in one command.
+- **Grounded copy:** page content comes from README files, docs, package metadata, examples, and license files instead of invented marketing claims.
+- **Useful artifacts:** get the generated `site/`, a structured `repo-profile.json`, a README gap report, and a validation report.
+- **Maintainer feedback:** see missing install steps, examples, screenshots, license details, and positioning gaps directly.
+- **Agent-portable workflow:** use the same `skills/repo-stage/` package from Codex, Claude, or other file-system-capable coding agents.
 
 Many open-source projects have enough substance in their README, docs, examples, package metadata, and license to support a strong public page. What they often lack is the time to turn that material into a coherent first impression.
-
-RepoStage treats the repository as the source of truth:
-
-- **Grounded by default:** generated claims must trace back to repository inputs.
-- **Useful output, not a mockup:** the result is a portable `site/` directory plus profile and validation reports.
-- **Maintainer-oriented:** missing install steps, examples, screenshots, license details, and positioning gaps are called out directly.
-- **Agent-portable:** the reusable Skill package lives in `skills/repo-stage/` for Codex, Claude, and other file-system-capable coding agents.
-
-## Quickstart
-
-Run the local generator directly with Python:
-
-```bash
-python3 -m repo_stage.cli generate https://github.com/owner/repo --out ./generated/owner-repo
-```
-
-Or install the console command in editable mode:
-
-```bash
-python3 -m pip install -e .
-repo-stage generate https://github.com/owner/repo --out ./generated/owner-repo
-```
 
 `GITHUB_TOKEN` is optional. Public repositories should work without a token until GitHub's unauthenticated rate limit is exhausted; when that happens the report or error explains the degraded path.
 
