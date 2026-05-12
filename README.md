@@ -136,6 +136,8 @@ python3 skills/repo-stage/scripts/validate_output.py examples/outputs/tiny-cli-t
 
 Checked-in verification outputs live under [examples/outputs/](examples/outputs/). They cover several repository shapes, including CLI tools, React/UI libraries, AI agent projects, developer infrastructure, and design/creative tools.
 
+Rendered previews are published with GitHub Pages after changes land on `main`. For example, the HTTPie CLI output opens at <https://wenfeng-gao.github.io/repo-stage/httpie-cli/site/>.
+
 Fixture URLs for smoke tests live in [examples/fixtures/public-repos.txt](examples/fixtures/public-repos.txt).
 
 ## Documentation
