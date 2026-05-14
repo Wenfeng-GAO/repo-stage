@@ -148,6 +148,8 @@ h3 {
 }
 
 .demo-frame {
+  min-width: 0;
+  max-width: 100%;
   overflow: hidden;
   border: 1px solid #2d2940;
   border-radius: 8px;
@@ -223,6 +225,7 @@ h3 {
 }
 
 pre {
+  max-width: 100%;
   margin: 0;
   overflow-x: auto;
   padding: 20px 22px;
